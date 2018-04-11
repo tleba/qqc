@@ -1,0 +1,21 @@
+/* Pop windows by vr4u 20161026 */
+
+.ls_pop_window{ position:fixed; top:50%; left:50%; margin:-110px 0 0 -250px; width:450px; height:220px; border:solid 1px #DDD; background-color:#FFF; box-shadow:0 2px 10px #DDD; font-family:"Microsoft Yahei",Tahoma,Helvetica,Arial,sans-serif;z-index:99999}
+	.ls_pop_header{ padding:0 7px 0 15px; height:40px; line-height:40px; border-bottom:solid 1px #DDD; background-color:#EEE;color:#000;}
+		.ls_pop_title{ float:left; font-weight:bold; font-size:16px;}
+		.ls_pop_btn{ float:right; padding:7px 0 0 0; font-size:16px;}
+		.ls_pop_btn a{ display:block; width:50px; height:26px; line-height:26px; border-radius:5px; font-size:14px; background-color:#EEE; color:#666; text-decoration:none; text-align:center;}
+		.ls_pop_btn a:hover{ background-color:#DDD; color:#333; text-decoration:none;}
+	.ls_pop_body{ padding:0 25px; font-size:15px;color:#000;}
+		.ls_pop_body ul{ margin:0; padding:15px 0; font-size:14px;}
+		.ls_pop_body li{ list-style:none; margin:0; padding:0 0 10px; line-height:25px;}
+		.ls_pop_body .l1{}
+		.ls_pop_body .l2{}
+			.ls_pop_body .l2 input{ width:398px; height:25px; line-height:25px; border:solid 1px #DDD; background-color:#f9f9f9; outline:none; text-indent:5px; color:#666; font-size:12px; font-family:"Microsoft Yahei",Tahoma,Helvetica,Arial,sans-serif;}
+		.ls_pop_body p{ margin:0; padding:0;}
+		
+			.ls_pop_close{ display:block; margin:0 auto; width:120px; height:40px; border-radius:5px; line-height:40px; background-color:#F96774; font-size:16px; text-align:center; color:#FFF; text-decoration:none; text-indent:0;}
+			.ls_pop_close:hover{ background-color:#E34E5C; color:#FFF;}
+		.ls_pop_body .l3{ padding-top:5px;}
+		.ls_pop_body .l3 input{ height:30px;}
+

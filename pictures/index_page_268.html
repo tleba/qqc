@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="Zh-hans" >
+
+<head>
+	
+    <title> 最新 视频 - 青青草在线视频</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="1 days" />
+    <meta name="author" content="QQC 2015 Themes" />
+    <meta name="copyright" content="2015 QQC Video Inc." />
+    <meta name="keywords" content=" 最新 videos, 日本AV,日本A片,超碰,CaoPorn,91Porn,在线视频" />
+    <meta name="description" content=" 最新 视频 - 青青草是针对华人更新最快内容最全的绿色的成人站之一，比超碰CaoPorn和91Porn更稳定全面，每日更新亚洲情色、欧美性爱、偷拍自拍等多种类型的在线视频电影，激情你懂得！" />
+	<link rel="Shortcut Icon" type="image/ico" href="/favicon.ico" />
+	<link rel="apple-touch-icon" href="/favicon.ico">
+
+    <script type="text/javascript">
+    var base_url = "http://qqc.com";
+    var max_thumb_folders = "32000";
+    var tmb_speed_url = "http://imagesweb.yxdyk.com:55888";
+    var tpl_url = "/templates/frontend/frontend-default";
+		var lang_deleting = "删除...";
+	var lang_flaging = "标记中...";
+	var lang_loading = "加载中...";
+	var lang_sending = "发送...";
+	var lang_share_name_empty = "请输入您的名字!";
+	var lang_share_rec_empty = "请至少输入一个收件人的电子邮件!";
+
+
+	
+	function getRealDomain(domains){
+		if(domains == '127.0.0.1' || domains == 'localhost')
+			return domains;
+		var redomain = '';
+		var domainArray = new Array("com" , "net" , "org" , "gov" , "edu", "me", "us", 'info', 'la');
+		var domains_array = domains.split('.');
+		var domain_count = domains_array.length-1;
+		var flag = false;
+		if(domains_array[domain_count]=='cn'){
+			for(i=0;i<domainArray.length;i++){
+				if(domains_array[domain_count-1] == domainArray[i]){
+					flag =true;
+					break;
+				}
+			}
+
+			if(flag==true){
+				redomain = domains_array[domain_count-2]+"."+domains_array[domain_count-1]+"."+domains_array[domain_count];
+			}else{
+				redomain = domains_array[domain_count-1]+"."+domains_array[domain_count];
+			}
+		}else{
+			redomain = domains_array[domain_count-1]+"."+domains_array[domain_count];
+		}
+		return redomain;
+	}
+
+	domain = getRealDomain(location.host);
+	document.domain = domain;
+
+	
+
+
+	</script>
+
+<script type="text/javascript" src="/templates/frontend/frontend-default/js/jquery-1.11.1.min.js?t=2"></script>
+<script type="text/javascript" src="/templates/frontend/frontend-default/js/jquery.inputbox.js"></script>
+
+<link type="text/css" rel="stylesheet" href="/templates/frontend/frontend-default/css/bootstrap.min.css?t=2" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/templates/frontend/frontend-default/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="/templates/frontend/frontend-default/js/respond.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="/templates/frontend/frontend-default/js/jscroller2-1.5.js"></script>
+
+	<link type="text/css" rel="stylesheet" href="/templates/frontend/frontend-default/css/colors.css?t=201509121" />
+	<link type="text/css" rel="stylesheet" href="/templates/frontend/frontend-default/css/font-awesome.min.css" />
+	<link type="text/css" rel="stylesheet" href="/templates/frontend/frontend-default/css/responsive.css?t=20170930" />
+	<link type="text/css" rel="stylesheet" href="/templates/frontend/frontend-default/css/style.css?t=201609293" /> 
+	<link type="text/css" rel="stylesheet" href="/css/qq.css?v=20160212093"/> 
+ <script type="text/javascript">
+ 
+function load_loginbox(){
+	$('#login').load('/site_login.php');
+	$("#sebimsg").load('/sebi.php');
+}
+
+// JavaScript Document
+$(function(){
+	$('.wrapper_bg_c').click(function(){
+		$.post('/ajax/adv_count',{'id':62,'title':'背景广告链接访问','zone_name':"背景广告"},function(resutl){});
+	});
+	/*加载登陆*/
+	load_loginbox();
+	$("#user").focus();
+	$("input:text,textarea,input:password").focus(function() {
+		$(this).addClass("cur_select");
+    });
+    $("input:text,textarea,input:password").blur(function() {
+		$(this).removeClass("cur_select");
+    });
+	$('#wrapper').removeAttr('style');
+	$(document).on('click', ".login_submit", function(){
+		var user = $("#user").val();
+		var pass = $("#pass").val();
+		if(user==""){
+			$('<div id="msg" />').html("用户名不能为空！").appendTo('.sub').fadeOut(2000);
+			$("#user").focus();
+			return false;
+		}
+		if(pass==""){
+			$('<div id="msg" />').html("密码不能为空！").appendTo('.sub').fadeOut(2000);
+			$("#pass").focus();
+			return false;
+		}
+		$.ajax({
+			type: "GET",
+			url: "/login_ajax?action=login",
+			dataType: "jsonp",
+			cache: false,
+			data: {"user":user,"pass":pass},
+			beforeSend: function(){
+				jQuery("button.login_submit").attr({"disabled": "disabled"});
+				$('<div id="msg" />').html("正在登录...").appendTo('.sub').fadeOut(2000);
+				$("#pass").focus();
+			},
+			success: function(json){
+				if(json.success==1){
+					$("#login_form").remove();
+					$("#login").html(json.html);
+				}else{
+					$("#msg").remove();
+					$('<div id="errmsg" />').html(json.msg).css("color","#fff").appendTo('.sub').fadeOut(2000);
+
+					jQuery("button.btn").removeAttr('disabled');
+					return false;
+				}
+			}
+		});
+	});
+
+	$("#logout").on('click',function(){
+		$.post("login.php?action=logout",function(msg){
+			if(msg==1){
+			    $("#result").remove();
+			    var div = "<div id='login_form'><p><label>用户名：</label> <input type='text' class='input' name='user' id='user' /></p><p><label>密 码：</label> <input type='password' class='input' name='pass' id='pass' /></p><div class='sub'><input type='submit' class='btn' value='登 录' /></div></div>";
+			    $("#login").append(div);
+			}
+		});
+	});
+	if($('div[name="stype"]') && $('div[name="stype"]').inputbox){
+		$('div[name="stype"]').inputbox({
+			height:31,
+			width:55
+		});
+	}
+});
+ 
+ </script>
+
+
+</head>
+
+<body>
+<div class="ps_121"></div>
+<div id="sebimsg"></div>
+<div class="top-nav">
+	<div class="container">
+		<ul class="top-menu">
+							<div class="pull-left">
+					
+					<li class="hidden-xs"><a data-toggle="modal" href="/"><span style="color:white">欢迎光临青青草在线视频</span></a></li>
+
+          <!--<li class="hidden-xs"><a data-toggle="modal" href="http://www.5188yy.com/ad/fanbb.rar"><span style="color:white">地址发布器</span></a></li>-->
+
+					<li class="hidden-xs visible-mo"><a data-toggle="modal" href="http://www.sowo999.com/" target="_blank"><span style="color:white">请收藏青青草地址发布页</span></a></li>
+					<li class="visible-xs" style="color: white;">青青草手机版欢迎你</li>
+					</div>
+
+						<div id="login" class="pull-right">
+
+			</div>
+			<div class="clearfix"></div>      
+		</ul>
+	</div>
+</div>
+<div class="navbar navbar-inverse" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+
+
+<div class="mobile_search visible-xs visible-sm pull-right">
+ <form method="post" action="/all_search"> <input type="text" name="title" placeholder="请输入内容" class="search_input" value="" style="  ">
+    			    <!--<div name="stype" type="selectbox">
+    			    		<div class="opts">
+    			    			<a href="javascript:;" class="selected" val="videos">电影</a>
+    			    			<a href="javascript:;" val="bbs">论坛</a>
+    			    		</div>
+    			    	</div>-->
+
+
+
+    			     <input class="search_submit" type="submit" name="submit" value="搜索"/> </form> </div>
+
+
+
+		<div class="pull-left">
+			<a class="navbar-brand" href="/">
+                <img src="/templates/frontend/frontend-default/img/logo.png?t=3">
+            </a>
+            <a class="navbar-brand hidden-xs" style="margin-left: 15px;" href="/"><img src="/templates/frontend/frontend-default/img/logo.gif"/></a>
+			</div>
+
+			<div class="search_header hidden-xs hidden-sm pull-right">
+
+			<!--头部广告-->
+			<div class="ps_117" style="float:left;margin-right:5px;"></div>
+			<div class="ps_36" style="float:left;"></div>
+			<div style="clear:both;"></div>
+			</div>
+
+		</div>
+
+		<!--/.nav-collapse -->
+    </div>
+
+    <!--Mobile-->
+    <div class="mobile_navbar_collapse  visible-xs">
+    <ul>
+
+    <li><a href="/">首页</a></li>
+    <li><a class="" href="/videos">最新更新</a></li>
+    <li><a href="/hd">高清视频</a></li>
+    <li><a href="/videos/10/index.html">动漫电影</a></li>
+    <li><a href="/videos/25/index.html">欧美电影</a></li>
+    <!--<li><a href="/videos/28/index.html">日韩无码</a></li>-->
+        				<li class="dropdown">
+        					<a href="/videos/26/index.html" class="dropdown-toggle" data-toggle="dropdown">日韩无码 <b class="caret"></b></a>
+        						<ul class="dropdown-menu">
+
+    <li><a href="/videos/4/index.html">无码丝袜</a></li>
+    <li><a href="/videos/6/index.html">无码乱伦</a></li>
+    <li><a href="/videos/28/index.html">无码人妻</a></li>
+    <li><a href="/videos/9/index.html">无码制服</a></li>
+    <li><a href="/videos/11/index.html">无码口交</a></li>
+    <li><a href="/videos/27/index.html">无码强奸</a></li>
+
+    </ul>
+        				</li>
+
+    <li class="dropdown">
+        					<a href="/videos/26/index.html" class="dropdown-toggle" data-toggle="dropdown">日韩有码 <b class="caret"></b></a>
+        						<ul class="dropdown-menu">
+
+    <li><a href="/videos/35/index.html">有码乱伦</a></li>
+    <li><a href="/videos/32/index.html">有码人妻</a></li>
+    <li><a href="/videos/37/index.html">有码出轨</a></li>
+    <li><a href="/videos/34/index.html">有码制服</a></li>
+    <li><a href="/videos/33/index.html">有码口交</a></li>
+    <li><a href="/videos/31/index.html">有码巨乳</a></li>
+    </ul>
+    </li>
+    <li class="dropdown">
+    <a href="/videos/26/index.html" class="dropdown-toggle" data-toggle="dropdown">国产电影 <b class="caret"></b></a>
+    <ul class="dropdown-menu">
+    <li><a href="/videos/8/index.html">偷拍视频</a></li>
+    <li><a href="/videos/19/index.html">真实自拍</a></li>
+    </ul>
+	</li>
+    <li><a href="/videos/41/index.html">明星热门</a></li>
+    <li><a href="/videos/40/index.html">裸聊视频</a></li>
+	<li><a href="/yinshi/63/index.html">VR影院</a></li>
+	<li><a href="/yinshi/65/index.html">青草拍客</a></li>
+	<li><a href="/videos/36/index.html">有码强奸</a></li>
+	<li><a href="/videos/5/index.html">无码中文</a></li>
+	<li><a href="/hdong/vip" target="_blank">加入VIP</a></li>
+    <!--<li><a href="#" class="videos-icon" data-toggle="collapse" data-target=".navbar-inverse-collapse"><em>青青草视频</em></a></li>
+    <li><a class="bbs-icon" href="javascript:;" onclick="location.href='http://bbs.'+domain"><em>青青草社区</em></a></li>-->
+    <!--<li><a class="shop-icon" href="http://bbs.qqcbbs.com/plugin.php?id=it618_scoremall:scoremall"><em>青青草商城</em></a></li>
+    <li><a class="service-icon" href="/hdong/vip" target="_blank"><em>加入vip</em></a></li>-->
+     </ul>
+
+    </div>
+    <!--Mobile-->
+
+    <div class="navbar-collapse pc-navbar collapse navbar-inverse-collapse">
+
+    	<div class="container">
+
+    			<ul class="hidden-xs nav navbar-nav navbar-navwd">
+    			    <li style="width:54px"><a href="/">首页</a></li>
+                <li><a class="hidden-xs" href="/videos">最新更新</a></li>
+                    <li><a href="/hd">高清视频</a></li>
+                    <li><a href="/videos/10/index.html">动漫电影</a></li>
+                    <li><a href="/videos/25/index.html">欧美电影</a></li>
+<li class="dropdown" style="width:82px">
+        					<a href="/videos/26/index.html" class="dropdown-toggle" data-toggle="dropdown">日韩无码 <b class="caret"></b></a>
+        						<ul class="dropdown-menu">
+
+    <li><a href="/videos/4/index.html">无码丝袜</a></li>
+    <li><a href="/videos/5/index.html">无码中文字幕</a></li>
+    <li><a href="/videos/6/index.html">无码乱伦</a></li>
+    <li><a href="/videos/28/index.html">无码人妻</a></li>
+    <li><a href="/videos/9/index.html">无码制服</a></li>
+    <li><a href="/videos/11/index.html">无码口交</a></li>
+    <li><a href="/videos/27/index.html">无码强奸</a></li>
+
+    </ul>
+        				</li>
+
+    <li class="dropdown" style="width:82px">
+        					<a href="/videos/26/index.html" class="dropdown-toggle" data-toggle="dropdown">日韩有码 <b class="caret"></b></a>
+        						<ul class="dropdown-menu">
+
+    <li><a href="/videos/35/index.html">有码乱伦</a></li>
+    <li><a href="/videos/32/index.html">有码人妻</a></li>
+    <li><a href="/videos/37/index.html">有码出轨</a></li>
+    <li><a href="/videos/34/index.html">有码制服</a></li>
+    <li><a href="/videos/33/index.html">有码口交</a></li>
+    <li><a href="/videos/31/index.html">有码巨乳</a></li>
+    <li><a href="/videos/36/index.html">有码强奸</a></li>
+
+    </ul>
+        				</li>
+
+    <li class="dropdown" style="width:82px">
+        					<a href="/videos/26/index.html" class="dropdown-toggle" data-toggle="dropdown">国产电影 <b class="caret"></b></a>
+        						<ul class="dropdown-menu">
+
+    <li><a href="/videos/8/index.html">偷拍视频</a></li>
+    <li><a href="/videos/19/index.html">真实自拍</a></li>
+    <li><a href="/videos/40/index.html">裸聊视频</a></li>
+    </ul>
+        				</li>
+                    <li><a href="/videos/41/index.html">明星热门</a></li>
+                    <li class="dropdown visible-mo" style="width:82px">
+                 	<a class="dropdown-toggle" data-toggle="dropdown" href="/novels/index.html">小说图片<b class="caret"></b></a>
+             		<ul class="dropdown-menu">
+             			<li><a href="/novels/index.html">成人小说</a></li>
+             			<li><a href="/pictures/index.html">成人图片</a></li>
+             		</ul>
+                 	</li>
+                	<li class="visible-mo"><a href="/qhd" target="_blank">活动专区</a></li>   
+					<li class="dropdown" style="width:82px"><img src="/templates/frontend/frontend-default/img/new.png" style="position: absolute;left: 23px;"/><a href="/yinshi/61/index.html" class="dropdown-toggle" data-toggle="dropdown">青草影视<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+					<li><a href="/yinshi/63/index.html">VR影院</a></li>
+					<li><a href="/yinshi/65/index.html">青草拍客</a></li>
+					</ul>
+					</li>
+					<li class="visible-mo"><a href="/hdong/vip" class="luntan" target="_blank">加入VIP</a></li>
+    			    <div class="search_nav hidden-xs hidden-sm"> <form method="post" action="/all_search"> <input type="text" name="title" placeholder="请输入搜索内容" class="search_input" value="">
+    			     <input class="search_submit" type="submit" name="submit" value="搜索"/> </form> </div><div style="clear:both;"></div>
+    			</ul>
+    			</div>
+    		</div>
+    		    		<div class="pc-tags cats hidden-xs hidden-sm navbar-collapse navbar-inverse-collapse">
+
+
+    			<div class="container" style="display:none">
+
+
+
+    					</div>
+
+    				</div>
+    	
+
+
+</div>
+<div class="ps_93 visible-xs" style="width: auto;margin-bottom: 10px;text-align:center;padding: 0 5px;"></div>
+<a id="wrapper_left_bg" class="wrapper_bg_c hidden-xs" target="_blank" href="http://www.k8dc15.com/register_phone.htm"></a>
+<a id="wrapper_right_bg" class="wrapper_bg_c hidden-xs" target="_blank" href="http://www.zlyulecheng1.com/slot-promotion-201707.htm"></a>
+<div id="wrapper">
+<div class="container hidden-xs">
+
+<div class="ps-body " style="padding:0;margin-top:-9px">
+<div class="ps-pc hidden-xs">
+	<div style="float:left ;">
+	<div class="ps_37"></div>
+	</div>
+	<div style="float:right;margin-left:1.1%;">
+	<div class="ps_77"></div>
+	</div>
+	<div style="float:right">
+	<div class="ps_38"></div>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+</div>
+
+<div class="ps-body " style="padding:0;margin-top:-9px">
+<div class="ps-pc hidden-xs">
+	<div style="float:left ;">
+	<div class="ps_125"></div>
+	</div>
+	<div style="float:right;margin-left:1.1%;">
+	<div class="ps_129"></div>
+	</div>
+	<div style="float:right">
+	<div class="ps_127"></div>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+</div>
+
+<div class="ps-body " style="padding:0;margin-top:-15px">
+	<div class="ps-pc hidden-xs">
+		<div style="float:left ;">
+		
+		<div class="ps_103"></div>
+		</div>
+		<div style="float:right;margin-left:1.1%;">
+		<div class="ps_105"></div>
+		</div>
+		<div style="float:right">	
+		<div class="ps_107"></div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+</div>
+
+<div class="ps-body " style="padding:0;margin-top:-15px">
+<div class="ps-pc hidden-xs">
+	<div style="float:left ;">
+	<div class="ps_97"></div>
+	</div>
+	<div style="float:right;margin-left:1.1%;">
+	<div class="ps_99"></div>
+	</div>
+	<div style="float:right">	
+	<div class="ps_101"></div>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+</div>
+
+<div class="ps-body " style="padding:0;margin-top:-15px">
+	<div class="ps-pc hidden-xs">
+		<div style="float:left;">
+		<div class="ps_49"></div>
+		</div>
+		<div style="float:right;margin-left:1.1%;">
+		<div class="ps_51"></div>
+		</div>
+		<div style="float:right;">
+		<div class="ps_53"></div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+</div>
+
+<div class="ps-body " style="padding:0;margin-top:-15px">
+	<div class="ps-pc hidden-xs">
+		<div style="float:left;">
+			<div class="ps_87"></div>
+		</div>
+		<div style="float:right;margin-left:1.1%;">
+			<div class="ps_91"></div>
+		</div>
+		<div style="float:right;">
+			<div class="ps_89"></div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+</div>
+
+<div class="ps-body " style="padding:0;margin-top:-15px">
+	<div class="ps-pc hidden-xs">
+		<div style="float:left;">
+			<div class="ps_111"></div>
+		</div>
+		<div style="float:right;margin-left:1.1%;">
+			<div class="ps_113"></div>
+		</div>
+		<div style="float:right;">
+			<div class="ps_115"></div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+</div>
+
+
+</div>
+<link type="text/css" rel="stylesheet" href="/templates/frontend/frontend-default/css/new.css?t=20150923" />
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 col-sm-4">
+			<div class="list-group">
+	<a href="/picture/" class="list-group-item header">
+		图片分类
+	</a>
+			<a id="categories_class_4" href="/pictures/4" class="list-group-item">
+		丝袜制服 <i class="total_videos pull-right">3924</i>
+		</a>
+			<a id="categories_class_7" href="/pictures/7" class="list-group-item">
+		动漫剧情 <i class="total_videos pull-right">3113</i>
+		</a>
+			<a id="categories_class_2" href="/pictures/2" class="list-group-item">
+		欧美丝袜 <i class="total_videos pull-right">2771</i>
+		</a>
+			<a id="categories_class_6" href="/pictures/6" class="list-group-item">
+		真实自拍 <i class="total_videos pull-right">4084</i>
+		</a>
+			<a id="categories_class_3" href="/pictures/3" class="list-group-item">
+		短丝裸足 <i class="total_videos pull-right">4055</i>
+		</a>
+			<a id="categories_class_1" href="/pictures/1" class="list-group-item">
+		纯情写真 <i class="total_videos pull-right">4172</i>
+		</a>
+			<a id="categories_class_5" href="/pictures/5" class="list-group-item">
+		走光偷拍 <i class="total_videos pull-right">3823</i>
+		</a>
+	</div>			<div class="ad-body">
+				<div class="adv-pc"></div>
+			</div>
+		</div>
+		<div class="col-md-9 col-sm-8">
+				<div class="well well-filters new_filters">
+							<div class="pull-left">
+								<h4><i class="fa fa-clock-o green"></i>&nbsp;性感美女</h4>
+							</div>
+							<div class="pull-right m-l-20">
+								<div class="hidden-xs">
+									<div class="btn-group">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">类型 <span class="caret"></span></button>
+										<ul class="dropdown-menu">
+											<li class="active"><a href="/pictures/">全部</a></li>
+											<li ><a href="/pictures/public">普通</a></li>
+											<li ><a href="/pictures/private">VIP</a></li>
+										</ul>
+									</div>
+
+									<div class="btn-group">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">全部 <span class="caret"></span></button>
+										<ul class="dropdown-menu">
+											<li class="active"><a href="/pictures/a">全部</a></li>
+											<li ><a href="/pictures/t">加入 今天</a></li>
+											<li ><a href="/pictures/w">加入 这周</a></li>
+											<li ><a href="/pictures/m">加入 本月</a></li>
+										</ul>
+									</div>
+									<div class="btn-group">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">最新 <span class="caret"></span></button>
+										<ul class="dropdown-menu">
+											<li ><a href="/pictures/bw">图片最多</a></li>
+											<li class="active"><a href="/pictures/mr">最新</a></li>
+											<li ><a href="/pictures/mv">最受欢迎</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="visible-xs">
+									<div class="btn-group">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Filters <span class="caret"></span></button>
+										<ul class="dropdown-menu">
+											<li class="active"><a href="/pictures/">全部</a></li>
+											<li ><a href="/pictures/public">普通</a></li>
+											<li ><a href="/pictures/private">VIP</a></li>
+											<li class="divider"></li>
+											<li class="active"><a href="/pictures/a">全部</a></li>
+											<li ><a href="/pictures/t">加入 今天</a></li>
+											<li ><a href="/pictures/w">加入 这周</a></li>
+											<li ><a href="/pictures/m">加入 本月</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="pull-right" style="display: none;">
+								<a class="btn btn-primary" href="/upload/video"><span class="hidden-xs"><i class="fa fa-upload"></i> 上传视频</span><span class="visible-xs"><i class="fa fa-upload"></i></span></a>
+							</div>
+							<div class="clearfix"></div>
+					</div>
+
+		            					<div class="well well-sm" style="display: none;">
+						显示 <span class="text-white">9613</span> 到 <span class="text-white">9648</span> of <span class="text-white">25352</span> 图片.
+					</div>
+					<div class="row row-boder">
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32543/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/cfd757362328dc711e371e1b9411586d.jpg" style="height:132px;" title="[CG]JJ插小洞[14P]" alt="[CG]JJ插小洞[14P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32543/" style="font-size:16px;font-weight:bolder;">[CG]JJ插小洞[…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：动漫剧情
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>15P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">136</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32541/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/34b34df2bb0d77417c5f3bb304003016.jpg" style="height:132px;" title="[黑白中文]大姐姐的水蜜桃[20P]" alt="[黑白中文]大姐姐的水蜜桃[20P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32541/" style="font-size:16px;font-weight:bolder;">[黑白中文]大姐姐的…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：动漫剧情
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>19P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">171</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32539/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/eac962478dbf24a27daf1d7d5c0099c0.jpg" style="height:132px;" title="OL美女制服高跟[16p]" alt="OL美女制服高跟[16p]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32539/" style="font-size:16px;font-weight:bolder;">OL美女制服高跟[1…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：丝袜制服
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>16P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">107</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32537/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/4baa54672508f88da1777c492b6a24dc.jpg" style="height:132px;" title="黑色长靴美腿妹妹[20p]" alt="黑色长靴美腿妹妹[20p]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32537/" style="font-size:16px;font-weight:bolder;">黑色长靴美腿妹妹[2…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：丝袜制服
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>16P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">71</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32535/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/bc06f8bcc6946fd02b0b78f2193b11f4.jpg" style="height:132px;" title="长腿尤物男人难做柳下惠[16p]" alt="长腿尤物男人难做柳下惠[16p]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32535/" style="font-size:16px;font-weight:bolder;">长腿尤物男人难做柳下…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：丝袜制服
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>12P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">85</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32533/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/a6ace522c2747d68754f0f8a503ef2e6.jpg" style="height:132px;" title="牛奶般白嫩的美腿凉高跟美女[12p]" alt="牛奶般白嫩的美腿凉高跟美女[12p]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32533/" style="font-size:16px;font-weight:bolder;">牛奶般白嫩的美腿凉高…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：丝袜制服
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>20P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">67</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32531/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/67b5c412cc46cb06682a3a3443a876e1.jpg" style="height:132px;" title="花哨的性感泳衣水晶高跟美女[15p]" alt="花哨的性感泳衣水晶高跟美女[15p]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32531/" style="font-size:16px;font-weight:bolder;">花哨的性感泳衣水晶高…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：丝袜制服
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>16P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">62</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32529/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/0db6cd9c4c582ed39cd2c8c14dd81109.jpg" style="height:132px;" title="粉红内衣模特棚拍写真[22P]" alt="粉红内衣模特棚拍写真[22P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32529/" style="font-size:16px;font-weight:bolder;">粉红内衣模特棚拍写真…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：短丝裸足
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>29P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">85</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32527/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/716d52b38c5c3b354fc25a646cb62d36.jpg" style="height:132px;" title="漂亮大方的美女户外人体[12P]" alt="漂亮大方的美女户外人体[12P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32527/" style="font-size:16px;font-weight:bolder;">漂亮大方的美女户外人…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：短丝裸足
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>49P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">328</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32525/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/8ec608754a8dd7a93a6f3c524f72eadb.jpg" style="height:132px;" title="丰满美女国模灵灵人体艺术[39P]" alt="丰满美女国模灵灵人体艺术[39P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32525/" style="font-size:16px;font-weight:bolder;">丰满美女国模灵灵人体…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：短丝裸足
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>37P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">199</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32523/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/71ceb9d561c8f5fa18145af36b043f4f.jpg" style="height:132px;" title="丰满国模思君[28P]" alt="丰满国模思君[28P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32523/" style="font-size:16px;font-weight:bolder;">丰满国模思君[28P…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：短丝裸足
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>18P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">103</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32521/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/bf363544ffef7c17eef6583a5ca49c11.jpg" style="height:132px;" title="清纯美女跟性感少妇你喜欢哪个？" alt="清纯美女跟性感少妇你喜欢哪个？" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32521/" style="font-size:16px;font-weight:bolder;">清纯美女跟性感少妇你…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：走光偷拍
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>10P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">78</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32519/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/aa1c533af34b0cb3f63d745a56a48819.jpg" style="height:132px;" title="清纯少妇逛美食街" alt="清纯少妇逛美食街" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32519/" style="font-size:16px;font-weight:bolder;">清纯少妇逛美食街</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：走光偷拍
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>10P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">58</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32517/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/61c6d7846c4cc4b88043a6a55838cbf5.jpg" style="height:132px;" title="蓝色紧牛少妇逛街" alt="蓝色紧牛少妇逛街" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32517/" style="font-size:16px;font-weight:bolder;">蓝色紧牛少妇逛街</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：走光偷拍
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>10P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">63</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32515/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/1af67046b98018122b0469a5afe721c5.jpg" style="height:132px;" title="低腰紧身裤牛仔裤MM" alt="低腰紧身裤牛仔裤MM" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32515/" style="font-size:16px;font-weight:bolder;">低腰紧身裤牛仔裤MM</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：走光偷拍
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>15P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">60</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32513/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/ccc8847c5a3c516a4b170802ab27fb7e.jpg" style="height:132px;" title="蓝色紧身裤美女好性感啊" alt="蓝色紧身裤美女好性感啊" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32513/" style="font-size:16px;font-weight:bolder;">蓝色紧身裤美女好性感…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：走光偷拍
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>10P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">54</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32511/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/f20a01769767813ca2c3fd738f8f03f5.jpeg" style="height:132px;" title="应朋友要求，发朋友媳妇照片一套，身材完美，家庭各种拍，详细照片[61p]" alt="应朋友要求，发朋友媳妇照片一套，身材完美，家庭各种拍，详细照片[61p]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32511/" style="font-size:16px;font-weight:bolder;">应朋友要求，发朋友媳…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：真实自拍
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>53P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">1664</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32509/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/822fd8571fab42d0c7653d7eb6c5de4b.jpg" style="height:132px;" title="学生装野外自拍 [28P]" alt="学生装野外自拍 [28P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32509/" style="font-size:16px;font-weight:bolder;">学生装野外自拍 [2…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：真实自拍
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>28P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">174</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32507/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/c11b7f426c5ec8e85691faf0872e9699.jpg" style="height:132px;" title="情趣内衣＋道具调教骚穴菊花＋爆菊花 [25P]" alt="情趣内衣＋道具调教骚穴菊花＋爆菊花 [25P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32507/" style="font-size:16px;font-weight:bolder;">情趣内衣＋道具调教骚…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：真实自拍
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>25P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">102</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32505/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/8975e6352d4a16f895c81ef158844601.jpg" style="height:132px;" title="为了领导的特殊癖好，约了情人化身臀控[14P]" alt="为了领导的特殊癖好，约了情人化身臀控[14P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32505/" style="font-size:16px;font-weight:bolder;">为了领导的特殊癖好，…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：真实自拍
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>14P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">156</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32503/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/61a2d0573fd288707f86616ceb3af121.jpg" style="height:132px;" title="情趣道具调教双插+肛交内射 [25P]" alt="情趣道具调教双插+肛交内射 [25P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32503/" style="font-size:16px;font-weight:bolder;">情趣道具调教双插+肛…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：真实自拍
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>25P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">113</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32501/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/0f955768cbb4f7996f2741aa75551657.jpg" style="height:132px;" title="红酒和紫色内衣的风情[11P]" alt="红酒和紫色内衣的风情[11P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32501/" style="font-size:16px;font-weight:bolder;">红酒和紫色内衣的风情…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：欧美丝袜
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>10P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">94</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32497/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/aa95eb20290c14b616806e2625f22f21.jpg" style="height:132px;" title="谁人不爱丁字裤 [20P]" alt="谁人不爱丁字裤 [20P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32497/" style="font-size:16px;font-weight:bolder;">谁人不爱丁字裤 [2…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：欧美丝袜
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>20P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">108</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32495/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/4b9de8b11540aac9da90d817e7941817.jpg" style="height:132px;" title="花中的圆斑点 [11P]" alt="花中的圆斑点 [11P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32495/" style="font-size:16px;font-weight:bolder;">花中的圆斑点 [11…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：欧美丝袜
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>10P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">78</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32493/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/cc160e23f4ec55768f6f63f34e38e817.jpeg" style="height:132px;" title="这张床装修就不便宜吧[21P]" alt="这张床装修就不便宜吧[21P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32493/" style="font-size:16px;font-weight:bolder;">这张床装修就不便宜吧…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：欧美丝袜
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>22P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">87</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32491/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/289a1a09c81c1ae1067637e55d9c48d5.jpg" style="height:132px;" title="冷艳御姐乐儿比基尼秀【10P】" alt="冷艳御姐乐儿比基尼秀【10P】" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32491/" style="font-size:16px;font-weight:bolder;">冷艳御姐乐儿比基尼秀…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：纯情写真
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>10P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">78</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32489/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/3505a4f74bd086e3411f0c641fdb1039.jpeg" style="height:132px;" title="面容精致白皙的不像真人 [22P]" alt="面容精致白皙的不像真人 [22P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32489/" style="font-size:16px;font-weight:bolder;">面容精致白皙的不像真…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：欧美丝袜
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>22P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">83</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32487/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/6260b1f8ae129e99f5bc7f970eded79e.jpg" style="height:132px;" title="清凉怡人高挑靓妹纸【10P】" alt="清凉怡人高挑靓妹纸【10P】" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32487/" style="font-size:16px;font-weight:bolder;">清凉怡人高挑靓妹纸【…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：纯情写真
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>10P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">68</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32485/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/4c3d656b5b5326ffd5783ce2bbe23463.jpg" style="height:132px;" title="中国长发性感嘉人别样性感【12P】" alt="中国长发性感嘉人别样性感【12P】" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32485/" style="font-size:16px;font-weight:bolder;">中国长发性感嘉人别样…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：纯情写真
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>12P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">69</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32483/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/9c487aa462a2be001a1a94f833352d65.jpg" style="height:132px;" title="清新茉莉宅女清纯迷人【10P】" alt="清新茉莉宅女清纯迷人【10P】" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32483/" style="font-size:16px;font-weight:bolder;">清新茉莉宅女清纯迷人…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：纯情写真
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>10P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">68</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32481/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161118/e52160db3248541b7c4eba7d1ae01aa9.jpg" style="height:132px;" title="香港校花清纯嫩美眉【13P】" alt="香港校花清纯嫩美眉【13P】" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32481/" style="font-size:16px;font-weight:bolder;">香港校花清纯嫩美眉【…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：351 天 之前</span>类型：纯情写真
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>12P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">66</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32479/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161117/5bb40f9be580910bc446a0d1a4770449.jpg" style="height:132px;" title="[CG]无毛的小穴诱人的屁眼[16P]" alt="[CG]无毛的小穴诱人的屁眼[16P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32479/" style="font-size:16px;font-weight:bolder;">[CG]无毛的小穴诱…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：352 天 之前</span>类型：动漫剧情
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>18P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">140</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32477/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161117/e677f0eb10305007ff4da5985388e7f6.jpg" style="height:132px;" title="[CG]享受精液的洗礼[18P]" alt="[CG]享受精液的洗礼[18P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32477/" style="font-size:16px;font-weight:bolder;">[CG]享受精液的洗…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：352 天 之前</span>类型：动漫剧情
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>13P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">113</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32475/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161117/eb4d05cbd940f93a66b48c43418047e7.jpg" style="height:132px;" title="[CG]漂亮的小骚货[15P]" alt="[CG]漂亮的小骚货[15P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32475/" style="font-size:16px;font-weight:bolder;">[CG]漂亮的小骚货…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：352 天 之前</span>类型：动漫剧情
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>15P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">98</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32473/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161117/2297b04c631645e55149e40ded35ed8e.jpg" style="height:132px;" title="[黑白中文]精液灌溉[30P]" alt="[黑白中文]精液灌溉[30P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32473/" style="font-size:16px;font-weight:bolder;">[黑白中文]精液灌溉…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：352 天 之前</span>类型：动漫剧情
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>30P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">113</p>
+						</div>
+		            						<div class="col-sm-6 col-md-4 col-lg-4 img-cont" style="border: 1px solid #d1d1d1;padding: 10px;margin-bottom:10px;background-color:#fff;border-radius:5px;">
+							<a href="/picture/32471/">
+								 <img src="http://imagesweb.yxdyk.com:55888/media/uploadfile/20161117/4ea0f37cfab518c900f6e0a2254eb8d6.jpg" style="height:132px;" title="[黑白中文]女子校生轮番操[40P]" alt="[黑白中文]女子校生轮番操[40P]" class="img-responsive "/>
+							</a>
+							<p class="first" style="text-align: center;font-size: 18px;padding: 8px;"><a href="/picture/32471/" style="font-size:16px;font-weight:bolder;">[黑白中文]女子校生…</a></p>
+							<div class="clearfix"></div>
+							<p class="second" style="font-size: 14px;">
+								<span style="float: right;">加入时间：352 天 之前</span>类型：动漫剧情
+							</p>
+        					<div class="clearfix"></div>
+        					<p class="three" style="font-size:15px;padding:5px;"><span style="float:right;"><img style="margin-right:5px;" src="/images/cont-right_03.jpg" alt="" /><b>40P</span><img style="margin-right:5px;" src="/images/cont-left_03.jpg">248</p>
+						</div>
+		            
+					</div>
+		            
+
+																		<div style="text-align: center;" class="hidden-xs">
+								<ul class="pagination"><li><a href="/pictures/index_page_267.html">&laquo;</a></li><li class="hidden-xs"><a href="/pictures/index.html">1</a></li><li class="hidden-xs"><a href="/pictures/index_page_2.html">2</a></li><li class="disabled hidden-xs"><span>&nbsp;...&nbsp;</span><li><li class="hidden-xs"><a href="/pictures/index_page_265.html">265</a></li><li class="hidden-xs"><a href="/pictures/index_page_266.html">266</a></li><li class="hidden-xs"><a href="/pictures/index_page_267.html">267</a></li><li class="active"><span>268</span></li><li class="hidden-xs"><a href="/pictures/index_page_269.html">269</a></li><li class="hidden-xs"><a href="/pictures/index_page_270.html">270</a></li><li class="hidden-xs"><a href="/pictures/index_page_271.html">271</a></li><li class="disabled hidden-xs"><span>&nbsp;...&nbsp;</span><li><li class="hidden-xs"><a href="/pictures/index_page_703.html">703</a></li><li class="hidden-xs"><a href="/pictures/index_page_704.html">704</a></li><li><a href="/pictures/index_page_269.html" class="prevnext">&raquo;</a></li></ul>
+							</div>
+											
+																		<div style="text-align: center;" class="visible-xs">
+								<ul class="pagination pagination-lg"><li><a href="/pictures/index_page_267.html">&laquo;</a></li><li class="hidden-xs"><a href="/pictures/index.html">1</a></li><li class="hidden-xs"><a href="/pictures/index_page_2.html">2</a></li><li class="disabled hidden-xs"><span>&nbsp;...&nbsp;</span><li><li class="hidden-xs"><a href="/pictures/index_page_265.html">265</a></li><li class="hidden-xs"><a href="/pictures/index_page_266.html">266</a></li><li class="hidden-xs"><a href="/pictures/index_page_267.html">267</a></li><li class="active"><span>268</span></li><li class="hidden-xs"><a href="/pictures/index_page_269.html">269</a></li><li class="hidden-xs"><a href="/pictures/index_page_270.html">270</a></li><li class="hidden-xs"><a href="/pictures/index_page_271.html">271</a></li><li class="disabled hidden-xs"><span>&nbsp;...&nbsp;</span><li><li class="hidden-xs"><a href="/pictures/index_page_703.html">703</a></li><li class="hidden-xs"><a href="/pictures/index_page_704.html">704</a></li><li><a href="/pictures/index_page_269.html" class="prevnext">&raquo;</a></li></ul>
+							</div>
+											
+				</div>
+
+
+	</div>
+
+
+	<div class="ad-body">
+		<p class="ad-title">赞助商</p>
+	</div>
+</div></div>
+<div class="ps_137 visible-xs" style="width: 100%; margin: 10px 0; text-align: center; padding: 0px 5px;">
+	<a style="display:block;margin:0 0 0 0 ;" title="久草SVIP活动--首页中间广告（APP端）" href="/qhd/20171102/m.index.html" target="_blank">
+		<img style="width:100%;height:100%;" alt="久草SVIP活动--首页中间广告（APP端）" src="/ps/qqc_msvip.gif">
+	</a>
+</div>
+<div class="footer-container visible-xs" style="position:relative;">
+	<div class="footer-links">
+		<div class="container">
+			<div class="row">
+				<div class="list-unstyled bottom-nav">
+					<li><a href="/static/advertise" rel="nofollow">广告</a></li>
+					<li><a href="/invite" rel="nofollow">邀请朋友</a></li>
+					<li><a href="/static/faq" rel="nofollow">常见问题</a></li>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer-copy hidden-xs">
+		<div class="container">
+			<div class="row text-muted">
+			  <p>站点申明：我们立足于美利坚合众国,对全球华人服务,受北美法律保护。版权所有,未经授权禁止复制或建立镜像。</p> <p>警告︰青青草在线视频（www.qqc2015.com）只适合18岁或以上人士观看。本网站内容可能令人反感！切不可将本站的内容出售、出租、交给或借予年龄未满18岁的人士或将本网站内容向未满18岁人士出示、播放或放映。如果您发现本站的某些影片内容不合适，或者某些影片侵犯了您的的版权，请联系我们删除影片。</p><p> WARNING: This Site Contains Adult Contents, No Entry For Less Than 18-Years-Old !</p>
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="container">
+			<div class="hidden-xs">
+				<span>版权所有 &#169; 2008-2014</span> 青青草在线视频
+				<div class="clearfix"></div>
+			</div>
+			<div class="visible-xs">
+				<span>版权所有 &#169; 2008-2014</span> 青青草在线视频
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer hidden-xs">
+	<div class="footerContent">
+		<div class="footerLeft">
+			<a href="/"><img src="/templates/frontend/frontend-default/img/logo.png" style="margin-right:10px;"></a>
+		</div>
+		<div class="footerMian">
+			<img src="/templates/frontend/frontend-default/img/qq_15.jpg">
+			<ul>
+				<li style="line-height:20px;"><span style="font-size:13px;">活动客服：在线咨询</span><a style="margin-left:50px;" href="https://f18.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=869866&configID=75470&jid=2696669831&s=1" target="_blank"></a></li>
+				<li style="line-height:20px;"><span style="font-size:13px;">活动客服：3002814561</span><a href="tencent://message/?uin=3002814561&Site=www.luoxiao123.cn&Menu=yes"></a></li>
+				<li style="line-height:20px;"><span style="font-size:13px;">活动客服：3002801271</span><a href="tencent://message/?uin=3002801271&Site=www.luoxiao123.cn&Menu=yes"></a></li>
+				<li style="line-height:18px;"><span>在线时间：13:00--22:00</span></li>
+			</ul>
+		</div>
+		<div class="footerRight">
+			<img src="/templates/frontend/frontend-default/img/generate.gif" style="height:110px;">
+			<ul>
+				<li>手机扫一扫【安卓版】  </li>
+				<li>扫描二维码下载青青草APP</li>
+				<li>IOS版本正在开发中敬请期待</li>
+			</ul>
+		</div>
+	</div>
+	<div class="side_bar ads_85" style="width:240px;height:auto;cursor:pointer;bottom:0;position:absolute;right:0px;top:0px;margin-top:0;"></div>
+</div>
+<link rel="stylesheet" type="text/css" href="/templates/frontend/frontend-default/css/base.css?t=39">
+<div class="quick_links_wrap hidden-xs">
+	<div class="quick_links_panel">
+		<div id="quick_links" class="quick_links">
+			<li>
+				<a href="/qhd/member/" class="my_qlinks"><span class="huodong">青<br />青<br />草<br />会<br />员<br />日</span></a>
+				<div class="ibar_login_box " style="display: none;">
+					<a href="/qhd/member/"><img src="/templates/frontend/frontend-default/img/huodong.jpg"/></a>
+					<i class="iconfont icon_arrow_white">&#xe607;</i></div>
+			</li>
+			<li>
+				<a href="#" class="my_qlinks app" style="height:85px;"><i class="iconfont">&#xe603;</i>SVIP<br/>免费福利</a>
+				<div class="ibar_login_box app_box " style="display: none;">
+					<img src="/templates/frontend/frontend-default/img/qqc_svip.jpg" style="width:180px;" alt="" />
+					<i class="iconfont icon_arrow_white">&#xe607;</i></div>
+			</li>
+			<li>
+				<a href="/login" class="my_qlinks app dl"><i class="iconfont">&#xe601;</i>登录 </a>
+				<!--<div class="ibar_login_box app_box dlk" style="display: none;">
+					<div class="dlk-db"><span>登录</span></div>
+					<span class="wz">用户名</span><input class="k" type="text" name="" id="" style="border:1px solid #ebebeb!important" placeholder="用户名"/><br />
+					<span class="wz">&nbsp;&nbsp;&nbsp;&nbsp;密码</span><input class="k" type="password" name="" id="" style="border:1px solid #ebebeb!important" placeholder="密码"/>
+					<div class="x"><div class="dx"><input type="checkbox" name="check1" value="check1" id="check1"><label for="check1">两周内免登录</label></div>
+					<a href="/lost">忘记密码？</a><br />
+					</div>
+					<input class="dlan" type="submit" value="登录"/>
+					<i class="iconfont icon_arrow_white">&#xe607;</i></div>-->
+			</li>
+			<li>
+				<a href="/signup" class="my_qlinks app m0" style="line-height:54px;">注册 </a>
+				<!--<div class="ibar_login_box app_box dlk zck" style="display: none;">
+					<div class="dlk-db"><span>登录</span></div>
+					<form class="form1" action="" method="post">
+						<span class="wz yy">用户名</span><input class="k yy" type="text" name="" id="" value="" placeholder="用户名"/><br />
+						<span class="wz yy">&nbsp;&nbsp;&nbsp;密码</span><input class="k yy" type="password" name="" id="" value="" placeholder="密码"/><br />
+						<span class="wz">重新输入密码</span><input class="k" type="password" name="" id="" value="" placeholder="重新输入密码"/><br />
+						<span class="wz yy">&nbsp;&nbsp;&nbsp;邮箱</span><input class="k yy" type="text" name="" id="" value="" placeholder="邮箱"/><br />
+						<span class="wz yy xb">&nbsp;&nbsp;&nbsp;性别</span>
+						<div class="qb">
+						<div class="xzk"><input type="radio" name="demo1" id="demo11" checked="checked"><label for="demo11">男</label><br />
+				<input type="radio" name="demo1" id="demo12"><label for="demo12">女</label></div>
+				<div class=" xzk2">
+					<input class="bz" type="checkbox" name="check1" value="check1" id="check1"><label for="check1">我保证年满18岁！</label><br />
+				<input type="checkbox" name="check1" value="check1" id="check1"><label for="check1">我同意<span class="tk" href="">使用条款</span>和<span class="tk"  href="">隐私政策</span></label>
+				</div>
+				</div>
+						<input class="dlan dlan2" type="submit" value="注册"/>
+					</form>
+					<i class="iconfont icon_arrow_white">&#xe607;</i></div>-->
+			</li>
+			<li>
+				<a href="https://f18.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=869866&configID=75470&jid=2696669831&s=1" target="_blank" class="my_qlinks app m0"><i class="iconfont">&#xe600;</i>客服 </a>
+			</li>
+			<li>
+				<a href="/hdong/vip/" class="my_qlinks app wd m0"><i class="iconfont">&#xe606;</i>加入<br />VIP </a>
+			</li>
+			<li>
+				<a href="" class="my_qlinks app m0"><i class="iconfont">&#xe605;</i>反馈 </a>
+			</li>
+			<li>
+				<a href="javascript:goTop();" class="my_qlinks app m0 top"><i class="iconfont">&#xe602;</i>TOP</a>
+			</li>
+			<li>
+				<a  href="javascript:void(0);" class="my_qlinks app m0 gb"><img id="ct" src="/templates/frontend/frontend-default/img/X.png"/></a>
+			</li>
+		</div>
+	</div>
+</div>
+<img id="an" class="an" src="/templates/frontend/frontend-default/img/anniu.png" alt="" />
+<!--[if lte IE 8]>
+<script src="/templates/frontend/frontend-default/js/ieBetter.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+$(".quick_links_panel li").mouseenter(function() {
+
+	$(this).children(".mp_tooltip").animate({
+		left: -92,
+		queue: true
+	});
+
+	$(this).children(".mp_tooltip").css("visibility", "visible");
+
+	$(this).children(".ibar_login_box").css("display", "block");
+
+});
+
+$(".quick_links_panel li").mouseleave(function() {
+
+	$(this).children(".mp_tooltip").css("visibility", "hidden");
+
+	$(this).children(".mp_tooltip").animate({
+		left: -121,
+		queue: true
+	});
+
+	$(this).children(".ibar_login_box").css("display", "none");
+
+});
+
+$(".quick_toggle li").mouseover(function() {
+
+	$(this).children(".mp_qrcode").show();
+
+});
+
+$(".quick_toggle li").mouseleave(function() {
+
+	$(this).children(".mp_qrcode").hide();
+
+});
+function goTop(){
+	$('html,body').animate({'scrollTop':0},600);
+}
+</script>
+<script type="text/javascript">
+	$(function(){
+    $("#ct").click(function(){
+        //关闭id=left的div
+        $(".quick_links_wrap").animate({right:'-40px'},function(){
+        	$("#an").animate({right:'0px'});
+        });
+     });
+     $("#an").click(function(){
+        //关闭id=left的div
+        $("#an").animate({right:'-77px'},function(){
+        	$(".quick_links_wrap").animate({right:'0px'});
+        });
+     });           
+})
+
+</script><div class="QQ_none" style="width: 3px; height: 3px; position: fixed; top: 40%;">
+</div>
+<div class="QQ_S">
+    <div class="Q_top" onclick="HideFoot()">
+        <span class="signi"></span>收起
+    </div>
+    <div class="Q_botm">
+        <div class="Q_pic">
+            <div class="Q_pic_hide">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=2880465610&site=qq&menu=yes"
+                    target="_blank" title="企业QQ交谈" rel="nofollow"><span class="hide_pic"></span>企业QQ交谈
+                </a>
+            </div>
+        </div>
+        
+        <div class="Q_sign">
+            <div class="Q_sign_hide">
+                <a href="javascript:void(0)" title="返回顶部"><span class="hide_pic2"></span>返回顶部 </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="QQ_S1">
+    <div class="Q_top1" onclick="ShowFoot()">
+        <span class="signj"></span>展开
+    </div>
+    <div class="Q_botm1">
+        <div class="Q_pic1">
+            <div class="Q_pic1_hide">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=2880465612&site=qq&menu=yes"
+                    rel="nofollow"><span class="hide_pic3"></span>QQ交谈 </a>
+            </div>
+        </div>
+        <div class="Q_sign1">
+            <div class="Q_sign1_hide">
+                <a href="javascript:void(0)">返回顶部 </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+<div class="side_bar" style="left:10px;">
+    <div class="house">
+        <a href="http://messenger.providesupport.com/messenger/17uvw2sizyaw6085hpcx6uydn0.html" target="_blank"></a>
+    </div>
+    <div class="count">
+        <ul>
+            <a href="/hdong/vip/" target="_blank"><li class="list_1"></li></a>
+            <a href="/hdong/vip/" target="_blank"><li class="list_2"></li></a>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=2880465612&site=qq&menu=yes" target="_blank"><li class="list_3"></li></a>
+        </ul>
+    </div>
+    <div class="wx">
+        <p>微信扫一扫</p>
+        <div class="wx_img">
+            <img src="/img/wx_03.png">
+        </div>
+    </div>
+    <div class="down">
+        <div class="close"></div>
+    </div>
+</div>
+<a href="/spread/" target="_blank"><div class="side_bar" style="background:url('/templates/frontend/frontend-default/img/side_bar_back.jpg?v=1') 0 0 no-repeat;width:140px;height:300px;cursor:pointer;"></div></a>-->
+
+<div class="notice">
+		<a href="#" class="icon-speaker"></a>
+		<div class="notice-cont">
+			<span class="speaker"></span>
+			<div class="msg">
+				<marquee direction="left">  
+					<p style="color:red;font-weight:bolder;">重要提示：青青草新办理VIP必须通过存款尊龙娱乐（指定尊龙娱乐不存在任何合并或子网站情况，更不存在旧平台关闭说法，如打开显示非尊龙娱乐或与本提示不符情况，请立即停止操作，联系青青草QQ客服3002801271）！！！</p>
+				</marquee>
+			</div>
+			<a href="#" class="ntc-btn">收起公告</a>
+		</div>
+	</div>
+	<script type="text/javascript" src="/templates/frontend/frontend-default/js/bootstrap.min.js?v=20151015"></script>
+	<script type="text/javascript" src="/templates/frontend/frontend-default/js/jquery.rotator-0.2.js"></script>
+	<script type="text/javascript" src="/templates/frontend/frontend-default/js/jquery.avs-0.2.js"></script>
+	
+	<script>
+	
+		function hiddenme(obj){
+			$(obj).parent().hide(150);
+			$('.ads_123').show(150);
+		}
+        $(function(){
+        	$(".ntc-btn").click(function(){
+				$(".notice").hide(500);
+			});
+            //$('#wrapper').removeAttr('style');
+            if(document.URL.indexOf('openlink') > 0){
+            	$('a').attr('target','_blank');
+            }
+        });
+
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+		  var msViewportStyle = document.createElement('style')
+		  msViewportStyle.appendChild(
+			document.createTextNode(
+			  '@-ms-viewport{width:auto!important}'
+			)
+		  )
+		  document.querySelector('head').appendChild(msViewportStyle)
+		}
+		$(function(){
+			setTimeout(function(){
+				$.getScript("/ps/data.js?t=201602012").done(function(r,s){
+					showAds();
+				});
+			},1500);
+			setTimeout(function(){
+				if(ismobile() == 0){
+					$.getScript("/templates/frontend/frontend-default/js/scoll_bg.js?t=2016020392136");
+				}
+			},3000);
+		   $("#wrapper").attr("style","");//清空多余间距
+		});
+		function createCloseBtn(){
+			var $btn = $('<div />');
+			$btn.css({'position':'absolute','font-size':'30px','top':'10px','color':'rgb(6, 255, 207)','cursor':'pointer'}).html('X');
+			$btn.click(function(){
+				$(this).parent().hide();
+				//$('#nyhiddenme').parent().show(150);
+			});
+			return $btn;
+		}
+		function showAds(){
+			if(ads){
+				var cWidth = parseInt($('.container').css('width').replace('px',''));
+				var pcContainerWidth = 1150;
+				var ismo = ismobile();
+				$.each(ads,function(i,r){
+					var width = parseInt(r.width) === 0 ? '100%' : (r.width * (cWidth / pcContainerWidth))+'px';
+					var height = parseInt(r.height)===0 ? '100%' : r.height+'px';
+					var advs = $('.ps_'+i);
+					if(r.ads && r.ads.length > 0 && advs.length > 0){
+						$.each(r.ads,function(ii,rr){
+							var url = '';
+							var adv = rr;
+							if(ismo != parseInt(adv.ismobile)) return;
+							$img = $('<img />');
+							$imgPath = '';
+							if( adv.localpic !=''){
+								$imgPath = adv.localpic;
+							}else if(adv.media != ''){ 
+								$imgPath = adv.media;
+							}else if(adv.relogopic != ''){
+								$imgPath = adv.relogopic;
+							}
+							$img.attr('src', $imgPath);
+							$img.attr('title', adv.name);
+						
+							$img.attr('style', "width:"+width+";height:"+height+";");
+	
+							$a = $('<a />');
+						
+							if(adv.id && adv.relname != '' && adv.relogopic != '') {
+								url = '/tiaozhuan.php?id=' + adv.id;
+							}else{
+								url = (adv.hash) ?'/link/'+adv.hash : adv.url;
+							}
+							$a.attr('href', url);
+							$a.attr('target', '_blank');
+							var id = 0;
+							if(adv.id){
+								id = adv.id;
+							}
+							var name =  "";
+							if(adv.name){
+								name =  adv.name;
+							}
+							var zone_name = "";
+							if(adv.zone_name){
+								zone_name = adv.zone_name;
+							}
+							$a.on({
+								'click':function(){
+									$.post('/ajax/adv_count',{'id':id,'title':name,'zone_name':zone_name},function(resutl){});
+								}
+							});
+							var margin = '0 0 10px 0';
+							if(adv.margin && adv.margin != ''){
+								margin = adv.margin;
+							}
+							if(adv.isbtn && parseInt(adv.isbtn) === 1){
+								var btn = createCloseBtn();
+								$(advs).append(btn);
+							}
+							$(advs).css({'width':width,'margin':margin}).append($a.append($img));
+						});
+					}
+				});
+			}
+		}
+		function HideFoot() {
+            var botm = $('.QQ_S').css("top");
+            var screenH = $(window).height();
+            var len = botm.length;
+            num = Number(botm.substr(0, len - 2));
+            var time = setInterval(function () {
+                if (num <= screenH - 212) {
+                    num = num + 40;
+                    botmt = num + "px";
+                    $('.QQ_S').css("top", botmt)
+                } else {
+                    clearInterval(time);
+                    $('.QQ_S').css("display", "none");
+                    $('.QQ_S1').css("display", "block");
+                }
+            }, 10);
+        }
+        function ShowFoot() {
+            $('.QQ_S').css("display", "block");
+            $('.QQ_S1').css("display", "none");
+            var botm = $('.QQ_S').css("top");
+            var screenH = $('.QQ_none').css("top");
+            var len = botm.length; lena = screenH.length;
+            num = Number(botm.substr(0, len - 2));
+            numa = Number(screenH.substr(0, lena - 2));
+            var time = setInterval(function () {
+                if (num > numa + 30) {
+                    num = num - 30;
+                    botmt = num + "px";
+                    $('.QQ_S').css("top", botmt);
+                } else {
+                    $('.QQ_S').css("top", numa + "px");
+                    clearInterval(time);
+                }
+            }, 10);
+        } 
+	
+	var back_img = '/templates/frontend/frontend-default/img/KF-ZL.jpg?t=1509781684';
+	var wrapper_left_bg_top = parseInt('400');
+	var wrapper_right_bg_top = parseInt('400');
+	</script>
+<div style="display:none" id="tongji">
+	<script type="text/javascript" src="/ads/tongji.js?t=5"></script>
+</div>
+</body>
+</html>
+
+<!-- static file: pictures/index_page_268.html make time:2017-11-04 15:48:21-->

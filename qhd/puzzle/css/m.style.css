@@ -1,0 +1,181 @@
+/*reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav,output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;}
+
+ul,li{list-style: none;}
+.text-indent{text-indent:2em;}
+body{background:#fef06f;}
+.warp{max-width:1000px;padding:0 4%;margin:0 auto;}
+.clearfix{overflow: auto;zoom:1;}
+/*头部导航*/
+#header{padding:.5rem 0;background:#1bbc9d;}
+#header .head-logo{display:block;float:left;width:20%;}
+#header .logo-gif{float:left;width:19%;margin-left:1rem;}
+
+/*banner*/
+.banner{position:relative;background:url("../images/m.images/banner-bg1.jpg") no-repeat top center;background-size: cover; -webkit-background-size: cover;-moz-background-size: cover;  -o-background-size: cover; }
+.banner .banner-title1{float:left;width:80%;margin-left:12%;padding-top:1rem;}
+.banner .banner-title2{float:left;width:57%;padding-top:1rem;margin-left:33%;}
+.banner .banner-title3{float:left;width:44%;margin-left:47%;}
+.banner .title-pintu{width:53%;float:left;margin-top:-22%;margin-left:-2%;}
+.banner .moon{position:absolute;z-index:1;}
+.banner .gold{float:left;width:23%;margin-left:15%;}
+.banner .title-nvyou{float:left;width:36%;margin:2% 0 0 -16%;}
+/*拼图游戏*/
+.game{padding-bottom:5%;background: url("../images/m.images/bg-yellow1.jpg") repeat-y;}
+.game .game-main{padding:2% 4%;background:#bc3457;border:3px solid #ec7694;}
+.game .game-main .level{margin-bottom:2%;}
+.game .game-main .level .name{float:left;width:49%;text-align:center;color:white;font-size: 1.1rem;}
+.game .game-main .level .level-num{float:left;width:48%;margin-left:3%;text-align:center;color:white;font-size: 1.1rem;}
+.game .game-main .game-area{float:left;width:49%;}
+.game .game-main #actualImageBox{;float:left;width:48%;margin-left:3%;border: 1px solid #ec7694;box-sizing:border-box;background: #da6180;border-radius:1rem;}
+.game .game-main #actualImageBox>p{text-align:center;margin-top:3%;color:#34000d;}
+.game .game-main #actualImageBox #actualImage{width:61%;margin:0 auto;border:1px solid white;}
+.game .game-main #actualImageBox #actualImage+div{margin:2% 0;text-align: center;color:white;font-size: 1.2rem;}
+.game .game-main #actualImageBox .function-btns{color:#34000d;text-align:center;}
+.game .game-main #actualImageBox .function-btns div{margin-bottom:2%;}
+.game .game-main #actualImageBox .function-btns div span{color:white;}
+.game .game-main #actualImageBox .function-btns #btn-transfer{display:block;width:40%;margin:0 auto 5%;}
+/*活动内容*/
+.content{background:url("../images/m.images/bg-yellow2.jpg") repeat-y;padding-bottom: 5%;}
+.content .content-title{width:37%;margin:0 auto;}
+.content .content-main{padding:3% 5%;border-radius: 10px;background:#efd30e;;}
+.content .content-main .content-h1{width:23%;}
+.content .content-main .text-indent{margin-top:1%;}
+.content .content-main .text-indent span{color:#d84d71;}
+.content .content-main .bonuses{width:30%;margin:1% auto 0;}
+.table-bonuses {width: 100%;background: #f06b8e;color: white;text-align: center;border-collapse: collapse;border-color:white;border:1px solid;}
+.content .level-math{width:30%;margin:3% auto;position:relative;}
+.content .level-math span{position:absolute;top:37%;right:13%;color:#921334;font-size: 2rem;}
+.content .marquee {width:88%;margin:10px auto 30px;padding:15px 0; overflow:hidden; text-align: center;border:1px solid #ccc; background: #f06b8e;border-radius:10px;}
+.content .marquee p{font-size:14px;line-height:35px;color:white;letter-spacing:5px;}
+.content .marquee p span{color:#660e25;}
+
+/*拼图大比拼荣誉榜*/
+.top-six-title{width:26%;margin:40px auto 10px;}
+.top-six-table{margin-bottom:50px; }
+.top-six-table>table{width:89%;margin:0 auto;border-collapse:collapse;background:#F06B8E;border:1px solid white;color:white;text-align: center;}
+.top-six-table table th{background:#d84d71;color:#4f0317;}
+.top-six-table table td span{color:#4f0317;}
+
+/*活动期间充值优惠*/
+.sales{width:89%;margin:3% auto 0;padding:10px 50px 30px;background:#efd30e;border-radius:10px;}
+.sales .sales-title{width:60%;margin-top:10px;margin-bottom:15px;background:url("../images/title-sales.png") no-repeat;}
+.sales p.text-indent span{color:#F06B8E;}
+.sales .qq-chat{width:50%;float:left;margin-top: 50px;}
+.sales .qq-chat p{float:right;font-weight:bold;color:#771c34;text-align: center;}
+.sales .qq-chat a.btn-chat{display:block;width:88px;height:20px;margin-left:10px;float:right;background:url("../images/btn-qq-cs.png") no-repeat;cursor:pointer;}
+.sales .cs{width:50%;float:right;margin-top:30px;padding-left:75px;box-sizing: border-box;}
+.sales .cs a.btn-cs{display:block;width:75%;line-height:20px;text-align:center;background:#f06b8e;border-radius:3px;color:white;text-decoration: none;}
+.sales .cs a.btn-cs:hover{background:#ff91ae;}
+.sales .cs span.cs-img{display:block;float:left;width:41px;height:39px;background:url("../images/btn-cs.png") no-repeat;}
+
+/*活动细则*/
+.rules{padding-bottom:4%;background:url("../images/m.images/bg-yellow1.jpg") repeat-y;}
+.rules .rules-title{width:37%;margin:0 auto;}
+.rules .rules-content{width:90%;margin:0 auto;padding:3% 5% 3%;box-sizing:border-box;background:#fffded;border-radius:10px;}
+.rules .rules-content p{line-height: 35px;}
+
+/*脚部*/
+.footer{background: #3a3a3a;padding:20px 0 10px;text-align: center;color:#6d6d6d;}
+.footer .logo-footer{width:14%;margin:0 auto 10px;}
+
+/*闯关成功*/
+.complete{position: fixed;top: 0;right: 0;bottom: 0;left: 0;background-color:rgba(0,0,0,.5);z-index: 9999;cursor:pointer;display:none;}
+.main-complete{width:49%;position:fixed;top:30%;left:26%;z-index: 99999;}
+
+@media (min-width:1180px) {
+    .banner .title-nvyou {width: 28%;margin-top: -3%;}
+    .game .game-main #actualImageBox #actualImage{width:55%;}
+    .content .level-math span{position:absolute;right:18%;}
+    .banner .title-pintu{margin-left:2%;}
+}
+@media (min-width:975px) {
+    .game .game-main #actualImageBox{width:45%;margin-left: 6%;}
+}
+@media (max-width:768px) {
+    .content .level-math span{position:absolute;top:24%;right:12%;font-size:1.5rem;}
+    .game .game-main #actualImageBox{width:45%;margin-left: 6%;}
+}
+
+
+@media (max-width: 600px) {
+    #header .head-logo{width:30%;}
+    #header .logo-gif{width:30%;}
+    .banner .banner-title3{width:50%;margin-left: 41%;}
+    .banner .title-nvyou{width:43%;margin:2% 0 0 -22%;}
+    .game .game-main .game-area{float:none;width:100%;}
+    .jqPuzzle .jqp-controls{width:100%;margin-top: 1%;}
+    .jqPuzzle .jqp-controls a{float:none;margin:0 auto;}
+    .jqPuzzle .jqp-controls span{display:block;margin-left: 32%;}
+    .game .game-main #actualImageBox{float:none;width:100%;margin-left: 0;margin-top: 2%;}
+    .game .game-main #actualImageBox #actualImage{width:50%;}
+    .content .content-title{width:60%;}
+    .content .content-main .content-h1{width:50%;}
+    .content .content-main .bonuses{width:60%;}
+    .content .level-math{width:60%;}
+    .content .level-math span{top:25%;right:10%;}
+    .content .marquee{width:100%;}
+    .content .marquee p{letter-spacing: 0;}
+    .top-six-title{width:55%;margin-top: 20px;}
+    .top-six-table>table{width:100%;}
+    .sales{padding:1% 2% 1%;width:95%;}
+    .sales .qq-chat a.btn-chat{float:none;margin:0 auto;}
+    .sales .cs{padding-left: 3%;}
+    .rules .rules-title{width:60%;}
+    .footer .logo-footer{width:30%;}
+}
+
+
+@media (max-width: 414px) {
+    #header .head-logo{width:30%;}
+    #header .logo-gif{width:30%;}
+    .banner .banner-title3{width:50%;margin-left: 41%;}
+    .banner .title-nvyou{width:43%;margin:2% 0 0 -22%;}
+    .game .game-main .game-area{float:none;width:100%;}
+    .jqPuzzle .jqp-controls{width:100%;margin-top: 1%;}
+    .jqPuzzle .jqp-controls a{float:none;margin:0 auto;}
+    .jqPuzzle .jqp-controls span{display:block;margin-left: 32%;}
+    .game .game-main #actualImageBox{float:none;width:100%;margin-left: 0;margin-top: 2%;}
+    .content .content-title{width:60%;}
+    .content .content-main .content-h1{width:50%;}
+    .content .content-main .bonuses{width:60%;}
+    .content .level-math{width:60%;}
+    .content .level-math span{top:25%;right:10%;}
+    .content .marquee{width:100%;}
+    .content .marquee p{letter-spacing: 0;}
+    .top-six-title{width:55%;margin-top: 20px;}
+    .top-six-table>table{width:100%;}
+    .sales{padding:1% 2% 1%;width:95%;}
+    .sales .qq-chat a.btn-chat{float:none;margin:0 auto;}
+    .sales .cs{padding-left: 3%;}
+    .rules .rules-title{width:60%;}
+    .footer .logo-footer{width:30%;}
+	.main-complete{width:70%;position:fixed;top:30%;left:17%;z-index: 99999;}
+}
+
+@media (max-width: 320px) {
+    #header .head-logo{width:30%;}
+    #header .logo-gif{width:30%;}
+    .banner .banner-title3{width:50%;margin-left: 41%;}
+    .banner .title-nvyou{width:43%;margin:2% 0 0 -22%;}
+    .game .game-main .game-area{float:none;width:100%;}
+    .jqPuzzle .jqp-controls{width:100%;margin-top: 1%;}
+    .jqPuzzle .jqp-controls a{float:none;margin:0 auto;}
+    .jqPuzzle .jqp-controls span{display:block;margin-left:26%;}
+    .game .game-main #actualImageBox{float:none;width:100%;margin-left: 0;margin-top: 2%;}
+    .content .content-title{width:60%;}
+    .content .content-main .content-h1{width:50%;}
+    .content .content-main .bonuses{width:60%;}
+    .content .level-math{width:60%;}
+    .content .level-math span{top:17%;right:10%;font-size: 1.5rem;}
+    .content .marquee{width:100%;}
+    .content .marquee p{letter-spacing: 0;}
+    .top-six-title{width:55%;margin-top: 20px;}
+    .top-six-table>table{width:100%;}
+    .sales{padding:1% 2% 1%;width:95%;}
+    .sales .qq-chat a.btn-chat{float:none;margin:0 auto;}
+    .sales .cs{padding-left: 3%;margin-top:9px;}
+    .rules .rules-title{width:60%;}
+    .footer .logo-footer{width:30%;}
+	.main-complete{width:70%;position:fixed;top:30%;left:17%;z-index: 99999;}
+}

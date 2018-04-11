@@ -1,0 +1,36 @@
+{if $video.embed_code != ''}
+	<div class="video-embedded">
+		{$video.embed_code}
+	</div>
+{else}
+<script type="text/javascript" src="{$baseurl}/media/player/js/swfobject.js"></script>
+<div id="flash" class="video-container">
+	{if $video.iphone == 1}
+<div id="mobile_player">
+<video controls poster="{insert name=thumb_path vid=$video.VID}/default.jpg" width="100%" height="100%"> <source src="{$mobile_url}" type="video/mp4"> </video>
+</div>
+	{else}
+		<center>
+			<div class="text-danger">{t c='video.not_available'}</div>
+		</center>
+	{/if}
+</div>
+{literal}
+<script type="text/javascript" src="/media/new_player/player.js" charset="utf-8"></script>
+<script type="text/javascript">
+	var flashvars={
+{/literal}
+
+f:'{$mobile_url}', a:'', s:'0', c:'0', x:'', i:'', d:'{$player_ads.stop_ads}', u:'{$player_ads.stop_ads_uri}', {if $ads_view}l:'{$front_ads.src}',r:'{$front_ads.href}',t:'{$front_ads.time}',{/if} y:'',e:'3',v:'80',p:'0', h:'0', q:'',m:'',o:'',w:'',g:'',j:'',k:'30|60',wh:'',lv:'0',loaded:'loadedHandler'{literal}
+
+};
+	var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+	CKobject.embedSWF('/media/new_player/player.swf','flash','flash_player_id','100%','100%',flashvars,params);
+	function ckadjump(){
+		alert('VIP用户免广告');
+	}
+	
+</script>
+{/literal}
+{/if}
+

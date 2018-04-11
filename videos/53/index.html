@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="Zh-hans" >
+
+<head>
+	
+    <title> 最新 视频 - 青青草在线视频</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="1 days" />
+    <meta name="author" content="QQC 2015 Themes" />
+    <meta name="copyright" content="2015 QQC Video Inc." />
+    <meta name="keywords" content=" 最新 videos, 日本AV,日本A片,超碰,CaoPorn,91Porn,在线视频" />
+    <meta name="description" content=" 最新 视频 - 青青草是针对华人更新最快内容最全的绿色的成人站之一，比超碰CaoPorn和91Porn更稳定全面，每日更新亚洲情色、欧美性爱、偷拍自拍等多种类型的在线视频电影，激情你懂得！" />
+	<link rel="Shortcut Icon" type="image/ico" href="/favicon.ico" />
+	<link rel="apple-touch-icon" href="/templates/frontend/frontend-default/img/webapp-icon.png">
+
+    <script type="text/javascript">
+    var base_url = "http://www.zhiboav.me";
+    var max_thumb_folders = "32000";
+    var tmb_speed_url = "http://imagesweb.yxdyk.com:55888";
+    var tpl_url = "/templates/frontend/frontend-default";
+		var lang_deleting = "删除...";
+	var lang_flaging = "标记中...";
+	var lang_loading = "加载中...";
+	var lang_sending = "发送...";
+	var lang_share_name_empty = "请输入您的名字!";
+	var lang_share_rec_empty = "请至少输入一个收件人的电子邮件!";
+
+
+	
+	function getRealDomain(domains){
+		if(domains == '127.0.0.1' || domains == 'localhost')
+			return domains;
+		var redomain = '';
+		var domainArray = new Array("com" , "net" , "org" , "gov" , "edu", "me", "us", 'info', 'la');
+		var domains_array = domains.split('.');
+		var domain_count = domains_array.length-1;
+		var flag = false;
+		if(domains_array[domain_count]=='cn'){
+			for(i=0;i<domainArray.length;i++){
+				if(domains_array[domain_count-1] == domainArray[i]){
+					flag =true;
+					break;
+				}
+			}
+
+			if(flag==true){
+				redomain = domains_array[domain_count-2]+"."+domains_array[domain_count-1]+"."+domains_array[domain_count];
+			}else{
+				redomain = domains_array[domain_count-1]+"."+domains_array[domain_count];
+			}
+		}else{
+			redomain = domains_array[domain_count-1]+"."+domains_array[domain_count];
+		}
+		return redomain;
+	}
+
+	domain = getRealDomain(location.host);
+	document.domain = domain;
+
+	
+
+
+	</script>
+
+<script type="text/javascript" src="/templates/frontend/frontend-default/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/templates/frontend/frontend-default/js/jquery.inputbox.js"></script>
+
+<link type="text/css" rel="stylesheet" href="/templates/frontend/frontend-default/css/bootstrap.css?t=1" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/templates/frontend/frontend-default/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="/templates/frontend/frontend-default/js/respond.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="/templates/frontend/frontend-default/js/jscroller2-1.5.js"></script>
+
+	<link type="text/css" rel="stylesheet" href="/templates/frontend/frontend-default/css/colors.css?t=201509091" />
+	<link type="text/css" rel="stylesheet" href="/templates/frontend/frontend-default/css/font-awesome.min.css" />
+	<link type="text/css" rel="stylesheet" href="/templates/frontend/frontend-default/css/responsive.css?t=201510052" />
+	<link type="text/css" rel="stylesheet" href="/templates/frontend/frontend-default/css/style.css?t=2016021223" /> 
+	<link type="text/css" rel="stylesheet" href="/css/qq.css?v=20160212093"/> 
+ <script type="text/javascript">
+ 
+function load_loginbox(){
+	$('#login').load('/site_login.php');
+	$("#sebimsg").load('/sebi.php');
+}
+
+// JavaScript Document
+$(function(){
+	$('.wrapper_bg_c').click(function(){
+		$.post('/ajax/adv_count',{'id':57,'title':'背景广告链接访问','zone_name':"背景广告"},function(resutl){});
+	});
+	/*加载登陆*/
+	load_loginbox();
+	$("#user").focus();
+	$("input:text,textarea,input:password").focus(function() {
+		$(this).addClass("cur_select");
+    });
+    $("input:text,textarea,input:password").blur(function() {
+		$(this).removeClass("cur_select");
+    });
+	$('#wrapper').removeAttr('style');
+	$(document).on('click', ".login_submit", function(){
+		var user = $("#user").val();
+		var pass = $("#pass").val();
+		if(user==""){
+			$('<div id="msg" />').html("用户名不能为空！").appendTo('.sub').fadeOut(2000);
+			$("#user").focus();
+			return false;
+		}
+		if(pass==""){
+			$('<div id="msg" />').html("密码不能为空！").appendTo('.sub').fadeOut(2000);
+			$("#pass").focus();
+			return false;
+		}
+		$.ajax({
+			type: "GET",
+			url: "/login_ajax?action=login",
+			dataType: "jsonp",
+			cache: false,
+			data: {"user":user,"pass":pass},
+			beforeSend: function(){
+				jQuery("button.login_submit").attr({"disabled": "disabled"});
+				$('<div id="msg" />').html("正在登录...").appendTo('.sub').fadeOut(2000);
+				$("#pass").focus();
+			},
+			success: function(json){
+				if(json.success==1){
+					$("#login_form").remove();
+					$("#login").html(json.html);
+				}else{
+					$("#msg").remove();
+					$('<div id="errmsg" />').html(json.msg).css("color","#fff").appendTo('.sub').fadeOut(2000);
+
+					jQuery("button.btn").removeAttr('disabled');
+					return false;
+				}
+			}
+		});
+	});
+
+	$("#logout").on('click',function(){
+		$.post("login.php?action=logout",function(msg){
+			if(msg==1){
+			    $("#result").remove();
+			    var div = "<div id='login_form'><p><label>用户名：</label> <input type='text' class='input' name='user' id='user' /></p><p><label>密 码：</label> <input type='password' class='input' name='pass' id='pass' /></p><div class='sub'><input type='submit' class='btn' value='登 录' /></div></div>";
+			    $("#login").append(div);
+			}
+		});
+	});
+	$('div[name="stype"]').inputbox({
+		height:31,
+		width:55
+	});
+	
+});
+ 
+ </script>
+
+
+</head>
+
+<body>
+
+<div id="sebimsg"></div>
+<div class="top-nav">
+	<div class="container">
+		<ul class="top-menu">
+							<div class="pull-left">
+					
+					<li class="hidden-xs"><a data-toggle="modal" href="/"><span style="color:white">欢迎光临青青草在线视频</span></a></li>
+
+          <!--<li class="hidden-xs"><a data-toggle="modal" href="http://www.5188yy.com/ad/fanbb.rar"><span style="color:white">地址发布器</span></a></li>-->
+
+					<li class="hidden-xs visible-mo"><a data-toggle="modal" href="http://www.sowo888.com/" target="_blank"><span style="color:white">请收藏青青草地址发布页</span></a></li>
+					<li class="visible-xs" style="color: white;">青青草手机版欢迎你</li>
+					</div>
+
+						<div id="login" class="pull-right">
+
+			</div>
+			<div class="clearfix"></div>      
+		</ul>
+	</div>
+</div>
+<div class="navbar navbar-inverse" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+
+
+<div class="mobile_search visible-xs visible-sm pull-right">
+ <form method="post" action="/all_search"> <input type="text" name="title" placeholder="请输入内容" class="search_input" value="" style="  ">
+    			    <!--<div name="stype" type="selectbox">
+    			    		<div class="opts">
+    			    			<a href="javascript:;" class="selected" val="videos">电影</a>
+    			    			<a href="javascript:;" val="bbs">论坛</a>
+    			    		</div>
+    			    	</div>-->
+
+
+
+    			     <input class="search_submit" type="submit" name="submit" value="搜索"/> </form> </div>
+
+
+
+		<div class="pull-left">
+			<a class="navbar-brand" href="/">
+                <img src="/templates/frontend/frontend-default/img/logo.png?t=2">
+            </a>
+            <a class="navbar-brand hidden-xs" style="margin-left: 15px;" href="/"><img src="/templates/frontend/frontend-default/img/logo.gif"/></a>
+			</div>
+
+			<div class="search_header hidden-xs hidden-sm pull-right">
+
+			<!--头部广告-->
+			<!--<script type="text/javascript" src="http://www.zhiboav.me/ads/adv.js?pos=36"></script>-->
+			<div class="ads_36"></div>
+			</div>
+
+		</div>
+
+		<!--/.nav-collapse -->
+    </div>
+
+    <!--Mobile-->
+    <div class="mobile_navbar_collapse  visible-xs">
+    <ul>
+
+    <li><a href="/">首页</a></li>
+    <li><a class="" href="/videos">最新更新</a></li>
+    <li><a href="/hd">高清视频</a></li>
+    <li><a href="/videos/10/index.html">动漫电影</a></li>
+    <li><a href="/videos/25/index.html">欧美电影</a></li>
+    <!--<li><a href="/videos/28/index.html">日韩无码</a></li>-->
+        				<li class="dropdown">
+        					<a href="/videos/26/index.html" class="dropdown-toggle" data-toggle="dropdown">日韩无码 <b class="caret"></b></a>
+        						<ul class="dropdown-menu">
+
+    <li><a href="/videos/4/index.html">无码丝袜</a></li>
+    <li><a href="/videos/5/index.html">无码中文字幕</a></li>
+    <li><a href="/videos/6/index.html">无码乱伦</a></li>
+    <li><a href="/videos/28/index.html">无码人妻</a></li>
+    <li><a href="/videos/9/index.html">无码制服</a></li>
+    <li><a href="/videos/11/index.html">无码口交</a></li>
+    <li><a href="/videos/27/index.html">无码强奸</a></li>
+
+    </ul>
+        				</li>
+
+    <li class="dropdown">
+        					<a href="/videos/26/index.html" class="dropdown-toggle" data-toggle="dropdown">日韩有码 <b class="caret"></b></a>
+        						<ul class="dropdown-menu">
+
+    <li><a href="/videos/35/index.html">有码乱伦</a></li>
+    <li><a href="/videos/32/index.html">有码人妻</a></li>
+    <li><a href="/videos/37/index.html">有码出轨</a></li>
+    <li><a href="/videos/34/index.html">有码制服</a></li>
+    <li><a href="/videos/33/index.html">有码口交</a></li>
+    <li><a href="/videos/31/index.html">有码巨乳</a></li>
+    <li><a href="/videos/36/index.html">有码强奸</a></li>
+
+    </ul>
+        				</li>
+
+    <li class="dropdown">
+        					<a href="/videos/26/index.html" class="dropdown-toggle" data-toggle="dropdown">国产电影 <b class="caret"></b></a>
+        						<ul class="dropdown-menu">
+
+    <li><a href="/videos/8/index.html">偷拍视频</a></li>
+    <li><a href="/videos/19/index.html">真实自拍</a></li>
+    <li><a href="/videos/40/index.html">裸聊视频</a></li>
+    </ul>
+        				</li>
+
+    <li><a href="/videos/41/index.html">明星热门</a></li>
+    <li><a href="/hdong/vip">加入VIP</a></li>
+
+    <!--<li><a href="#" class="videos-icon" data-toggle="collapse" data-target=".navbar-inverse-collapse"><em>青青草视频</em></a></li>
+    <li><a class="bbs-icon" href="javascript:;" onclick="location.href='http://bbs.'+domain"><em>青青草社区</em></a></li>-->
+    <!--<li><a class="shop-icon" href="http://bbs.zhiboav.me/plugin.php?id=it618_scoremall:scoremall"><em>青青草商城</em></a></li>
+    <li><a class="service-icon" href="/hdong/vip" target="_blank"><em>加入vip</em></a></li>-->
+     </ul>
+
+    </div>
+    <!--Mobile-->
+
+    <div class="navbar-collapse pc-navbar collapse navbar-inverse-collapse">
+
+    	<div class="container">
+
+    			<ul class="hidden-xs nav navbar-nav navbar-navwd">
+    			    <li><a href="/">首页</a></li>
+                <li><a class="hidden-xs" href="/videos">最新更新</a></li>
+                    <li><a href="/hd">高清视频</a></li>
+                    <li><a href="/videos/10/index.html">动漫电影</a></li>
+                    <li><a href="/videos/25/index.html">欧美电影</a></li>
+<li class="dropdown" style="width:82px">
+        					<a href="/videos/26/index.html" class="dropdown-toggle" data-toggle="dropdown">日韩无码 <b class="caret"></b></a>
+        						<ul class="dropdown-menu">
+
+    <li><a href="/videos/4/index.html">无码丝袜</a></li>
+    <li><a href="/videos/5/index.html">无码中文字幕</a></li>
+    <li><a href="/videos/6/index.html">无码乱伦</a></li>
+    <li><a href="/videos/28/index.html">无码人妻</a></li>
+    <li><a href="/videos/9/index.html">无码制服</a></li>
+    <li><a href="/videos/11/index.html">无码口交</a></li>
+    <li><a href="/videos/27/index.html">无码强奸</a></li>
+
+    </ul>
+        				</li>
+
+    <li class="dropdown" style="width:82px">
+        					<a href="/videos/26/index.html" class="dropdown-toggle" data-toggle="dropdown">日韩有码 <b class="caret"></b></a>
+        						<ul class="dropdown-menu">
+
+    <li><a href="/videos/35/index.html">有码乱伦</a></li>
+    <li><a href="/videos/32/index.html">有码人妻</a></li>
+    <li><a href="/videos/37/index.html">有码出轨</a></li>
+    <li><a href="/videos/34/index.html">有码制服</a></li>
+    <li><a href="/videos/33/index.html">有码口交</a></li>
+    <li><a href="/videos/31/index.html">有码巨乳</a></li>
+    <li><a href="/videos/36/index.html">有码强奸</a></li>
+
+    </ul>
+        				</li>
+
+    <li class="dropdown" style="width:82px">
+        					<a href="/videos/26/index.html" class="dropdown-toggle" data-toggle="dropdown">国产电影 <b class="caret"></b></a>
+        						<ul class="dropdown-menu">
+
+    <li><a href="/videos/8/index.html">偷拍视频</a></li>
+    <li><a href="/videos/19/index.html">真实自拍</a></li>
+    <li><a href="/videos/40/index.html">裸聊视频</a></li>
+    </ul>
+        				</li>
+                    <li><a href="/videos/41/index.html">明星热门</a></li>
+                 <li class="visible-mo"><a href="/novels/index.html">成人小说</a></li>
+                <li class="visible-mo"><a href="/pictures/index.html">成人图片</a></li> 
+                    <li class="visible-mo"><a href="/hdong/vip" class="luntan">加入VIP</a></li>
+					<li><a href="http://11qqc.com" class="luntan" target="_blank">论坛</a></li>
+    			    <div class="search_nav hidden-xs hidden-sm"> <form method="post" action="/all_search"> <input type="text" name="title" placeholder="请输入搜索内容" class="search_input" value="">
+    			     <input class="search_submit" type="submit" name="submit" value="搜索"/> </form> </div><div style="clear:both;"></div>
+    			</ul>
+    			</div>
+    		</div>
+    		    		<div class="pc-tags cats hidden-xs hidden-sm navbar-collapse navbar-inverse-collapse">
+
+
+    			<div class="container" style="display:none">
+
+
+
+    					</div>
+
+    				</div>
+    	
+
+
+</div>
+<a id="wrapper_left_bg" class="wrapper_bg_c" target="_blank" href="/hdong/vip/index.html"></a>
+<a id="wrapper_right_bg" class="wrapper_bg_c" target="_blank" href="/hdong/vip/index.html"></a>
+<div id="wrapper">
+<div class="container">
+
+<div class="ad-body " style="padding:0;margin-top:-9px">
+
+<div class="adv-pc hidden-xs">
+	<div style="float:left ;">
+	<!--<script type="text/javascript" src="http://www.zhiboav.me/ads/adv.js?pos=37"></script>-->
+	<div class="ads_37"></div>
+	</div>
+	<div style="float:right;margin-left:1.1%;">
+	<div class="ads_77"></div>
+	</div>
+	<div style="float:right">
+	<!--<script type="text/javascript" src="http://www.zhiboav.me/ads/adv.js?pos=38"></script>-->
+	<div class="ads_38"></div>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+
+</div>
+<div class="ad-body " style="padding:0;margin-top:-15px">
+	<div class="adv-pc hidden-xs">
+		<div style="float:left;">
+		<!--<script type="text/javascript" src="http://www.zhiboav.me/ads/adv.js?pos=49"></script>-->
+		<div class="ads_49"></div>
+		</div>
+		<div style="float:right;margin-left:1.1%;">
+		<!--<script type="text/javascript" src="http://www.zhiboav.me/ads/adv.js?pos=51"></script>-->
+		<div class="ads_51"></div>
+		</div>
+		<div style="float:right;">
+		<!--<script type="text/javascript" src="http://www.zhiboav.me/ads/adv.js?pos=53"></script>-->
+		<div class="ads_53"></div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+</div>
+
+<div class="ad-body " style="padding:0;margin-top:-15px">
+	<div class="adv-pc hidden-xs">
+		<div style="float:left;">
+			<div class="ads_87"></div>
+		</div>
+		<div style="float:right;margin-left:1.1%;">
+			<div class="ads_91"></div>
+		</div>
+		<div style="float:right;">
+			<div class="ads_89"></div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+</div>
+
+</div>
+<div class="container">
+
+	
+	
+	<div class="row">
+		
+		
+		<div class="col-md-3 col-sm-4">
+			
+			<div class="list-group" style="margin-bottom:0px;">
+<!--Mobile-->
+<div class="header visible-mo" style="background-color:#1bbc9d;border-color:#1bbc9d;color:white;display:none\9;">
+	<a href="/videos/" class="list-group-item" style="background-color:#1bbc9d;border-color:#1bbc9d;color:white;">
+		<i class="fa fa-list-alt"></i>&nbsp;视频分类
+	</a>
+	<a style="display: block;float: right;padding: 10px 15px;color: white;font-weight: bold;font-size:20px;" showorhide="0" onclick="showOrHide(this);"><img src="/templates/frontend/frontend-default/img/aaOn.png" style="width:18px;"/></a>
+<div style="clear:both;"></div>
+	</div>
+<!--Mobile-->
+	<a href="/videos/" class="list-group-item header visible-pc">
+		<i class="fa fa-list-alt"></i>&nbsp;视频分类
+	</a>
+				<a id="categories_class_8" href="/videos/8" class="active_list list-group-item">
+		偷拍视频 <i class="total_videos pull-right">2304</i>
+		</a>
+					<a id="categories_class_10" href="/videos/10" class="active_list list-group-item">
+		动漫电影 <i class="total_videos pull-right">314</i>
+		</a>
+					<a id="categories_class_42" href="/videos/42" class="active_list list-group-item">
+		同性人妖 <i class="total_videos pull-right">45</i>
+		</a>
+					<a id="categories_class_3" href="/videos/3" class="active_list list-group-item">
+		国产三级 <i class="total_videos pull-right">1187</i>
+		</a>
+					<a id="categories_class_39" href="/videos/39" class="active_list list-group-item">
+		国产电影 <i class="total_videos pull-right">9</i>
+		</a>
+									<a id="categories_class_4" href="/videos/4" class="active_list list-group-item">
+		无码丝袜 <i class="total_videos pull-right">491</i>
+		</a>
+					<a id="categories_class_5" href="/videos/5" class="active_list list-group-item">
+		无码中文字幕 <i class="total_videos pull-right">65</i>
+		</a>
+					<a id="categories_class_6" href="/videos/6" class="active_list list-group-item">
+		无码乱伦 <i class="total_videos pull-right">492</i>
+		</a>
+					<a id="categories_class_28" href="/videos/28" class="active_list list-group-item">
+		无码人妻 <i class="total_videos pull-right">1792</i>
+		</a>
+					<a id="categories_class_9" href="/videos/9" class="active_list list-group-item">
+		无码制服 <i class="total_videos pull-right">957</i>
+		</a>
+					<a id="categories_class_11" href="/videos/11" class="active_list list-group-item">
+		无码口交 <i class="total_videos pull-right">653</i>
+		</a>
+					<a id="categories_class_13" href="/videos/13" class="active_list list-group-item">
+		无码巨乳 <i class="total_videos pull-right">765</i>
+		</a>
+					<a id="categories_class_27" href="/videos/27" class="active_list list-group-item">
+		无码强奸 <i class="total_videos pull-right">528</i>
+		</a>
+									<a id="categories_class_41" href="/videos/41" class="active_list list-group-item">
+		明星热门 <i class="total_videos pull-right">1134</i>
+		</a>
+					<a id="categories_class_57" href="/videos/57" class="active_list list-group-item">
+		最强推荐 <i class="total_videos pull-right">740</i>
+		</a>
+					<a id="categories_class_35" href="/videos/35" class="active_list list-group-item">
+		有码乱伦 <i class="total_videos pull-right">1133</i>
+		</a>
+					<a id="categories_class_32" href="/videos/32" class="active_list list-group-item">
+		有码人妻 <i class="total_videos pull-right">1619</i>
+		</a>
+					<a id="categories_class_37" href="/videos/37" class="active_list list-group-item">
+		有码出轨 <i class="total_videos pull-right">790</i>
+		</a>
+					<a id="categories_class_34" href="/videos/34" class="active_list list-group-item">
+		有码制服 <i class="total_videos pull-right">1193</i>
+		</a>
+					<a id="categories_class_33" href="/videos/33" class="active_list list-group-item">
+		有码口交 <i class="total_videos pull-right">114</i>
+		</a>
+					<a id="categories_class_31" href="/videos/31" class="active_list list-group-item">
+		有码巨乳 <i class="total_videos pull-right">817</i>
+		</a>
+					<a id="categories_class_36" href="/videos/36" class="active_list list-group-item">
+		有码强奸 <i class="total_videos pull-right">1579</i>
+		</a>
+							<a id="categories_class_25" href="/videos/25" class="active_list list-group-item">
+		欧美电影 <i class="total_videos pull-right">1049</i>
+		</a>
+					<a id="categories_class_19" href="/videos/19" class="active_list list-group-item">
+		真实自拍 <i class="total_videos pull-right">4795</i>
+		</a>
+							<a id="categories_class_18" href="/videos/18" class="active_list list-group-item">
+		素人妻 <i class="total_videos pull-right">148</i>
+		</a>
+							<a id="categories_class_20" href="/videos/20" class="active_list list-group-item">
+		群交 <i class="total_videos pull-right">58</i>
+		</a>
+					<a id="categories_class_21" href="/videos/21" class="active_list list-group-item">
+		自慰按摩 <i class="total_videos pull-right">38</i>
+		</a>
+					<a id="categories_class_40" href="/videos/40" class="active_list list-group-item">
+		裸聊视频 <i class="total_videos pull-right">447</i>
+		</a>
+							<a id="categories_class_22" href="/videos/22" class="active_list list-group-item">
+		高清 <i class="total_videos pull-right">38</i>
+		</a>
+		</div>
+ <script type="text/javascript">
+ 
+function showOrHide(obj){
+	var sh  = $(obj).attr('showorhide');
+	if(sh == 1){
+		$('.active_list').hide();
+		$(obj).attr('showorhide',0);
+		$(obj).html('<img src="/templates/frontend/frontend-default/img/aaOn.png" style="width:18px;"/>');
+	}
+	if(sh == 0){
+		$('.active_list').show();
+		$(obj).attr('showorhide',1);
+		$(obj).html('<img src="/templates/frontend/frontend-default/img/aaOff.png" style="width:18px;"/>');
+	}
+}
+
+</script>			
+			<div class="ad-body">
+				
+				<div class="adv-pc">
+				<script type="text/javascript" src="/ads/cat-bottom.js"></script>
+				</div>
+				
+			</div>	
+					
+		</div>
+		
+		
+		
+		<div class="col-md-9 col-sm-8">
+				
+				
+				<div class="well well-filters new_filters">
+							<div class="pull-left">
+								<h4><i class="fa fa-clock-o green"></i>&nbsp;视频</h4>
+							</div>
+							<!--<div class="pull-right m-l-20">
+								<div class="hidden-xs">
+									<div class="btn-group">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">类型 <span class="caret"></span></button>
+										<ul class="dropdown-menu">
+											<li class="active"><a href="/videos/">全部</a></li>
+											<li ><a href="/videos/public">普通</a></li>
+											<li ><a href="/videos/private">VIP</a></li>
+										</ul>
+									</div>
+									
+									<div class="btn-group">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">大事记 <span class="caret"></span></button>
+										<ul class="dropdown-menu">
+											<li class="active"><a href="/videos/a">全部</a></li>							
+											<li ><a href="/videos/t">加入 今天</a></li>
+											<li ><a href="/videos/w">加入 这周</a></li>
+											<li ><a href="/videos/m">加入 本月</a></li>
+										</ul>
+									</div>					
+				
+									<div class="btn-group">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">最新 <span class="caret"></span></button>
+										<ul class="dropdown-menu">
+											<li ><a href="/videos/bw">看过的视频</a></li>						
+											<li class="active"><a href="/videos/mr">最新</a></li>
+											<li ><a href="/videos/mv">最受欢迎</a></li>
+											<li ><a href="/videos/md">最多评论</a></li>
+											<li ><a href="/videos/tr">最高评分</a></li>							
+											<li ><a href="/videos/tf">最爱</a></li>
+											<li ><a href="/videos/lg">时间最长</a></li>
+										</ul>
+									</div>					
+								</div>	
+								<div class="visible-xs">
+									<div class="btn-group">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Filters <span class="caret"></span></button>
+										<ul class="dropdown-menu">
+											<li class="active"><a href="/videos/">全部</a></li>
+											<li ><a href="/videos/public">普通</a></li>
+											<li ><a href="/videos/private">VIP</a></li>						
+											<li class="divider"></li>
+											<li class="active"><a href="/videos/a">全部</a></li>							
+											<li ><a href="/videos/t">加入 今天</a></li>
+											<li ><a href="/videos/w">加入 这周</a></li>
+											<li ><a href="/videos/m">加入 本月</a></li>
+											<li class="divider"></li>				
+											<li ><a href="/videos/bw">看过的视频</a></li>						
+											<li class="active"><a href="/videos/mr">最新</a></li>
+											<li ><a href="/videos/mv">最受欢迎</a></li>
+											<li ><a href="/videos/md">最多评论</a></li>
+											<li ><a href="/videos/tr">最高评分</a></li>							
+											<li ><a href="/videos/tf">最爱</a></li>
+											<li ><a href="/videos/lg">时间最长</a></li>
+										</ul>
+									</div>				
+								</div>
+							</div>-->
+							<div class="pull-right" style="display: none;">
+								<a class="btn btn-primary" href="/upload/video"><span class="hidden-xs"><i class="fa fa-upload"></i> 上传视频</span><span class="visible-xs"><i class="fa fa-upload"></i></span></a>
+							</div>		
+							<div class="clearfix"></div>
+					</div>
+				
+				
+		            					<div class="well well-sm" style="display: none;">
+						显示 <span class="text-white">1</span> 到 <span class="text-white">4</span> of <span class="text-white">4</span> 视频.
+					</div>			
+					<div class="row row-boder">
+		            						<div class="col-sm-6 col-md-4 col-lg-4">
+							<div class="well well-sm">
+								<a href="/video/23701/test-last">
+									<div class="thumb-overlay">
+										<img src="http://imagesweb.yxdyk.com:55888/media/videos/tmb/23701/1.jpg" title="test last" alt="test last" id="rotate_23701_20_1" class="img-responsive "/>
+										<div class="label-private">免费</div>																				<div class="duration">
+											
+											07:05
+										</div>
+									</div>
+									<span class="video-title title-truncate m-t-5">test last</span>
+								</a>
+								<div class="video-added">
+									
+									165 天 之前
+								</div>
+								<div class="video-views pull-left">
+									<i class="fa fa-eye"></i>&nbsp;1272
+								</div>
+								<div class="video-rating pull-right no-rating">
+									<i class="fa fa-thumbs-up video-rating-heart no-rating"></i> <b>-</b>
+								</div>
+								<div class="clearfix"></div>
+								
+							</div>				
+						</div>			
+		            						<div class="col-sm-6 col-md-4 col-lg-4">
+							<div class="well well-sm">
+								<a href="/video/23587/test-no-watermark">
+									<div class="thumb-overlay">
+										<img src="http://imagesweb.yxdyk.com:55888/media/videos/tmb/23587/1.jpg" title="test no watermark" alt="test no watermark" id="rotate_23587_20_1" class="img-responsive "/>
+										<div class="label-private">免费</div>																				<div class="duration">
+											
+											07:05
+										</div>
+									</div>
+									<span class="video-title title-truncate m-t-5">test no watermark</span>
+								</a>
+								<div class="video-added">
+									
+									166 天 之前
+								</div>
+								<div class="video-views pull-left">
+									<i class="fa fa-eye"></i>&nbsp;764
+								</div>
+								<div class="video-rating pull-right no-rating">
+									<i class="fa fa-thumbs-up video-rating-heart no-rating"></i> <b>-</b>
+								</div>
+								<div class="clearfix"></div>
+								
+							</div>				
+						</div>			
+		            						<div class="col-sm-6 col-md-4 col-lg-4">
+							<div class="well well-sm">
+								<a href="/video/23533/test-写入数据库">
+									<div class="thumb-overlay">
+										<img src="http://imagesweb.yxdyk.com:55888/media/videos/tmb/23533/1.jpg" title="test 写入数据库" alt="test 写入数据库" id="rotate_23533_20_1" class="img-responsive "/>
+										<div class="label-private">免费</div>																				<div class="duration">
+											
+											07:05
+										</div>
+									</div>
+									<span class="video-title title-truncate m-t-5">test 写入数据库</span>
+								</a>
+								<div class="video-added">
+									
+									166 天 之前
+								</div>
+								<div class="video-views pull-left">
+									<i class="fa fa-eye"></i>&nbsp;922
+								</div>
+								<div class="video-rating pull-right no-rating">
+									<i class="fa fa-thumbs-up video-rating-heart no-rating"></i> <b>-</b>
+								</div>
+								<div class="clearfix"></div>
+								
+							</div>				
+						</div>			
+		            						<div class="col-sm-6 col-md-4 col-lg-4">
+							<div class="well well-sm">
+								<a href="/video/23499/test">
+									<div class="thumb-overlay">
+										<img src="http://imagesweb.yxdyk.com:55888/media/videos/tmb/23499/1.jpg" title="test" alt="test" id="rotate_23499_20_1" class="img-responsive "/>
+										<div class="label-private">免费</div>																				<div class="duration">
+											
+											07:05
+										</div>
+									</div>
+									<span class="video-title title-truncate m-t-5">test</span>
+								</a>
+								<div class="video-added">
+									
+									166 天 之前
+								</div>
+								<div class="video-views pull-left">
+									<i class="fa fa-eye"></i>&nbsp;730
+								</div>
+								<div class="video-rating pull-right no-rating">
+									<i class="fa fa-thumbs-up video-rating-heart no-rating"></i> <b>-</b>
+								</div>
+								<div class="clearfix"></div>
+								
+							</div>				
+						</div>			
+		            					
+					</div>
+		            	
+		
+		
+									
+																		
+				</div>
+		
+		
+	</div>
+	
+	
+	<div class="ad-body">
+		<p class="ad-title">赞助商</p>
+		
+			</div>	
+</div></div>
+<div class="footer-container" style="position:relative;">
+	<div class="footer-links">
+		<div class="container">
+			<div class="row">
+				<div class="list-unstyled bottom-nav">
+					<li><a href="/static/advertise" rel="nofollow">广告</a></li>
+					<li><a href="/invite" rel="nofollow">邀请朋友</a></li>
+					<li><a href="/static/faq" rel="nofollow">常见问题</a></li>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer-copy hidden-xs">
+		<div class="container">
+			<div class="row text-muted">
+			  <p>站点申明：我们立足于美利坚合众国,对全球华人服务,受北美法律保护。版权所有,未经授权禁止复制或建立镜像。</p> <p>警告︰青青草在线视频（www.qqc2015.com）只适合18岁或以上人士观看。本网站内容可能令人反感！切不可将本站的内容出售、出租、交给或借予年龄未满18岁的人士或将本网站内容向未满18岁人士出示、播放或放映。如果您发现本站的某些影片内容不合适，或者某些影片侵犯了您的的版权，请联系我们删除影片。</p><p> WARNING: This Site Contains Adult Contents, No Entry For Less Than 18-Years-Old !</p>
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="container">
+			<div class="hidden-xs">
+				<span>版权所有 &#169; 2008-2014</span> 青青草在线视频
+				<div class="clearfix"></div>
+			</div>
+			<div class="visible-xs">
+				<span>版权所有 &#169; 2008-2014</span> 青青草在线视频
+			</div>
+		</div>
+	</div>
+	<div class="side_bar ads_85" style="width:240px;height:auto;cursor:pointer;bottom:0;position:absolute;right:0px;top:0px;margin-top:0;"></div>
+</div>
+
+<div class="QQ_none" style="width: 3px; height: 3px; position: fixed; top: 40%;">
+</div>
+<div class="QQ_S">
+    <div class="Q_top" onclick="HideFoot()">
+        <span class="signi"></span>收起
+    </div>
+    <div class="Q_botm">
+        <div class="Q_pic">
+            <div class="Q_pic_hide">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=2880465610&site=qq&menu=yes"
+                    target="_blank" title="企业QQ交谈" rel="nofollow"><span class="hide_pic"></span>企业QQ交谈
+                </a>
+            </div>
+        </div>
+        
+        <div class="Q_sign">
+            <div class="Q_sign_hide">
+                <a href="javascript:void(0)" title="返回顶部"><span class="hide_pic2"></span>返回顶部 </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="QQ_S1">
+    <div class="Q_top1" onclick="ShowFoot()">
+        <span class="signj"></span>展开
+    </div>
+    <div class="Q_botm1">
+        <div class="Q_pic1">
+            <div class="Q_pic1_hide">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=2880465612&site=qq&menu=yes"
+                    rel="nofollow"><span class="hide_pic3"></span>QQ交谈 </a>
+            </div>
+        </div>
+        <div class="Q_sign1">
+            <div class="Q_sign1_hide">
+                <a href="javascript:void(0)">返回顶部 </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+<div class="side_bar" style="left:10px;">
+    <div class="house">
+        <a href="http://messenger.providesupport.com/messenger/17uvw2sizyaw6085hpcx6uydn0.html" target="_blank"></a>
+    </div>
+    <div class="count">
+        <ul>
+            <a href="/hdong/vip/" target="_blank"><li class="list_1"></li></a>
+            <a href="/hdong/vip/" target="_blank"><li class="list_2"></li></a>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=2880465612&site=qq&menu=yes" target="_blank"><li class="list_3"></li></a>
+        </ul>
+    </div>
+    <div class="wx">
+        <p>微信扫一扫</p>
+        <div class="wx_img">
+            <img src="/img/wx_03.png">
+        </div>
+    </div>
+    <div class="down">
+        <div class="close"></div>
+    </div>
+</div>
+
+<a href="/spread/" target="_blank"><div class="side_bar" style="background:url('/templates/frontend/frontend-default/img/side_bar_back.jpg?v=1') 0 0 no-repeat;width:140px;height:300px;cursor:pointer;"></div></a>-->
+<div class="notice">
+		<a href="#" class="icon-speaker"></a>
+		<div class="notice-cont">
+			<span class="speaker"></span>
+			<div class="msg">
+				<marquee direction="left">  
+					<a href="">加入青青草VIP最新优惠：每位VIP新会员额外赠送裸聊点、良家信息、爱奇艺黄金会员、腾讯QQ/好莱坞会员等，看视频与美女聊天玩游戏尽在青青草VIP（活动时间：4月11日22:00—4月15日12:00）兑换开通福利领取请联系客服青青：800105134 ;  已经注册尊龙充值账号的用户，存款如遇问题可联系在线客服青青，帮您通过支付宝、微信、点卡等方式快捷完成存款，开通加入青青草VIP领取福利！</a>
+				</marquee>
+			</div>
+			<a href="#" class="ntc-btn">收起公告</a>
+		</div>
+	</div>
+	<script type="text/javascript" src="/templates/frontend/frontend-default/js/bootstrap.min.js?v=20151015"></script>
+	<script type="text/javascript" src="/templates/frontend/frontend-default/js/jquery.rotator-0.2.js"></script>
+	<script type="text/javascript" src="/templates/frontend/frontend-default/js/jquery.avs-0.2.js"></script>
+	
+	<script>
+	
+        $(function(){
+        	$(".ntc-btn").click(function(){
+				$(".notice").hide(500);
+			});
+            //$('#wrapper').removeAttr('style');
+            if(document.URL.indexOf('openlink') > 0){
+            	$('a').attr('target','_blank');
+            }
+        });
+
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+		  var msViewportStyle = document.createElement('style')
+		  msViewportStyle.appendChild(
+			document.createTextNode(
+			  '@-ms-viewport{width:auto!important}'
+			)
+		  )
+		  document.querySelector('head').appendChild(msViewportStyle)
+		}
+		$(function(){
+			$.getScript("/ads/data.js?t=20160204").done(function(r,s){
+				showAds();
+			});
+		});
+		function showAds(){
+			if(ads){
+				var cWidth = parseInt($('.container').css('width').replace('px',''));
+				var pcContainerWidth = 1150;
+				$.each(ads,function(i,r){
+					var width = r.width * (cWidth / pcContainerWidth);
+					
+					var height = r.height;
+					
+					var advs = $('.ads_'+i);
+					
+					if(r.ads && advs.length > 0){
+						var url = '';
+						var adv = r.ads[0];
+						$img = $('<img />');
+						$img.attr('src', adv.media);
+						$img.attr('title', adv.name);
+					
+						$img.attr('width', width);
+						$img.attr('height',height);
+					
+						$a = $('<a />');
+					
+						if(adv.id && adv.relname != '' && adv.relogopic != '') {
+							url = '/tiaozhuan.php?id=' + adv.id;
+						}else{
+							url = adv.url;
+						}
+						$a.attr('href', url);
+						$a.attr('target', '_blank');
+						var id = 0;
+						if(adv.id){
+							id = adv.id;
+						}
+						var name =  "";
+						if(adv.name){
+							name =  adv.name;
+						}
+						var zone_name = "";
+						if(adv.zone_name){
+							zone_name = adv.zone_name;
+						}
+						$a.on({
+							'click':function(){
+								$.post('/ajax/adv_count',{'id':id,'title':name,'zone_name':zone_name},function(resutl){});
+							}
+						});
+						$(advs).css({'width':width,'margin-bottom':'10px'});
+						$(advs).append($a.append($img));
+					}
+				});
+			}
+		}
+		function HideFoot() {
+            var botm = $('.QQ_S').css("top");
+            var screenH = $(window).height();
+            var len = botm.length;
+            num = Number(botm.substr(0, len - 2));
+            var time = setInterval(function () {
+                if (num <= screenH - 212) {
+                    num = num + 40;
+                    botmt = num + "px";
+                    $('.QQ_S').css("top", botmt)
+                } else {
+                    clearInterval(time);
+                    $('.QQ_S').css("display", "none");
+                    $('.QQ_S1').css("display", "block");
+                }
+            }, 10);
+        }
+        function ShowFoot() {
+            $('.QQ_S').css("display", "block");
+            $('.QQ_S1').css("display", "none");
+            var botm = $('.QQ_S').css("top");
+            var screenH = $('.QQ_none').css("top");
+            var len = botm.length; lena = screenH.length;
+            num = Number(botm.substr(0, len - 2));
+            numa = Number(screenH.substr(0, lena - 2));
+            var time = setInterval(function () {
+                if (num > numa + 30) {
+                    num = num - 30;
+                    botmt = num + "px";
+                    $('.QQ_S').css("top", botmt);
+                } else {
+                    $('.QQ_S').css("top", numa + "px");
+                    clearInterval(time);
+                }
+            }, 10);
+        }
+        
+	
+	var back_img = '/templates/frontend/frontend-default/img/zl.jpg?t=1460464175';
+	var back_top = parseInt('555');
+	</script>
+	<script type="text/javascript" src="/templates/frontend/frontend-default/js/scoll_bg.js?t=201602039820"></script>
+<div style="display:none">
+<script type="text/javascript" src="/ads/tongji.js"></script>
+</div>
+</body>
+
+</html>
+
+<!-- static file: videos/53/index.html make time:2016-04-12 20:29:36-->

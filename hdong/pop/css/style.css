@@ -1,0 +1,59 @@
+.clearfix{overflow: auto;zoom:1;}
+
+.yellow{color:#ff8400;}
+body{background:#f6b29b;}
+.banner{width:100%;height:807px;background:url("../images/banner.jpg") no-repeat top center;}
+.banner .main-banner{width:1024px;height:807px;margin:0 auto;background:url("../images/banner.jpg") no-repeat top center;}
+.banner .main-banner .banner-h2{width:784px;height:44px;background:url("../images/banner-h2.png") no-repeat center bottom;margin:0 auto 0;padding-top: 420px;}
+.banner .main-banner .banner-h1{width:894px;height:106px;margin:30px auto 190px;background:url("../images/banner-h1.png") no-repeat center center;}
+.anchor{background:#f6b29b;}
+.anchor-main{width:1024px;margin:0 auto;background:#f6b29b;}
+.anchor-main h3{margin-top:20px;font-size:30px;color:white;}
+.anchor-main h3 span{font-size:25px;font-weight:normal;}
+.anchor-main .anchor-x{width:326px;height:268px;margin-left:22px;float:left;position:relative;cursor: pointer;}
+.anchor-main .anchor-x:hover .play{color:#ff8400;text-decoration: underline;}
+.anchor-main .play .btn-play{display:block;float:left;width:35px;height:35px;margin-left:15px;margin-right:5px;background:url("../images/icon-play.png") no-repeat;}
+
+.anchor-main .anchor-01{display:block;overflow:hidden;margin-left:0;}
+.anchor-main .anchor-02{display:block;overflow:hidden;margin-bottom:20px;}
+.anchor-main .anchor-03{display:block;overflow:hidden;margin-bottom:20px;}
+.anchor-main .anchor-04{display:block;overflow:hidden;margin-left:0;}
+.anchor-main .anchor-05{display:block;overflow:hidden;}
+.anchor-main .anchor-06{display:block;overflow:hidden;}
+
+.anchor-main .anchor-01 .anchor-img{width:100%;height:100%;background:url("../images/anchor01.png") no-repeat;}
+.anchor-main .anchor-02 .anchor-img{width:100%;height:100%;background:url("../images/anchor02.png") no-repeat;}
+.anchor-main .anchor-03 .anchor-img{width:100%;height:100%;background:url("../images/anchor03.png") no-repeat;}
+.anchor-main .anchor-04 .anchor-img{width:100%;height:100%;background:url("../images/anchor04.png") no-repeat;}
+.anchor-main .anchor-05 .anchor-img{width:100%;height:100%;background:url("../images/anchor05.png") no-repeat;}
+.anchor-main .anchor-06 .anchor-img{width:100%;height:100%;background:url("../images/anchor06.png") no-repeat;}
+
+.anchor-main .anchor-01 .play{width:100%;height:35px;line-height:35px;color:white;position:absolute;top:215px;}
+.anchor-main .anchor-02 .play{width:100%;height:35px;line-height:35px;color:white;position:absolute;top:215px;}
+.anchor-main .anchor-03 .play{width:100%;height:35px;line-height:35px;color:white;position:absolute;top:215px;}
+.anchor-main .anchor-04 .play{width:100%;height:35px;line-height:35px;color:white;position:absolute;top:215px;}
+.anchor-main .anchor-05 .play{width:100%;height:35px;line-height:35px;color:white;position:absolute;top:215px;}
+.anchor-main .anchor-06 .play{width:100%;height:35px;line-height:35px;color:white;position:absolute;top:215px;}
+
+.anchor a.btn-date-now{display:block;width:450px;height:84px;line-height:84px;margin:50px auto 70px;box-sizing:border-box;border-bottom:3px solid #a96852;border-right:3px solid #a96852;border-radius:10px;text-align: center;background:#ff8400;font-size: 30px;color:white;}
+.anchor a.btn-date-now:hover{color:#623300;text-decoration: none;}
+
+.ways{background:#ededef;}
+.ways .ways-main{width:1024px;margin:0 auto;background: #ededef;}
+.ways .ways-main .ways-title{width:192px;height:47px;margin:0 auto 20px;padding-top: 30px;}
+.ways .ways-main .ways-text{padding:0 30px;padding-bottom: 50px;}
+.ways .ways-main .ways-text .condition{display:block;float:left;height:51px;line-height:51px;margin-right:15px;font-size: 23px;color:#192332;}
+.ways .ways-main .ways-text a.btn-reg{display:block;float:left;width:248px;height:48px;line-height: 48px;text-align: center;color:white;background:#ff8400;border-radius:5px;border-bottom:3px solid #a96852;border-right:3px solid #a96852;font-size:21px;text-decoration:none;}
+.ways .ways-main .ways-text a.btn-reg:hover{color:#623300;}
+.ways .ways-text{color:#192332;}
+.ways .ways-text .txt a.btn-add:hover{color:#d06c00;}
+
+.footer{background:#191919;position:relative;color:#fff;}
+.footer .clearfix{width:1024px;margin:0 auto;}
+.footer .clearfix .cs{float:left;width:115px;margin:15px 0  25px 0;text-align: center;}
+.footer .clearfix .cs .f-btn{display:block;width:115px;height:25px;line-height: 25px;color:white;background: #287fba;}
+.footer .clearfix .cs .f-btn:hover{background: #287fba;background-image: none;background-image: -webkit-linear-gradient(#287fba, #3da4ec);background-image: -o-linear-gradient(#287fba, #3da4ec);background-image: linear-gradient(#287fba, #3da4ec);}
+.footer .clearfix .icon-f-cs{float:left;width:59px;height:62px;margin-left: 15px;margin-top:8px;background:url(../images/foot_call.png) no-repeat;}
+.footer .f-links{float:right;height: 100%;line-height: 79px;}
+.footer .f-links a{color:#d4d4d4;border:1px solid #d4d4d4;padding:5px 10px;}
+.footer .f-links a:hover{color:#b6b6b6;border:1px solid #b6b6b6;padding:5px 10px;}

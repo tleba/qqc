@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="Zh-hans">
+<head>
+	
+	<style type="text/css">
+		body{
+			margin:0;
+			padding:0;
+			background-color: transparent; 
+		}
+		
+		.adv{
+			position:absolute;
+			top:0;
+			left:0;
+		}
+		
+		.adv img{
+			position:absolute;
+			top:0;
+			left:0;
+		}
+		
+	</style>
+	<script type="text/javascript" src="/templates/frontend/frontend-default/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="/ads/data.js"></script>
+	
+	<script type="text/javascript"> 
+		
+		function $Q(urlId, splitStr, isTop)
+		{
+			var Url = !isTop ? window.location.href : top.window.location.href;
+			var u = Url.indexOf(splitStr == null ? '?' : splitStr);
+			var g = u >= 0 ? Url.substring(u + 1) : '';
+			if(g != '')
+			{
+				if(urlId == null) 
+				{
+					return g;
+				}
+				else 
+				{
+					var gg = g.split('&');
+					var str = urlId + '=';
+					for(xm = 0; xm < gg.length; xm++)
+					{
+						if (gg[xm].indexOf(str) == 0) 
+						{
+							return ((gg[xm].replace(str, '')).split('#')[0]);
+						}
+					}
+				}
+			}
+			return '';
+		}
+		
+		var posid = $Q('pos');
+		
+		var domain = $Q('domain');
+
+		$(document).ready(function(){
+			if(ads[posid] != undefined) {
+				pos = ads[posid];
+
+
+
+				$.each(pos.ads, function(){
+					$img = $('<img />');
+					$img.attr('src', this.media);
+					$img.attr('title', this.title);
+					
+					$img.attr('width', pos.width);
+					$img.attr('height', pos.height);
+					
+					$a = $('<a />');
+					
+					if(this.url != '') {
+						$a.attr('href', this.url);
+						$a.attr('target', '_blank');
+					}
+					
+					$('.adv').css({width:pos.width, height:pos.height});
+					
+
+					$('.adv').append($a.append($img));
+					
+				});
+			}
+
+		});
+	</script> 
+
+</head>
+
+<body> 
+
+
+
+<div class="adv"></div>
+</body>
+</html>

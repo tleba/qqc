@@ -1,0 +1,32 @@
+body, html { font-size: 100%;}
+
+/* Reset */
+@charset "utf-8";/* CSS Document */
+body{margin:0px auto;width:100%;padding:0px;font-size:12px;color:#373737;background:#fff;font-family:"宋体", Verdana, Arial, sans-serif;}
+form,p,h1,h2,h3,h4,h5,h6{margin:0px;padding:0px;}
+img{margin:0px;padding:0px;border:0px;}
+ul{margin:0px;padding:0px;list-style-type:none;}
+input,select{margin:0px;padding:0px;font-size:12px;vertical-align:absmiddle;}
+a{color:#333;text-decoration:none;}
+a:hover{color:#900;text-decoration:none;}
+.hot{ font-weight:bold;}
+.clear{font-size:0px;line-height:0px;float:none;height:0px;clear:both;overflow:hidden;}
+.space{font-size:0px;line-height:0px;height:20px;}
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+body{
+	background: #fff;
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+}
+/*浮动*/
+.f-l{float: left;}
+.f-r{float: right;}
+/**/
+.w-1000{width: 1000px;margin: 0 auto;}
+.w-870{width: 870px;margin: 0 auto;padding-top: 375px;}

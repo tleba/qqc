@@ -1,0 +1,39 @@
+.top{width: 100%;font-size: 0;}
+.top img{width: 100%;}
+.content{ width: 100%; height: 2103px; background: url(../images/cont_bg_02.jpg) center;border-top: 1px solid #392d51}
+.list_one{  width: 725px;margin: 0 auto;margin-top: 673px;color: #fff;}
+.list_one>h3{font-size: 18px; color: #ffd200;font-weight: normal;line-height: 50px;height: 50px;}
+.list_one>p{color: #fff; font-size: 14px; color: #fff}
+.activity{width: 725px;margin: 0 auto; margin-top: 30px;}
+.activity>h3{font-size: 18px; color: #ffd200;font-weight: normal;line-height: 50px;height: 50px;}
+.activity>p{color: #fff; font-size: 14px; color: #fff}
+.activity ul.text li{position: relative; color: #fff;margin-bottom: 20px;}
+.activity ul.text li p{line-height: 20px; height: 24px;margin-left: 75px; font-size: 14px;}
+.activity ul.text li span{position: absolute;top: -3px;}
+.activity ul.img{ margin-top: 20px;width: 800px;margin-left: 37px;}
+.activity ul.img li{ width: 180px; float: left;text-align: center;}
+.clear{clear: both;}
+.mode{width:707px;margin: 0 auto; margin-top: 111px;}
+.mode>h3{font-size: 18px; color: #ffd200;font-weight: normal;line-height: 48px;height: 48px;}
+.mode>p{color: #fff; font-size: 14px; color: #fff;margin-left: 88px;}
+.mode>p a{color: #fff}
+.mode table{ width: 707px; margin:0 auto; border:1px solid #c2c2c2;border-left: 0px; border-top: 0px;}
+.mode table td{border:1px solid #c2c2c2; border-bottom: 0px; border-right: 0px; }
+.mode table .title{height: 46px; width: 350px; text-align: center; background: #a06071; font-size: 18px; font-weight: bold; color: #1a133d}
+.mode table .zise{background: #503872; color: #fff;}
+.mode table .cont{ height: 80px; color: #fff; font-size: 14px;width: 350px; background: #1d1a50;}
+.mode table .cont p{line-height: 40px; text-align: center; width: 300px; margin: 0 auto;}
+.mode table .join{ height: 50px; position: relative; width: 350px; font-size: 14px; background: #1d1a50; color: #fff}
+.mode table .join a{width: 140px; height: 30px; color: #fff; text-align: center; line-height: 30px; background: #a06071; color: #1a133d; font-size: 18px; display: block; margin: 0 auto;}
+.select li{border-bottom: 1px solid #957B7B;}
+.mode table .join:hover ul{display: block;}
+.select{position: absolute; top: 40px;left: 107px; display: none;z-index:9999;}
+.mode table .join p{width: 140px; height: 30px; color: #fff; text-align: center; line-height: 30px; background: #503872;  font-size: 18px; display: block; margin: 0 auto;}
+.rule{width: 692px;margin: 0 auto; margin-top: 84px;}
+.rule>h3{font-size: 18px; color: #ffd200;font-weight: normal;line-height: 48px;height: 48px;}
+.rule>p{color: #fff; font-size: 14px; color: #fff;margin-left: 88px;}
+.rule li{float: left;}
+.rule li{margin-bottom: 15px; color: #fff; font-size: 16px; position: relative;margin-left: 21px;}
+.rule li span{position: absolute; left: 0px;}
+.rule li p{float: left;margin-left: 25px;}
+

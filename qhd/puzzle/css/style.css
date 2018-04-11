@@ -1,0 +1,107 @@
+﻿/*reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav,output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;}
+
+ul,li{list-style: none;}
+.text-indent{text-indent:2em;}
+body{background:#fef06f;}
+.warp{width:1000px;margin:0 auto;}
+.body-bg{height:3482px;background:url("../images/body-bg1.jpg") no-repeat center top;}
+.clearfix{overflow: auto;zoom:1;}
+/*头部*/
+#header{padding:10px 0;background:#1bbc9d;}
+#header .head-logo{margin-right:20px;}
+
+/*头部banner*/
+.banner{width:1000px;height:740px;position:relative;}
+.banner-title1{width:897px;height:224px;position:absolute;z-index:1;background:url("../images/banner-txt1.png") no-repeat;left:80px;top:15px;}
+.banner-title2{width:587px;height:87px;position:absolute;background:url("../images/banner-txt2.png") no-repeat;top:235px;left:380px;z-index: 2;}
+.banner-title3{width:449px;height:108px;position:absolute;background:url("../images/banner-txt-time.png") no-repeat;top:315px;left:530px;z-index: 2;}
+.title-pintu{width:366px;height:71px;position:absolute;background:url("../images/title-pingtu.png") no-repeat;top:660px;left:315px;}
+
+.banner ul#scene{list-style:none;display:block;width:1000px;height:700px;position:relative;}
+.banner ul li{margin:0;padding:0;list-style:none;}
+.banner ul li .flower1{width:694px;height:625px;background:url("../images/flower1.png") no-repeat;position:absolute;z-index:2;left:365px;top:0;}
+.banner .flower2{width:610px;height:689px;background:url("../images/flower2.png") no-repeat;position:absolute;z-index:3;left:-36px;top:-20px;}
+.banner .pintu{width:537px;height:516px;position:absolute;left:-35px;top:129px;
+    background: url("../images/banner-pintu.png") no-repeat;z-index: 1;}
+.banner .gold{width:231px;height:161px;background:url("../images/gold.png") no-repeat;position:absolute;left:730px;top:436px;}
+.banner .moon{width:589px;height:559px;position:absolute;top:50px;left:600px;z-index: 0;background:url("../images/banner-moon.png") no-repeat;}
+/*拼图游戏*/
+.game{width:780px;height:auto;margin:20px auto 0;padding:15px 30px;box-sizing:border-box;background:#bc3457;border:3px solid #ec7694;}
+.level{width:100%;margin-bottom:20px;}
+.level div{float:left;color:white;height:30px;line-height: 30px;}
+.level div#level{width:270px;margin-left:20px;text-align: center;}
+.level .name{width:420px;text-align: center;}
+.level div#stepBox{margin-right: 100px;color:#34000d;}
+.level div#stepBox span{color:white;}
+.level div#timeBox{color:#34000d;}
+.level div#timeBox span{color:white;}
+.game-area{float:left;margin-right: 20px;position:relative;}
+.game-area .mask{width:400px;height:400px;line-height:400px;text-align:center;background:url("../images/mask-img.jpg") no-repeat;color:white;position:absolute;top:42px;left:12px;}
+
+.game-area h3#imgTitle{display: block;text-align:center;line-height: 30px;color:white;}
+.game-area #sortable{border:2px solid #a46;list-style-type:none;display:inline-block;margin: 10px;padding: 0;width:400px;}
+.game-area #sortable li{background-size:400% 400%;border: none;cursor: pointer;margin: 0;padding: 0;float: left;width: 100px;height:100px;}
+#actualImageBox{float:left;width:270px;height:500px;padding:10px;border-radius:8px;border:1px solid #ec7694;box-sizing:border-box;background:#da6180;}
+#actualImageBox>p{text-align: center;color:#34000d;}
+#actualImageBox .mask-img{width:255px;height:255px;background:url("../images/mask-img-s.jpg") no-repeat;}
+#actualImageBox img#actualImage{display:block;width:255px;height:auto;border:1px solid white;}
+#actualImageBox img#actualImage+div{padding:10px 0;color:white;text-align: center;}
+.function-btns a#btn-start-game{display:block;width:139px;height:37px;margin:0 auto 10px;background-image:url("../images/btn-start-game.png");background-repeat: no-repeat;}
+.function-btns a#btn-start-game:hover{background-image:url("../images/btn-start-game-hover.png");background-repeat: no-repeat;}
+.function-btns div{color:#34000d;text-align:center;padding-bottom:10px;}
+.function-btns div span{color:white;}
+.function-btns a#btn-transfer{display:block;width:139px;height:37px;margin:0 auto;background-image:url("../images/btn-transfer.png");background-repeat: no-repeat;}
+.function-btns a#btn-transfer:hover{background-image:url("../images/btn-transfer-hover.png");background-repeat: no-repeat;}
+/*活动内容*/
+.content-title{width:384px;height:90px;margin:40px auto 0;background:url("../images/title-content.png") no-repeat;}
+.content-main{width:800px;padding:10px 50px 15px;background:#efd30e;margin:20px auto 0;border-radius:10px;}
+.content-main .content-h1{width:214px;height:38px;margin:15px 0 15px;background:url("../images/content-title1.png") no-repeat;}
+.content-main .text-indent{text-indent:2em;}
+.content-main p span{color:#d84d71;}
+.bonuses{width:256px;height:32px;margin:10px auto 0;background:url("../images/titlle-jiangli.png") no-repeat;}
+.table-bonuses{width:100%;background:#f06b8e;color:white;text-align:center;border-collapse:collapse;border-color:white;
+    border:1px solid;}
+.table-bonuses th{background:#d84d71;color:#4f0317;}
+.level-math{width:278px;height:41px;margin:30px auto 0;background:url("../images/title-people.png") no-repeat;}
+.level-math span{margin-left:200px;line-height:50px;color:#921334;font-size: 25px; }
+
+
+.marquee {width:800px;height:300px;margin:10px auto 30px;padding:15px 0; overflow:hidden;border:1px solid #ccc; background: #f06b8e;border-radius:10px;}
+/*.ver {height:30px;}*/
+.marquee p{font-size:14px;line-height:35px;color:white;letter-spacing:3px;}
+.marquee p span{color:#660e25;}
+
+.top-six-title{width:239px;height:40px;margin:40px auto 10px;background:url("../images/title-top6.png") no-repeat;}
+
+.top-six-table{margin-bottom:50px; }
+.top-six-table>table{width:800px;margin:0 auto;border-collapse:collapse;background:#F06B8E;border:1px solid white;color:white;text-align: center;}
+.top-six-table table th{background:#d84d71;color:#4f0317;}
+.top-six-table table td span{color:#4f0317;}
+
+
+.sales{width:800px;margin:30px auto 0;padding:10px 50px 30px;background:#efd30e;border-radius:10px;}
+.sales-title{width:202px;height:38px;margin-top:10px;margin-bottom:15px;background:url("../images/title-sales.png") no-repeat;}
+.sales p.text-indent span{color:#F06B8E;}
+
+/*.qq-chat, .cs{border:1px solid red;}*/
+
+.qq-chat{width:50%;float:left;margin-top: 50px;}
+.qq-chat p{float:right;font-weight:bold;color:#771c34;text-align: center;}
+.qq-chat a.btn-chat{display:block;width:88px;height:20px;margin-left:10px;float:right;background:url("../images/btn-qq-cs.png") no-repeat;cursor:pointer;}
+.cs{width:50%;float:right;margin-top:30px;padding-left:75px;box-sizing: border-box;}
+a.btn-cs{display:block;width:80px;height:20px;line-height:20px;text-align:center;background:#f06b8e;border-radius:3px;color:white;text-decoration: none;}
+a.btn-cs:hover{background:#ff91ae;}
+span.cs-img{display:block;float:left;width:41px;height:39px;background:url("../images/btn-cs.png") no-repeat;}
+
+/*活动细则*/
+.rules-title{width:384px;height:90px;margin:40px auto 0;background:url("../images/title-xize.png") no-repeat;}
+.rules-content{width:900px;margin:0 auto;padding:15px 50px 15px;box-sizing:border-box;background:#fffded;border-radius:10px;}
+.rules-content p{line-height: 35px;}
+
+/*脚部*/
+.footer{background: #3a3a3a;padding:20px 0 10px;text-align: center;color:#6d6d6d;}
+.footer .logo-footer{width:137px;height:39px;margin:0 auto 10px;background:url("../images/footer-logo.png") no-repeat;}
+/*闯关成功*/
+.complete{position: fixed;top: 0;right: 0;bottom: 0;left: 0;background-color:rgba(0,0,0,.5);z-index: 9999;cursor:pointer;display:none;}
+.main-complete{width:377px;height:252px;background:url("../images/icon-close.png") no-repeat;position:fixed;top:30%;left:40%;z-index: 99999;}

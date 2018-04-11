@@ -1,0 +1,313 @@
+body{background:#f3f3f3;}
+a:hover,a.focus{text-decoration: none;}
+.clear{clear:both;}
+input{border:none;}
+/*top bar*/
+.top_bar{display:none;position:fixed;z-index:999;top:0;width:100%;text-align: center;}
+.top_bar a:hover,.top_bar a:focus{background:rgba(0,0,0,.9);}
+
+.top_bar a.btn_register{display:block;float:left;width:50%;background:rgba(0,0,0,.5);color:white;font-size:2.5rem;}
+.top_bar a.btn_check_flow{display:block;float:left;width:50%;background:rgba(0,0,0,.5);color:white;font-size:2.5rem;border-left:1px dashed #969696;}
+.top_bar a.btn_register span,.top_bar a.btn_check_flow span{display: inline-block;width:15%;margin:5px 0;line-height: 50px;text-align: center;}
+.navbar{margin-bottom:0;}
+.banner img{width:100%;height:100%;}
+.banner a{display: block;}
+.txt img{width:100%;height:100%;margin-top: 15px;}
+/*images list*/
+.photos-content{overflow-x:auto;overflow-y:hidden;}
+.photos-content .photos-wrap{display:inline-block;width:3057px;overflow:hidden;list-style:none;padding:0;margin:15px 0;}
+.photos-content .photos-wrap li{position:relative;float:left;display:inline-block;height:505px;margin-right:5px;border:2px solid #fff;z-index: 0;}
+.photos-content .photos-wrap li:nth-child(1){width:258px;}
+.photos-content .photos-wrap li:nth-child(2){width:258px;}
+.photos-content .photos-wrap li:nth-child(3){width:247px;}
+.photos-content .photos-wrap li:nth-child(4){width:203px;}
+.photos-content .photos-wrap li:nth-child(5){width:258px;}
+.photos-content .photos-wrap li:nth-child(6){width:247px;}
+.photos-content .photos-wrap li:nth-child(7){width:258px;}
+.photos-content .photos-wrap li:nth-child(8){width:258px;}
+.photos-content .photos-wrap li:nth-child(9){width:247px;}
+.photos-content .photos-wrap li:nth-child(10){width:258px;}
+.photos-content .photos-wrap li:nth-child(11){width:258px;}
+.photos-content .photos-wrap li:nth-child(12){width:247px;}
+.photos-content .photos-wrap li img{position:absolute;top:0;left:0;display:block;width:100%;height:100%;color:white;z-index: 0;}
+
+.bottom_arrow{float:left;margin-left:45%;text-align: center;}
+/*------------------------联系客服------------------------*/
+.main_cs{position:relative;}
+/*联系客服 按钮*/
+.main_cs .cs{margin-bottom:7%;}
+.main_cs .cs #btn_cs{display:block;position:absolute;right:0;width:30%;height:auto;padding:1%;font-size:2.5rem;text-align:center;border-radius:10rem 0 0 10rem;background:#ff4305;color:white;}
+.main_cs .cs #btn_cs span{font-size:2rem;}
+/*客服弹出框*/
+.main_cs .cs_box{display:none;float:right;position:absolute;right:0;top:0;width:40%;height:auto;padding:3% 1%;background:#ff4305;border-radius:2rem 0 0 2rem;}
+.main_cs .cs_box h4{margin-top:0;padding-right:5%;font-size:2.5rem;font-weight:normal;text-align: right;}
+.main_cs .cs_box a{display:block;font-size:2rem;color:white;}
+.main_cs .cs_box a span{display:block;float:left;width:108px;height:108px;margin-left: 3%;}
+.main_cs .cs_box a span img{width:100%;height:100%}
+.main_cs .cs_box a p{float:left;margin-top:12%;margin-left:5%;}
+.main_cs .cs_box a#cs3 p{margin-left:10%;}
+.main_cs .cs_box a#btn_hide_cs{margin-left:17%;}
+/*------------注册区域------------*/
+.register_box{background:#feb05c;}
+/*注册标题*/
+.register_box .title{padding:3%;margin:0 auto;text-align: center;}
+.register_box .title .logo img{width:18%;}
+.register_box .title h3{font-size: 3rem;}
+/*注册表单*/
+.main_register{width:80%;margin:0 auto;padding:5% 5% 2% 1%;background:#fff;border-radius:1rem;}
+.main_register form{margin-left: 5%;}
+.main_register table{width:95%;margin:0 auto;background:white;font-size:2.5rem;}
+.main_register table tbody{width:90%;}
+.main_register table tbody tr td{padding-bottom: 7%;}
+.main_register table tbody tr td.icon_username{width:10%;text-align: center;}
+.main_register table tbody tr td.icon_password{width:10%;text-align: center;}
+.main_register table tbody tr td.icon_phone{width:10%;text-align: center;}
+.main_register table tbody tr td input{height:4rem;padding-left:10px;color:black;border-bottom:1px solid #d3d1d1!important;}
+.main_register table tbody tr td input.prefix{display:inline-block;width:15%;padding-left:0;margin-left:8px;color:black;background:#ffab6c;height:4rem;line-height:4rem;text-align: center;border:0;}
+.main_register table tbody tr td input.prefix1{width:75%;margin-left:20px;font-size:55%;}
+.main_register table tbody tr td input.password{margin-left: 2%;width:94%;font-size: 55%;}
+.main_register table tbody tr td input.phone{margin-left:2%;width:94%;font-size: 55%;}
+.main_register div.btn_submit{padding-bottom:3%;border-bottom:1px dashed #cccccc;}
+.main_register div.btn_submit a{display:block;width:80%;padding:4% 0;margin:3% auto;font-size:2.5rem;text-align:center;border-radius:1rem;background:#56b4fd;color:white;}
+.main_register div.btn_login{padding-top:4%;font-size:2rem;color:#545454;text-align: center;}
+.main_register div.btn_login a{color:#ff3b3b;}
+/*注册流程*/
+.register_flow{width:75%;margin:5% auto 0;padding-bottom: 5%;}
+.register_flow img{width:100%;height:100%;}
+/*-------------查看流程-------------*/
+.check_flow{padding:3% 0;width:100%;text-align: center;}
+.check_flow a{display:inline-block;width:50%;}
+.check_flow .arrow_down{padding-top: 3%;}
+/*-------------vip尊享-------------*/
+/*.vip_title{width:100%;}*/
+.vip_title img{width:100%;}
+.vip_content .container{width:100%;padding:3% 6% 6%;background:white;}
+.vip_content .vip_content1, .vip_content .vip_content3{float:left;width:49%;padding:3%;font-size:2.3rem;text-align:center;color:#404040;background:#63caff;}
+.vip_content .vip_content2, .vip_content .vip_content4{float:right;width:49%;padding:3%;font-size:2.3rem;text-align:center;color:#404040;background:#ffd883;}
+.vip_content .vip_content3, .vip_content .vip_content4{margin-top: 2%;}
+
+/*-----------------青青草 VIP-----------------*/
+.qqc_lve .qqc_lve_title{width:40%;margin:0 auto;padding:4% 0 5%;text-align: center;}
+.qqc_lve .qqc_lve_title a{display:block;}
+.qqc_lve .qqc_lve_title img{width:100%;}
+.qqc_lve .qqc_lve_content table{width:100%;text-align: center;font-size: 1.7rem;}
+.qqc_lve .qqc_lve_content table tbody tr:nth-child(1){background:#404040;color:white;}
+.qqc_lve .qqc_lve_content table tbody tr:nth-child(1) td{border:none;}
+.qqc_lve .qqc_lve_content table tbody tr{background:white;color:black;}
+.qqc_lve .qqc_lve_content table tbody tr td{border:1px solid gainsboro;}
+.qqc_lve .qqc_lve_content .icon_next_arrow{padding:3% 0;text-align: center;}
+
+/* ---------------------游戏类型 滚动--------------------- */
+.game_type{background:#dfe0e3;}
+
+.banner{float:left;width:100%;position:relative;padding-bottom:5%;overflow:hidden;}
+#owl-banner{width:auto;height:400px;}
+.owl-carousel .owl-wrapper-outer{overflow:hidden;position:relative;width:100%;}
+#owl-banner .owl-item a{display:block;width:100%;height:400px;}
+a.item1{background: url("../images/1live.png") center center no-repeat;}
+a.item2{background: url("../images/2dianyou.png") center center no-repeat;}
+a.item3{background: url("../images/3sport.png") center center no-repeat;}
+a.item4{background: url("../images/4fishing.png") center center no-repeat;}
+a.item5{background: url("../images/5qipai.png") center center no-repeat;}
+a.item6{background: url("../images/6lottle.png") center center no-repeat;}
+#owl-banner .owl-controls{ margin-top:-20px; position:relative;}
+#owl-banner .owl-controls .owl-page span{background:rgba(137,137,137,.5);}
+#owl-banner .owl-controls .active span{background:rgba(255,79,178,1.00);}
+
+/*每月会员日*/
+.vip_day .container{position:relative;}
+.vip_day img{width:100%;}
+.vip_day a.btn_play_now{display:block;width:70%;position:absolute;bottom:30px;left:14%;margin:0 auto;padding:3% 0;font-size:3rem;text-align:center;border-radius:3rem;background:#ffe720;color:#434343;}
+
+/*查看流程 弹出*/
+.main_flow{display:none;width:100%;height:100%;background:rgba(0,0,0,.7);position:fixed;top:0;z-index: 999;}
+.main_flow .container .flow_bg{float:left;width:90%;height:880px;position:relative;margin-left:5%;padding-bottom:5%;overflow:hidden;background:white;border-radius:3rem;}
+#owl-banner-flow{width:auto;height:880px;}
+.owl-carousel .owl-wrapper-outer{overflow:hidden;position:relative;width:100%;}
+#owl-banner-flow .owl-item a{display:block;width:100%;height:880px;}
+a.flow1{background:url("../images/flow1.png") center center no-repeat;}
+a.flow2{background:url("../images/flow2.png") center center no-repeat;}
+a.flow3{background:url("../images/flow3.png") center center no-repeat;}
+a.flow4{background:url("../images/flow4.png") center center no-repeat;}
+a.flow5{background:url("../images/flow5.png") center center no-repeat;}
+a.flow6{background:url("../images/flow6.png") center center no-repeat;}
+a.flow7{background:url("../images/flow7.png") center center no-repeat;}
+#owl-banner-flow .owl-controls{ margin-top:-40px; position:relative;}
+#owl-banner-flow .owl-controls .owl-page span{background:rgba(140,140,140,.5);}
+#owl-banner-flow .owl-controls .active span{background:rgba(255,83,83,1.00);}
+    /*关闭按钮*/
+.btn_close a{display:block;float:right;margin-top:5%;margin-right: 8%;width:5%;}
+.btn_close a img{width:100%;height:100%;}
+
+/*使用说明 弹出*/
+.main_use{display:none;width:100%;height:100%;background:rgba(0,0,0,.7);position:fixed;top:0;z-index: 999;}
+.main_use .container .flow_bg{float:left;width:90%;height:880px;position:relative;margin-left:5%;padding-bottom:5%;overflow:hidden;background:white;border-radius:3rem;}
+#owl-banner-use{width:auto;height:880px;}
+.owl-carousel .owl-wrapper-outer{overflow:hidden;position:relative;width:100%;}
+#owl-banner-use .owl-item a{display:block;width:100%;height:880px;}
+#owl-banner-use .owl-item a.flow7{background:url("../images/flow7.png") center center no-repeat;}
+#owl-banner-use .owl-controls{ margin-top:-40px; position:relative;}
+#owl-banner-use .owl-controls .owl-page span{background:rgba(140,140,140,.5);}
+#owl-banner-use .owl-controls .active span{background:rgba(255,83,83,1.00);}
+/*关闭按钮*/
+.btn_close a{display:block;float:right;margin-top:5%;margin-right: 8%;width:5%;}
+.btn_close a img{width:100%;height:100%;}
+
+/*裸聊表格 弹出*/
+.plug-luoliao {display: none;width: 100%;height: 100%;position: fixed;left: 0;bottom: 0;right: 0;background: rgba(0, 0, 0, 0.8);z-index: 99;  top: 0;  }
+.plug-luoliao .container{position: relative;width: 90%;top:24%;padding-bottom: 3%; z-index: 9999;background:white;border-radius: 4px;}
+.plug-luoliao .container>a{position:absolute;right:-3%;top:-6%;}
+.luoliao-table h3{margin-top: 15px;text-align: center;color:#feb05c;font-size: 2.3rem;}
+.luoliao-table>p{margin-top:10px;text-align: center;color: gray;font-size: 1.5rem;line-height: 20px;}
+.luoliao-table table{margin:10px auto 0;text-align:center;line-height:25px;background:white;color:black;border:1px solid gainsboro;}
+.luoliao-table table th{text-align: center;}
+.luoliao-table table thead{background:#feb05c;color:white;}
+.plug-luoliao .btn_close a{display:block;float:right;margin-top:14%;margin-right: 8%;width:5%;}
+.plug-luoliao .btn_close a img{width:100%;height:100%;}
+
+
+/*------------------------------------------媒体查询 样式------------------------------------------*/
+@media screen and (min-width: 1024px){
+    /*联系客服*/
+    .main_cs .cs_box a p{font-size: 3rem;margin-top: 7%;margin-left: 10%;}
+    .main_cs .cs_box a#cs3 p{margin-left: 17%;}
+    .main_cs .cs_box a#btn_hide_cs{margin-left: 8%;}
+    /*每月会员日*/
+    .vip_day a.btn_play_now{width:80%;position:absolute;left:10%}
+}
+
+@media screen and (max-width:414px) {
+    /*top bar*/
+    .top_bar a.btn_check_flow, .top_bar a.btn_register{font-size: 2rem;}
+    .top_bar a span img{width:85%;}
+    /*美女图 滑动列表*/
+    .photos-content .photos-wrap{width:1800px;}
+    .photos-content .photos-wrap li{height:293px;}
+    .photos-content .photos-wrap li:nth-child(1){width:150px;}
+    .photos-content .photos-wrap li:nth-child(2){width:150px;}
+    .photos-content .photos-wrap li:nth-child(3){width:143px;}
+    .photos-content .photos-wrap li:nth-child(4){width:118px;}
+    .photos-content .photos-wrap li:nth-child(5){width:150px;}
+    .photos-content .photos-wrap li:nth-child(6){width:143px;}
+    .photos-content .photos-wrap li:nth-child(7){width:150px;}
+    .photos-content .photos-wrap li:nth-child(8){width:150px;}
+    .photos-content .photos-wrap li:nth-child(9){width:143px;}
+    .photos-content .photos-wrap li:nth-child(10){width:150px;}
+    .photos-content .photos-wrap li:nth-child(11){width:150px;}
+    .photos-content .photos-wrap li:nth-child(12){width:143px;}
+    /*---------------------向下 视觉引导线---------------------*/
+    .bottom_arrow{margin-left: 42%;}
+    .bottom_arrow img{width:50%}
+    /*---------------------客服弹出按钮---------------------*/
+    .main_cs .cs #btn_cs{font-size:1.5rem;}
+    .main_cs .cs #btn_cs span{font-size: 1rem;}
+    /*---------------------客服弹出框---------------------*/
+    .main_cs .cs_box h4{font-size: 1.7rem;text-align: center;}
+    .main_cs .cs_box a{font-size: 1.7rem;}
+    .main_cs .cs_box a#btn_hide_cs{margin-left: 28%;}
+    .main_cs .cs_box a span{margin-left: 15%;}
+    .main_cs .cs_box a p{margin-left: 16%;}
+    .main_cs .cs_box a#cs3 p{margin-left: 30%;font-size: 1.5rem;}
+    /*---------------------查看流程---------------------*/
+    .main_flow .container{margin-top: 12%;}
+    .main_flow .container .flow_bg{height:480px;}
+    #owl-banner-flow{height:480px;}
+    #owl-banner-flow .owl-item a{height:480px;}
+    .btn_close a{width:7%;margin-right: 15%;}
+    a.flow1{background:url("../images/flow1_s.png") center center no-repeat;}
+    a.flow2{background:url("../images/flow2_s.png") center center no-repeat;}
+    a.flow3{background:url("../images/flow3_s.png") center center no-repeat;}
+    a.flow4{background:url("../images/flow4_s.png") center center no-repeat;}
+    a.flow5{background:url("../images/flow5_s.png") center center no-repeat;}
+    a.flow6{background:url("../images/flow6_s.png") center center no-repeat;}
+    a.flow7{background:url("../images/flow7_s.png") center center no-repeat;}
+    #owl-banner-flow .owl-controls{margin-top:-35px;}
+    /*---------------------使用说明 弹出---------------------*/
+    .main_use .container{margin-top: 12%;}
+    .main_use .container .flow_bg{height:480px;}
+    #owl-banner-use{height:480px;}
+    #owl-banner-use .owl-item a{height:480px;}
+    .btn_close a{width:7%;margin-right: 15%;}
+    #owl-banner-use .owl-item a.flow7{background:url("../images/flow7_s.png") center center no-repeat;}
+    #owl-banner-use .owl-controls{margin-top:-35px;}
+
+    /*---------------------注册页---------------------*/
+    .register_box .title h3{font-size:2rem;}
+    .main_register{width:100%;}
+    .main_register form{margin-left: 3%;}
+    .main_register table tbody{width:100%;}
+    .main_register table tbody tr td img{width:80%;}
+    .main_register table tbody tr td input.prefix1{margin-left: 0;}
+    .main_register table tbody tr td input.password{width:93%;}
+    .register_flow{width:90%;}
+
+    .check_flow span img{width:15%;}
+    .check_flow a{width:100%;}
+    .check_flow a img{width:40%;margin-top:3%;}
+    .arrow_down img{width:8%;}
+    /*等级兑换 向下箭头*/
+    .icon_next_arrow img{width:10%;}
+    /*游戏类型*/
+    #owl-banner{width:auto;height:250px;}
+    #owl-banner .owl-item a{display:block;width:100%;height:250px;}
+    a.item1{background: url("../images/1live_s.png") center center no-repeat;}
+    a.item2{background: url("../images/2dianyou_s.png") center center no-repeat;}
+    a.item3{background: url("../images/3sport_s.png") center center no-repeat;}
+    a.item4{background: url("../images/4fishing_s.png") center center no-repeat;}
+    a.item5{background: url("../images/5qipai_s.png") center center no-repeat;}
+    a.item6{background: url("../images/6lottle_s.png") center center no-repeat;}
+
+    /*立即娱乐*/
+    .vip_day a.btn_play_now{padding:2% 0;font-size: 2rem;}
+}
+
+@media screen and (max-width:320px){
+    /*top bar*/
+    .top_bar a.btn_check_flow, .top_bar a.btn_register{font-size:1.5rem;}
+    /*注册区域*/
+    .main_register table tbody tr td input.prefix{width:11%;height:3rem;font-size: 1.5rem;}
+    .main_register table tbody tr td input.prefix1,
+    .main_register table tbody tr td input.password,
+    .main_register table tbody tr td input.phone {height:2.5rem;font-size: 1.5rem;}
+    .main_register div.btn_submit a{width:95%;padding:3% 0;font-size: 1.7rem;}
+    .main_register div.btn_login{font-size: 1.5rem;}
+
+    /*vip尊享*/
+    .content_icon1 img,
+    .content_icon2 img,
+    .content_icon3 img,
+    .content_icon4 img{width:85%;}
+    .vip_content .vip_content1,
+    .vip_content .vip_content2,
+    .vip_content .vip_content3,
+    .vip_content .vip_content4{font-size: 1.5rem;}
+
+    /*游戏类型*/
+    #owl-banner{width:auto;height:200px;}
+    #owl-banner .owl-item a{display:block;width:100%;height:200px;}
+    a.item1{background: url("../images/1live_xs.png") center center no-repeat;}
+    a.item2{background: url("../images/2dianyou_xs.png") center center no-repeat;}
+    a.item3{background: url("../images/3sport_xs.png") center center no-repeat;}
+    a.item4{background: url("../images/4fishing_xs.png") center center no-repeat;}
+    a.item5{background: url("../images/5qipai_xs.png") center center no-repeat;}
+    a.item6{background: url("../images/6lottle_xs.png") center center no-repeat;}
+
+    /*查看流程*/
+    .main_flow .container{margin-top: 2%;}
+    .main_flow .container .flow_bg{height:400px;}
+    #owl-banner-flow{height:400px;}
+    #owl-banner-flow .owl-item a{height:400px;}
+    a.flow1{background:url("../images/flow1_xs.png") center center no-repeat;}
+    a.flow2{background:url("../images/flow2_xs.png") center center no-repeat;}
+    a.flow3{background:url("../images/flow3_xs.png") center center no-repeat;}
+    a.flow4{background:url("../images/flow4_xs.png") center center no-repeat;}
+    a.flow5{background:url("../images/flow5_xs.png") center center no-repeat;}
+    a.flow6{background:url("../images/flow6_xs.png") center center no-repeat;}
+    a.flow7{background:url("../images/flow7_xs.png") center center no-repeat;}
+    #owl-banner-flow .owl-controls{margin-top:-25px;}
+    /*使用说明弹出*/
+    .main_use .container{margin-top: 2%;}
+    #owl-banner-use .owl-item a.flow7{background:url("../images/flow7_xs.png") center center no-repeat;}
+
+    .plug-luoliao .container{position:relative;top:18%;}
+}

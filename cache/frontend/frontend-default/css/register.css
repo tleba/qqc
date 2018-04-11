@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+.degree{margin-top: -8px; margin-left:20px;}
+.warn{border: 1px solid #f00;}
+.qd{display: inline-block;font-size:12px;margin-top:-10px;width: 53px;height: 14px;background: #c6c4c5;color: #fff;text-align: center;line-height: 14px;}
+.selected{background:#dd465e; }
+.title{ font-size:14px; font-weight:bold; color:#6b6b6b;}
+.tab-box div{width: 100%;height: 400px;border-top: 1px solid #dfdfdf;padding-top: 30px;}
+.red{color: #f00;display: inline-block;padding:0 3px;}
+.input,.yzm{border: 1px solid #c0bfc0;height: 29px;padding-left: 8px;color: #525252;line-height: 29px;}
+.input{width: 200px;}
+.yzm{width: 70px;}
+.tips{display:inline-block;background: url(../img/icon.png) 0 0 no-repeat;padding-left: 20px;margin-left: 5px;height: 16px;}
+.right{background-position:0 0;color: #608004;}
+.error{background-position:0 -17px;color: #de0909;}
+.province,.city,.zone{border: 1px solid #dfdfdf;height: 25px;line-height: 25px; padding: 3px;}
+.sub-btn{ background-color:#1bbc9d; outline:none; border:none; width: 182px;height: 36px;color: #fff;text-align: center;}
+.hr-15{height: 15px;}
+
+}
+
+
+
+

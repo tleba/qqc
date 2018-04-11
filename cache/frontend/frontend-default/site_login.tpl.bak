@@ -1,0 +1,47 @@
+<!--User--> 
+<!--User--> <li  class="hidden-xs" style=" color: #fff; ">{if $type_of_user==='guest'}{elseif $type_of_user==='free'}免费用户{else}级别:<span style=" color: red; margin-right: 10px; " class="nm">{$PremiumNikename}</span><span class="rv">{$PremiumRemainingView}</span>{/if}</li><!--End-->
+
+			{if isset($smarty.session.uid)}
+				<li class="dropdown">
+					<a class="dropdown-toggle"  data-toggle="dropdown" href="#">
+						<span class="visible-xs">
+							{if $requests_count > 0 || $mails_count > 0}<div class="badge">{$requests_count+$mails_count}</div>{/if} {$smarty.session.username|truncate:15:"..."} <span class="caret"></span>
+						</span>
+						<span class="hidden-xs">
+							{if $requests_count > 0 || $mails_count > 0}<div class="badge">{$requests_count+$mails_count}</div>{/if} {$smarty.session.username|truncate:35:"..."} <span class="caret"></span>
+						</span>
+					</a>
+					<ul class="dropdown-menu pull-right m-t-0">
+					<li><a href="#">{if $type_of_user==='guest'}游客{elseif $type_of_user==='free'}免费用户{else}级别:{$PremiumNikename}
+					</a>
+					</li>
+					<li><a class="rv">{$PremiumRemainingView}</a>{/if}</li>
+						<li><a href="{$relative}/user">{t c='topnav.my_profile'}</a></li>
+						{if $video_module == '1'}<li><a href="{$relative}/user/{$smarty.session.username}/videos">{t c='topnav.my_videos'}</a></li>{/if}
+						{if $photo_module == '1'}<li><a href="{$relative}/user/{$smarty.session.username}/albums">{t c='topnav.my_photos'}</a></li>{/if}
+						{if $game_module == '1'}<li><a href="{$relative}/user/{$smarty.session.username}/games">{t c='topnav.my_games'}</a></li>{/if}
+						<li><a href="{$relative}/user/{$smarty.session.username}/blog">{t c='topnav.my_blog'}</a></li>
+						<li><a href="{$relative}/feeds">{translate c='global.my_feeds'}</a></li>
+						<li><a href="{$relative}/requests"><span class="pull-left">{translate c='global.requests'}</span>{if $requests_count > 0}<div class="badge pull-right">{$requests_count}</div>{/if}<div class="clearfix"></div></a></li>
+						<li><a href="{$relative}/mail/inbox"><span class="pull-left">{translate c='global.inbox'}</span>{if $mails_count > 0}<div class="badge pull-right">{$mails_count}</div>{/if}<div class="clearfix"></div></a></li>
+						
+					</ul>
+				</li>			
+				<li><a href="{$relative}/logout">{translate c='global.sign_out'}</a></li>
+			{else}
+				
+			
+				          <div class='hidden-xs' id="login_form">
+				        <p><label>账号:</label> <input type="text" class="input" name="user" id="user" /></p>
+				        <p><label>密码:</label> <input type="password" class="input" name="pass" id="pass" /></p>
+				        <input type="hidden" name="submit_login" value="login" />
+				        <button type="submit" class="btn login_submit"><span>登录</span></button>
+				        <a class="lost" href="/lost">找回密码</a>
+				        <button onclick="window.location.href='/signup';" type="button" class="reg"><span>注册</span></button>
+				        <div class="sub"></div>
+				    </div>
+				     <div class="visible-xs">
+				     <li><a href="/login" rel="nofollow">登录</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="/signup" rel="nofollow">注册</a></li>
+				     </div>
+					
+			{/if}

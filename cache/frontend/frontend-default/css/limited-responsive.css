@@ -1,0 +1,174 @@
+/* Email:frontend.offer@gmail.com */
+/*========== Mobile First Method ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+.limitedbox.icons1,.limitedbox.icons2,.limitedbox.icons3,.limitedbox.icons4,.limitedbox.icons5{margin: 10px auto; float: inherit;}
+.limited_header {
+background-size: 3px 44px;
+height: 44px;
+line-height: 20px;
+font-size: 12px;
+}
+
+.limited_tips{
+	  font-size: 13px;
+	  overflow: hidden;
+}
+.limited_signup {
+background-size: 257px 34px;
+height: 34px;
+width: 257px;
+}
+
+
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+.limitedbox.icons1,.limitedbox.icons2,.limitedbox.icons3,.limitedbox.icons4,.limitedbox.icons5{margin: 10px auto; float: inherit;}
+.limited_header {
+  background-size: 3px 89px;
+  height: 89px;
+line-height: 20px;
+font-size: 12px;
+}
+
+
+.limited_signup {
+background-size: 257px 34px;
+height: 34px;
+width: 257px;
+}
+.limited_tips{
+	font-size: 13px;
+	overflow: hidden;
+}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+.limited_header {
+background-size: 3px 89px;
+height: 89px;
+  line-height: 42px;
+font-size: 16px;
+}
+
+.limited_signup {
+height: 48px;
+width: 409px;
+  background-size: 409px 48px;
+}
+.icons_group {width: 938px;}
+.limitedbox.icons1,.limitedbox.icons2,.limitedbox.icons3,.limitedbox.icons4,.limitedbox.icons5{ height: 216px; width: 165px; overflow: hidden; margin: 10px; _margin: 10px; float: left; background-size: 166px; }
+
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+.limited_header {
+  background-size: 3px 44px;
+  height: 44px;
+  line-height: 39px;
+  font-size: 23px;
+}
+.icons_group {width: 938px;}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+.limited_header {
+  background-size: 3px 89px;
+  height: 89px;
+  line-height: 39px;
+  font-size: 23px;
+}
+.icons_group {width: 938px;}
+}
+
+/*========== Non-Mobile First Method ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+.limited_header {
+background-size: 3px 89px;
+height: 89px;
+  line-height: 39px;
+  font-size: 23px;
+}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+.limited_header {
+background-size: 3px 44px;
+height: 44px;
+  line-height: 39px;
+  font-size: 23px;
+}
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+.limited_header {
+background-size: 3px 89px;
+height: 89px;
+  line-height: 42px;
+font-size: 16px;
+}
+
+}
+
+/* Smartphones, Smartphones Landscape, Mini Tablets */
+@media only screen and (max-width : 767px) {
+
+.limited_header {
+background-size: 3px 89px;
+height: 89px;
+  line-height: 42px;
+font-size: 16px;
+}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+.limited_header {
+background-size: 3px 89px;
+height: 89px;
+line-height: 28px;
+font-size: 16px;
+}
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+.limited_header {
+background-size: 3px 89px;
+height: 89px;
+line-height: 28px;
+font-size: 16px;
+}
+
+
+}
+
+/* Retina-specific stuff here */
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+
+
+}

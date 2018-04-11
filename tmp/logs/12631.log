@@ -1,0 +1,153 @@
+/usr/bin/php /mnt/www/default/scripts/convert_videos.php 12631.mp4 12631 /mnt/www/default/media/videos/vid/12631.mp4
+/usr/bin/mplayer -quiet -nolirc -vo null -ao null -frames 0 -identify "/mnt/www/default/media/videos/vid/12631.mp4"
+MPlayer 1.0rc4-4.4.7 (C) 2000-2010 MPlayer Team
+
+Playing /mnt/www/default/media/videos/vid/12631.mp4.
+libavformat file format detected.
+ID_VIDEO_ID=0
+[lavf] stream 0: video (h264), -vid 0
+ID_AUDIO_ID=0
+ID_AID_0_LANG=eng
+[lavf] stream 1: audio (aac), -aid 0, -alang eng
+VIDEO:  [H264]  480x272  24bpp  29.970 fps  196.5 kbps (24.0 kbyte/s)
+Clip info:
+ major_brand: M4V
+ID_CLIP_INFO_NAME0=major_brand
+ID_CLIP_INFO_VALUE0=M4V
+ minor_version: 512
+ID_CLIP_INFO_NAME1=minor_version
+ID_CLIP_INFO_VALUE1=512
+ compatible_brands: isomiso2avc1
+ID_CLIP_INFO_NAME2=compatible_brands
+ID_CLIP_INFO_VALUE2=isomiso2avc1
+ encoder: Lavf52.64.2
+ID_CLIP_INFO_NAME3=encoder
+ID_CLIP_INFO_VALUE3=Lavf52.64.2
+ album: na
+ID_CLIP_INFO_NAME4=album
+ID_CLIP_INFO_VALUE4=na
+ artist: na
+ID_CLIP_INFO_NAME5=artist
+ID_CLIP_INFO_VALUE5=na
+ comment: na
+ID_CLIP_INFO_NAME6=comment
+ID_CLIP_INFO_VALUE6=na
+ date: na
+ID_CLIP_INFO_NAME7=date
+ID_CLIP_INFO_VALUE7=na
+ title: na
+ID_CLIP_INFO_NAME8=title
+ID_CLIP_INFO_VALUE8=na
+ID_CLIP_INFO_N=9
+ID_FILENAME=/mnt/www/default/media/videos/vid/12631.mp4
+ID_DEMUXER=lavfpref
+ID_VIDEO_FORMAT=H264
+ID_VIDEO_BITRATE=196528
+ID_VIDEO_WIDTH=480
+ID_VIDEO_HEIGHT=272
+ID_VIDEO_FPS=29.970
+ID_VIDEO_ASPECT=1.7647
+ID_AUDIO_FORMAT=MP4A
+ID_AUDIO_BITRATE=127728
+ID_AUDIO_RATE=44100
+ID_AUDIO_NCH=2
+ID_START_TIME=0.00
+ID_LENGTH=70.74
+ID_SEEKABLE=1
+ID_CHAPTERS=0
+==========================================================================
+Opening video decoder: [ffmpeg] FFmpeg's libavcodec codec family
+Selected video codec: [ffh264] vfm: ffmpeg (FFmpeg H.264)
+==========================================================================
+ID_VIDEO_CODEC=ffh264
+==========================================================================
+Opening audio decoder: [faad] AAC (MPEG2/4 Advanced Audio Coding)
+AUDIO: 44100 Hz, 2 ch, s16le, 127.7 kbit/9.05% (ratio: 15966->176400)
+ID_AUDIO_BITRATE=127728
+ID_AUDIO_RATE=44100
+ID_AUDIO_NCH=2
+Selected audio codec: [faad] afm: faad (FAAD AAC (MPEG-2/MPEG-4 Audio))
+==========================================================================
+AO: [null] 44100Hz 2ch s16le (2 bytes per sample)
+ID_AUDIO_CODEC=faad
+Starting playback...
+
+
+Exiting... (End of file)
+ID_EXIT=EOF
+/usr/bin/mplayer -quiet -nolirc -vo null -ao null -frames 0 -identify "/mnt/www/default/media/videos/vid/12631.mp4"
+MPlayer 1.0rc4-4.4.7 (C) 2000-2010 MPlayer Team
+
+Playing /mnt/www/default/media/videos/vid/12631.mp4.
+libavformat file format detected.
+ID_VIDEO_ID=0
+[lavf] stream 0: video (h264), -vid 0
+ID_AUDIO_ID=0
+ID_AID_0_LANG=eng
+[lavf] stream 1: audio (aac), -aid 0, -alang eng
+VIDEO:  [H264]  480x272  24bpp  29.970 fps  196.5 kbps (24.0 kbyte/s)
+Clip info:
+ major_brand: M4V
+ID_CLIP_INFO_NAME0=major_brand
+ID_CLIP_INFO_VALUE0=M4V
+ minor_version: 512
+ID_CLIP_INFO_NAME1=minor_version
+ID_CLIP_INFO_VALUE1=512
+ compatible_brands: isomiso2avc1
+ID_CLIP_INFO_NAME2=compatible_brands
+ID_CLIP_INFO_VALUE2=isomiso2avc1
+ encoder: Lavf52.64.2
+ID_CLIP_INFO_NAME3=encoder
+ID_CLIP_INFO_VALUE3=Lavf52.64.2
+ album: na
+ID_CLIP_INFO_NAME4=album
+ID_CLIP_INFO_VALUE4=na
+ artist: na
+ID_CLIP_INFO_NAME5=artist
+ID_CLIP_INFO_VALUE5=na
+ comment: na
+ID_CLIP_INFO_NAME6=comment
+ID_CLIP_INFO_VALUE6=na
+ date: na
+ID_CLIP_INFO_NAME7=date
+ID_CLIP_INFO_VALUE7=na
+ title: na
+ID_CLIP_INFO_NAME8=title
+ID_CLIP_INFO_VALUE8=na
+ID_CLIP_INFO_N=9
+ID_FILENAME=/mnt/www/default/media/videos/vid/12631.mp4
+ID_DEMUXER=lavfpref
+ID_VIDEO_FORMAT=H264
+ID_VIDEO_BITRATE=196528
+ID_VIDEO_WIDTH=480
+ID_VIDEO_HEIGHT=272
+ID_VIDEO_FPS=29.970
+ID_VIDEO_ASPECT=1.7647
+ID_AUDIO_FORMAT=MP4A
+ID_AUDIO_BITRATE=127728
+ID_AUDIO_RATE=44100
+ID_AUDIO_NCH=2
+ID_START_TIME=0.00
+ID_LENGTH=70.74
+ID_SEEKABLE=1
+ID_CHAPTERS=0
+==========================================================================
+Opening video decoder: [ffmpeg] FFmpeg's libavcodec codec family
+Selected video codec: [ffh264] vfm: ffmpeg (FFmpeg H.264)
+==========================================================================
+ID_VIDEO_CODEC=ffh264
+==========================================================================
+Opening audio decoder: [faad] AAC (MPEG2/4 Advanced Audio Coding)
+AUDIO: 44100 Hz, 2 ch, s16le, 127.7 kbit/9.05% (ratio: 15966->176400)
+ID_AUDIO_BITRATE=127728
+ID_AUDIO_RATE=44100
+ID_AUDIO_NCH=2
+Selected audio codec: [faad] afm: faad (FAAD AAC (MPEG-2/MPEG-4 Audio))
+==========================================================================
+AO: [null] 44100Hz 2ch s16le (2 bytes per sample)
+ID_AUDIO_CODEC=faad
+Starting playback...
+
+
+Exiting... (End of file)
+ID_EXIT=EOF

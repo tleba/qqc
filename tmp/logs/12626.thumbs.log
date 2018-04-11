@@ -1,0 +1,42 @@
+/usr/bin/ffmpeg -ss 00:00:19 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 640x360 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:00:05 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:00:09 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:00:12 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:00:16 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:00:19 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:00:23 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:00:27 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:00:30 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:00:34 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:00:37 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:00:41 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:00:45 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:00:48 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:00:52 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:00:55 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:00:59 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:01:03 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:01:06 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:01:10 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+
+/usr/bin/ffmpeg -ss 00:01:13 -i '/mnt/www/default/media/videos/vid/12626.mp4' -r 1 -s 256x144 -vframes 1 -an -vcodec mjpeg -y /mnt/www/default/tmp/thumbs/12626/%08d.jpg
+

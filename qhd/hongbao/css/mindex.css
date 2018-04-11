@@ -1,0 +1,220 @@
+#header .head-left{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#header .head-right{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.head-left a,.head-right a{
+    display: inline-block;
+    width: 1.3em;
+    height: inherit;
+}
+.head-left a img,.head-right a img{
+    width: 100%;
+}
+.head-left{
+     margin-left:1em ;
+ }
+.head-right{
+    margin-right:1em ;
+}
+#content_page div{
+    width: 100%; 
+}
+#page1{
+    left: 0;
+}
+.current{
+    background: #009BE1;
+    color: #FFF !important;
+}
+.banner img,.banner{width: 100%;}
+.chai img,.chai{width: 100%;}
+.a{position: relative;height: 193px;overflow:hidden;}
+.a img{height: 193px;position: absolute;}
+.a span{position: relative;text-align: center;font-size: 1em;left: 0.5em;padding-top: 2em;display: block;}
+.b{position: relative;height: 245px;overflow:hidden;}
+.b img{height: 245px;position: absolute;}
+.b ul{position: relative;padding-top: 8em;color: #FFFFFF;width: 100%;}
+.b ul li{width: 100%;}
+.s1,.s2,.s3{float: left;width: 30%;line-height: 2em;text-align: center;}
+.c{position: relative;height: 215px;overflow:hidden;}
+.c img{height: 215px;position: absolute;}
+.c ul{position: relative;color: #FFFFFF;width: 100%;padding-top: 4em;}
+.c ul li{width: 95%;padding: 1em;}
+.hongbao{position: relative;}
+.hongbaoa{position: absolute; margin-top:-52%;z-index:100;}
+.hongbaoa font{ display:block; text-align:center;font-size:400%; color:#FF3;font-family:"Microsoft YaHei";}
+.hongbaoa span{ display:block; text-align:center; font-size:100%; font-family:"Microsoft YaHei";}
+.lj{width: 100%;}
+.lj a{width: 50%;height:100%;}
+.cd-popup-container img{position: absolute;}
+.cd-popup-container ul{position: relative;width: 100%;}
+.cd-popup-container ul li{width: 50%;}
+.cd-popup-container ul li a{width: 100%;}
+.a2-popup-container img{position: absolute;}
+.a2-popup-container .tck{position: relative;width: 100%;}
+.tc-container img{position: absolute;}
+.tc-container a{width: 50%;position: relative;height: 100%;}
+.a ul{position: absolute;width: 100%;margin-top: 20%;color: #fff;}
+@media screen and (min-width:768px){
+	.lj a{
+		height:232px;
+	}
+	.hongbaoa{
+		margin-top:-49.5%;
+	}
+	.a ul{
+		margin-top:6%;
+	}
+	.a .s1{
+		width:26%;
+	}
+	.a .s2{
+		width:44%;
+	}
+	.b ul{
+		padding-top:6.5em;
+	}
+	.b .s1{width:27%;}
+	.b .s2{width:42%;}
+}
+@media only screen and (max-width : 767px) {
+	.hongbaoa{
+		margin-top:-50%;
+	}
+	.hongbaoa font{
+		font-size:370%;
+	}
+	.a ul{
+		margin-top:7%;
+	}
+	.a .s1{
+		width:26%;
+	}
+	.a .s2{
+		width:44%;
+	}
+	.b ul{
+		padding-top:6.5em;
+	}
+	.b .s1{width:27%;}
+	.b .s2{width:42%;}
+	.lj .aa{
+		width:254px;
+		height:120px;margin-left:47px;margin-top:102px;
+	}
+}
+@media (max-width: 640px){
+	
+}
+@media screen and (max-width:420px) {
+	body,html {
+		font-size: 10.5px
+	}
+	.lj .aa{
+		width:144px;
+		height:70px;margin-left:26px;margin-top:52px;
+	}
+	.hongbaoa font{
+		font-size:300%;margin-top:14px;margin-bottom:5px;
+	}
+	.a span{
+		padding-left:8%;padding-top:8%;
+	}
+	.a ul{
+		margin-top:13%;
+	}
+	.a .s1{
+		width:28%;
+	}
+	.a .s2{
+		width:42%;
+	}
+	.b ul{
+		padding-top:9em;
+	}
+	.b .s1{
+		width:20%;
+	}
+	.b .s2{
+		width:38%;
+	}
+	.b .s3{
+		width:28%;
+	}
+	.list_con{
+		margin-top:7em;
+		height:7em;
+	}
+}
+@media (max-width: 376px){
+	body,html {
+		font-size: 8px
+	}
+	.hongbaoa{
+		margin-top:-52%;
+	}
+	.lj .aa{
+		width:50%;
+		height:70px;
+		margin-left:0;
+		margin-top:39px;
+	}
+	.tck input{
+		margin-top:14%;
+	}
+	.a ul{
+		margin-top:13%;
+	}
+	.a span{
+		padding-left:20%;
+		padding-top:10%;
+	}
+	.b .s1{
+		width:25%;
+	}
+	.b .s2{
+		width:35%;
+	}
+	.b .s3{
+		width:35%;
+	}
+}
+@media (max-width: 320px){
+	body,html {
+		font-size: 8px
+	}
+	.hongbaoa{
+		margin-top:-53%;
+	}
+	.lj .aa{
+		width:50%;
+		height:70px;
+		margin-left:0;
+		margin-top:25px;
+	}
+	.tck input{
+		margin-top:14%;
+	}
+	.a ul{
+		margin-top:17%;
+	}
+	.a span{
+		padding-left:20%;
+		padding-top:10%;
+	}
+	.b .s1{
+		width:25%;
+	}
+	.b .s2{
+		width:35%;
+	}
+	.b .s3{
+		width:35%;
+	}
+}

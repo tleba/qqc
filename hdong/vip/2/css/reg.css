@@ -1,0 +1,95 @@
+@charset "utf-8";
+@import url(base.css);
+@import url(footer.css);
+.top{
+	background:#1bbc9d;
+	color:#fff;
+	height:90px;
+	line-height: 82px;
+}
+.top img {
+    width: 180px;
+    height: 60px;
+    margin-right:20px;
+}
+
+.content{
+    height: 994px;
+    background: url(../images/bg.png) no-repeat center;
+    overflow: hidden;	
+}
+.content .contain{
+	position: relative;	
+	padding-top:128px;
+}
+
+.woman {
+    position: absolute;
+    right: -184px;
+    top: 0px;
+    height:994px;
+    width:658px;
+}
+
+.woman img {
+    height:994px;
+    width:658px;
+}
+
+.content .text{
+	text-align: center;
+	width:780px;
+}
+.content .text .logo {
+    height: 61px;
+    margin-bottom: 46px;
+}
+.content .text .logo img{
+	margin:0px 28px;
+}
+.content .text .success{
+	margin-bottom: 30px;
+}
+.content .text  p{
+	font-size: 20px;
+	text-align: center;
+}
+.content .text  p span.orange{
+	margin-right:20px;
+}
+.content .text .btn_group {
+    margin-top:50px;
+}
+
+
+.content .text .info {
+    margin-top: 60px;
+    text-align: left;
+}
+
+.content .text .info h1 {
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    line-height: 30px;
+}
+
+.content .text .info p {
+    line-height: 26px;
+    font-size: 15px;
+    text-align: left;
+    background:#fff;
+    color:#242222;
+    padding:0px 4px;
+}
+.content .text .success_text{
+	margin-bottom: 30px;
+}
+
+
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}

@@ -1,0 +1,45 @@
+/*1*/
+.zt{width: 100%;height: auto;}
+.banner{background: url(../images/banner.jpg) center center; height: 510px;}
+.banner a{display:block;height: 510px;}
+.bj1{background: url(../images/bj1.jpg) top center;}
+.hongbao{background: url(../images/hbc.jpg); height: 605px;}
+.hongbao a{display:block;height: 605px;}
+.hongbao3{background: url(../images/hb3.png); height: 605px;}
+.hongbao3 a{display:block;height: 605px;}
+.bj2{background: url(../images/bj2.jpg) center center;height: 303px;}
+.hong{color: #c12f2e;}
+.bj2 span{display:block;font-size: 30px;margin-left: 273px;padding-top: 45px;}
+.bj2 ul{margin-left:60px;margin-top:82px;}
+.bj2 ul li {color:#fff; }
+.bj2 ul li font{float:left;width:150px; text-align:center;height: 30px;line-height: 30px;}
+.s7{margin-left: 210px;}
+.s8{margin-left: 210px;}
+.bj3{background: url(../images/bj3.jpg) center center;height: 575px;}
+.bj4{background: url(../images/bj4.jpg) center center;height: 694px;}
+.f-l ul{padding-top: 175px;margin-left: 40px;}
+.f-l ul li{font-size: 14px; color: #FFFFFF;line-height: 38px;}
+.s1{width: 150px;}
+.s2{margin-left: 145px;}
+.s3{margin-left: 130px;}
+.f-r{margin-right: 18px;margin-top: 110px; width: 278px;}
+.f-r ul li{font-size: 14px; color: #FFFFFF;line-height: 40px;}
+.s5{float: left;}
+.s6{float: right;}
+.huang{color: #fbf207;}
+.bj4 span{display:block;padding-top: 125px;margin-left: 18px;color: #FFFFFF;line-height: 35px;font-size: 18px;}
+/*2*/
+.hongbao2{background: url(../images/hb2.jpg); height: 605px;}
+.hongbao2 font{margin-left: 425px;padding-top: 70px;font-size: 120px;display: block;}
+.hongbao2 span{display: block;color: #FFFFFF;font-size: 30px;text-align: center;}
+.lj{width: 870px;margin: 0 auto;margin-top: 110px;height: 170px;}
+.fl{float: left;}
+.fr{float: right;}
+.aa{width: 345px;height: 170px;display: block;}
+.jiathis_style_32x32{padding-left: 86px;padding-top: 80px;}
+/*tc*/
+.tc-container{background: url(../images/hb3.jpg) no-repeat; height: 605px; 
+/* display: flex;	justify-content:center;	align-items:Center; */
+ }
+<!--.gbck{display: block;}-->
+/*.gb{position: relative;top: -350px;right: -500px;font-size: 50px;color: #FFDA0F;}*/

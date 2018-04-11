@@ -1,0 +1,63 @@
+/*common*/
+.container{width:1143px;margin:0 auto;}
+.clear{clear:both;height:0;line-height: 0;font-size: 0;}
+.clearfix{overflow: auto;zoom:1;}
+.pink{background:#fd589f;}
+.gery1{background:#e8e8e8;}
+.gery2{background:#f5f5f5;}
+.gold{color:#fbd107;}
+/*header style*/
+.head{background:#1abd9d;}
+.head .container{padding:10px 0;background:#1abd9d;}
+.head .container a.logo{float:left;display: block;width:179px;height:60px;margin-left:15px;background:url(../images/logo.png) no-repeat 0 0;}
+.head .container div.slogan{float:left;display:block;width:186px;height:65px;margin-left:25px;background:url("../images/logo.gif") no-repeat 0 0;}
+/*------------------------------主要内容------------------------------*/
+.main{background:url("../images/bg.jpg") no-repeat top center #172770;}
+.main .container{background:#172770;}
+.main .banner{width:100%;height:713px;position:relative;background:url("../images/bg.jpg") no-repeat top center;}
+.main .banner .slogan{width:710px;height:283px;background:url("../images/banner-text.png") no-repeat 0 0;position:absolute;top:44px;left:321px;}
+.main .banner .time{width:563px;height:61px;background:url("../images/banner-time.png") no-repeat 0 0;position:absolute;top:335px;left:428px;}
+
+.main .content .content-title{width:1067px;height:93px;margin:0 auto;background:url("../images/active-content-title.png") no-repeat 0 0;}
+/*------------------------------活动内容 1------------------------------*/
+.main .content .content-1{width:100%;height:469px;margin-top:45px;padding:50px 35px 25px;background:#2a4693;border:2px solid #6b8dce;border-radius:10px;box-sizing: border-box;}
+.main .content .content-1 .content-1-l{float:left;width:590px;}
+.main .content .content-1 .content-1-l .num-1{float:left;width:68px;height:170px;margin-right:20px;background:url("../images/active-content-1.png") no-repeat 0 0;}
+.main .content .content-1 .content-1-l .rule-1{margin-top:0;color:white;line-height:25px;}
+.main .content .content-1 .content-1-l .weibo{width:567px;height:108px;margin:0 auto;background:url("../images/weibo.jpg") no-repeat 0 0;}
+.main .content .content-1 .content-1-l .gold{color:#fbd107;font-size: 12px;}
+.main .content .content-1 .content-1-l .qq-num{float:left;color:white;}
+.main .content .content-1 .content-1-l a.btn-cs{float:left;display:block;width:117px;height:33px;line-height:33px;margin-left:35px;color:#112061;background:#fbd107;border-radius:3px;text-align: center;text-decoration: none;}
+.main .content .content-1 .content-1-l a.btn-cs:hover{color:#253789;background:#ffdb2d;}
+.main .content .content-1 .content-1-l .tips{float:left;margin-top:0;color:#fbd107;font-size: 17px;}
+.main .content .content-1 .content-1-r{float:right;width:461px;height:313px;margin-top: 30px;}
+/*------------------------------活动内容 2------------------------------*/
+.main .content .content-2{width:100%;height:395px;margin-top:50px;margin-bottom:50px;padding:50px 35px 25px;background:#2a4693;border:2px solid #6b8dce;border-radius:10px;box-sizing: border-box;}
+.main .content .content-2 .content-2-l{float:left;width:555px;}
+.main .content .content-2 .content-2-l .num-2{float:left;width:68px;height:85px;margin-right:20px;background:url("../images/active-content-2.png") no-repeat 0 0;}
+.main .content .content-2 .content-2-l .rule-2{margin-top:0;color:white;line-height: 25px;}
+.main .content .content-2 .content-2-l .qq-num{float:left;color:white;}
+.main .content .content-2 .content-2-l a.btn-cs{float:left;display:block;width:117px;height:33px;line-height:33px;margin-left:35px;color:#112061;background:#fbd107;border-radius:3px;text-align: center;text-decoration: none;}
+.main .content .content-2 .content-2-l a.btn-cs:hover{color:#253789;background:#ffdb2d;}
+.main .content .content-2 .content-2-l .tips{float:left;margin-top:0;color:#fbd107;font-size: 17px;}
+.main .content .content-2 .content-2-l .moon-cake{float:left;width:200px;height:134px;margin:-2px;background:url("../images/moon-cake-content.png") no-repeat 0 0;}
+
+.main .content .content-2 .content-2-r{float:right;width:445px;color:white;}
+.main .content .content-2 .content-2-r .time-limit{width:258px;height:44px;line-height:44px;margin:0 auto;text-align:center;background:#fd589f;border-top-left-radius: 10px;border-top-right-radius: 10px;}
+.main .content .content-2 .content-2-r table{width:100%;text-align:center;font-weight:normal;border-collapse:collapse;border:1px solid white;}
+.main .content .content-2 .content-2-r table tr{line-height: 30px;}
+.main .content .content-2 .content-2-r table td{color:#565656;}
+/*------------------------------活动细则------------------------------*/
+.main .rules .rules-title{width:1067px;height:93px;margin:0 auto 30px;background:url("../images/rules-title.png") no-repeat 0 0;}
+.main .rules .rules-list{display:block;width:1063px;margin:0 auto;padding-bottom:80px;line-height:30px;color:white;}
+
+/*footer style*/
+.footer{background:#191919;position:relative;color:#fff;}
+.footer .clearfix{width:1143px;margin:0 auto;background:#191919;}
+.footer .clearfix .cs{float:left;width:115px;margin:15px 0  25px 0;text-align: center;}
+.footer .clearfix .cs .f-btn{display:block;width:115px;height:25px;line-height: 25px;margin-top:12px;color:white;background: #287fba;text-decoration: none;}
+.footer .clearfix .cs .f-btn:hover{background: #287fba;background-image: none;background-image: -webkit-linear-gradient(#287fba, #3da4ec);background-image: -o-linear-gradient(#287fba, #3da4ec);background-image: linear-gradient(#287fba, #3da4ec);}
+.footer .clearfix .icon-f-cs{float:left;width:59px;height:62px;margin-left: 15px;margin-top:8px;background:url(../images/foot_call.png) no-repeat;}
+.footer .f-links{float:right;height: 100%;line-height: 79px;}
+.footer .f-links a{color:#d4d4d4;border:1px solid #d4d4d4;padding:5px 10px;text-decoration: none;}
+.footer .f-links a:hover{color:#b6b6b6;border:1px solid #b6b6b6;padding:5px 10px;}

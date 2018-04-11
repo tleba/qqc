@@ -1,0 +1,214 @@
+*{padding: 0; margin: 0}
+img{display: inline-block;}
+ul,li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pull-left{float: left;}
+.pull-right{float: right;}
+body{max-width: 640px; margin: 0 auto}
+html {
+        font-size : 20px;
+    }
+    @media only screen and (min-width: 320px){
+        html {
+            font-size: 20px !important;
+        }
+    }
+    @media only screen and (min-width: 375px){
+        html {
+            font-size: 23.4375px !important;
+        }
+    }
+    @media only screen and (min-width: 414px){
+        html {
+            font-size: 25.875px !important; 
+        }
+    }
+    @media only screen and (min-width: 569px){
+        html {
+            font-size: 35px !important; 
+        }
+    }
+    @media only screen and (min-width: 640px){
+        html {
+            font-size: 28px !important;
+        }
+    }
+.wapper{width: 16rem;margin: 0 auto;}
+.header{height: 40px;background-color: #19bd9e;}
+.header img{width: 200px;height: 30px;margin-top: 5px;margin-left: 10px;float: left;}
+.qcl{background-color: #3d3d3d}
+.qcl img{margin-top: 3px;margin-left: 10px;}
+.header img
+.banner{ font-size: 0; }
+.banner img{max-width: 100%}
+.jc{ background: #192233}
+.jc img{width: 80px}
+
+.content{
+    width: 15.4rem;
+    border: 2px solid #ffc400;
+    margin:0 auto;
+    height: 25rem;
+    background-color: #fff;
+}
+
+.content h3{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #7d4046;
+    font-size: 20px;
+}
+
+.content .text{
+    font-size: 14px;
+    color: #7d4046;
+    margin-left: 20px;
+}
+.content h4{
+    font-size: 24px;
+    color: #ea2034;
+    margin-left: 20px;
+    line-height: 50px;
+}
+.top{
+    height: 70px;
+    width: 100%;
+    background-color: #ffc400;
+}
+.t-left{
+    width: 160px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    border-right: 1px solid #520008;
+    float: left;
+}
+.t-right{width: 819px;float: left;}
+.t-right p{height: 36px;line-height: 36px;color: #520008;text-align: center;font-size: 14px;}
+.t-right p:first-child{border-bottom: 1px solid #520008;height: 33px;}
+.t-right span{width: 160px;display: inline-block;height: 34px;line-height: 34px;}
+.qq{
+    width: 94%;
+    margin: 0 auto;
+    height: 30px;
+    margin-top: 10px;
+}
+.table{
+    position: relative;
+}
+.qq b{
+    font-weight: normal;
+    float: left;
+    margin-right: 10px;
+    width: 9rem;
+    font-size: 0.6rem;
+    height: 21px;
+    line-height: 21px;
+}
+.qq a{
+    display: inline-block;
+    border-radius: 30px;
+    background-color: #f73526;
+    padding: 2px 12px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    float: left;
+}
+.table img{max-width: 100%}
+.r-left{width: 6.2rem;height: 1.8rem;position: absolute;top: 9.2rem;left: 0.7rem;}
+.r-left a{display: inline-block; width: 100%; height: 100%}
+.r-right{
+    width: 6.2rem;
+    height: 1.8rem;
+    position: absolute;
+    top: 9.2rem;
+    right: 0.9rem;
+    }
+.r-right a{display: inline-block; width: 100%; height: 100%}
+.r-bottom{width: 6.4rem;height: 1.2rem;position: absolute;top: 11.9rem;m;left: 4.7rem;}
+.r-bottom a{display: inline-block; width: 100%; height: 100%}
+.target{font-size: 0.6rem;color: #e70017;width: 94%;margin: 0 auto;}
+
+.rule{
+    width: 16rem;
+    margin:0 auto;
+    margin-top: 20px;
+    padding-top: 20px;
+    height: 14rem;
+    background-color: #fdf3d5;
+}
+
+
+.rule p{
+    color: #ad9284;
+    font-size: 0.5rem;
+    margin-bottom: 4px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.rule-title{
+    text-align: center;
+    height: 2rem;
+}
+
+
+
+.footer{
+    width: 16rem;
+    height: 80px;
+    background-color: #181818;
+    margin: 0 auto;
+}
+
+
+.bottoms{
+    width: 16rem;
+    margin:0 auto;
+}
+
+.bottoms a{
+    margin-left: 10px;
+    width: 6rem;
+    margin-top: 10px;
+    height: 70px;
+    display: inline-block;
+}
+
+.bottoms img{
+    max-width: 100%;
+    height: 60px;
+}
+
+.bottoms .home{
+    width: 50px;
+    margin-right: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 12px;
+    text-decoration: none;
+    line-height: 20px;
+    border: 1px solid #fff;
+    color: #fff;
+    float: right;
+    margin-top: 26px;
+}
+
+
+
+
+
+
+
+
+
+
+

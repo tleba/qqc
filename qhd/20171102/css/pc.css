@@ -1,0 +1,224 @@
+*{padding: 0;margin: 0;}
+a{text-transform: none;}
+li{list-style: none;}
+.header-box{
+    width: 100%;
+    height: 80px;
+    background-color: #00bafa;
+}
+
+.header{
+    width:1200px;
+    height: 80px;
+    margin:0 auto;
+}
+
+.header-green{
+	background-color: #0ec99a;
+}
+.header-back{
+	background-color: #404040;
+}
+
+.header-purple{
+	background-color: #162334;
+}
+.header-back img{
+	margin-top: 4px;
+}
+.header .logo{
+    height: 80px;
+    display: inline-block;
+}
+
+
+.header img{
+	max-width: 100%;
+	max-height: 100%;
+	vertical-align: baseline;
+	display: inline-block;
+}
+
+.header-purple img{
+	margin-top: 10px;
+}
+
+
+
+.banner{
+	width: 100%;
+	font-size: 0;
+}
+
+
+.banner img{
+	display: block;
+	max-width: 100%;
+	 vertical-align: bottom 
+}
+
+.main{
+	width: 100%;
+	background-color: #fff6e5;
+	height: 1048px;
+}
+
+.content{
+	width: 980px;
+	border: 2px solid #ffc400;
+	margin:0 auto;
+	height: 700px;
+	background-color: #fff;
+}
+
+.content h3{
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #7d4046;
+	font-size: 20px;
+}
+
+.content .text{
+	font-size: 14px;
+	color: #7d4046;
+	margin-left: 20px;
+}
+
+
+.content h4{
+	font-size: 24px;
+	color: #ea2034;
+	margin-left: 20px;
+	line-height: 50px;
+}
+
+.top{
+	height: 70px;
+	width: 100%;
+	background-color: #ffc400;
+}
+
+.t-left{
+	width: 210px;
+	height: 70px;
+	text-align: center;
+	line-height: 70px;
+	border-right: 1px solid #520008;
+	float: left;
+}
+
+.t-right{width: 768px;float: left;}
+.t-right p{height: 36px;line-height: 36px;color: #520008;text-align: center;font-size: 14px;}
+.t-right p:first-child{border-bottom: 1px solid #520008;height: 33px;}
+.t-right span{width: 150px;display: inline-block;height: 34px;line-height: 34px;}
+.login{
+	width: 90%;
+	margin: 0 auto;
+	height: 235px;
+	background: url(../images/zixun_03.jpg) no-repeat top center;
+}
+.r-left{width: 270px;height: 71px;float: left;margin-left: 102px;margin-top: 97px;}
+.r-left a{display: inline-block; width: 100%; height: 100%}
+.r-right{width: 270px;height: 71px;float: left;margin-left: 126px;margin-top: 97px;}
+.r-right a{display: inline-block; width: 100%; height: 100%}
+.r-bottom{width: 183px;height: 43px;float: left;margin-left: 350px;margin-top: 11px;}
+.r-bottom a{display: inline-block; width: 100%; height: 100%}
+
+.bottom{ height: 60px;}
+.bottom ul{ height: 30px; width: 100%; float: left;}
+.bottom li{ text-align: center; height: 30px; float: left;}
+.bottom li{font-size: 14px;line-height: 34px;width: 153px;}
+.bottom ul{border-bottom: 1px solid #520008}
+.bottom .meal{width: 130px;text-align: center;border-right: 1px solid #520008;margin: 0;padding: 0;}
+.meal:first-child{width: 79px;} 
+
+.demand{ height: 40px; line-height: 40px; color: #e70017; font-size: 14px; text-align: center; border-bottom: 1px solid #520008}
+
+
+.target{color: #e70017;width: 90%;
+	margin: 0 auto;}
+.qq{
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 17px;
+}
+
+.qq b{
+	font-weight: normal;
+	float: left;
+	margin-right: 10px;
+}
+.qq a{
+	display: inline-block;
+	border-radius: 30px;
+	background-color: #f73526;
+	padding: 2px 20px;
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+
+
+
+.rule{
+	width: 964px;
+	margin:0 auto;
+	margin-top: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
+	height: 280px;
+	background-color: #fdf3d5;
+}
+
+
+.rule p{
+	color: #ad9284;
+	font-size: 14px;
+	margin-bottom: 4px;
+}
+
+.rule-title{
+	text-align: center;
+}
+
+
+
+.footer{
+	width: 100%;
+	height: 96px;
+	background-color: #181818;
+}
+
+
+.bottoms{
+	width: 988px;
+	margin:0 auto;
+}
+
+.bottoms a{
+	width: 180px;
+	margin-top: 10px;
+	height: 80px;
+	display: inline-block;
+}
+
+.bottoms img{
+	max-width: 100%;
+}
+
+.bottoms .home{
+	width: 60px;
+	height: 20px;
+	text-align: center;
+	font-size: 12px;
+	text-decoration: none;
+	line-height: 20px;
+	border: 1px solid #fff;
+	color: #fff;
+	float: right;
+	margin-top: 37px;
+}
