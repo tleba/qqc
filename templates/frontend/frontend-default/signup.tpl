@@ -58,17 +58,52 @@
 
 					<div class="form-group {if $err.email}has-error{/if}">
 						<label for="email" class="col-lg-3 control-label">{t c='global.email'}</label>
-						<div class="col-lg-6">
+						<div class="col-lg-6 " style="position:relative;">
 							<input name="email" type="text" class="form-control" value="{$signup.email}" id="email" placeholder="{t c='global.email'}" />
+							<i class="glyphicon  glyphicon-question-sign icon-email-q" style="position:absolute;right:25px;top:10px; font-size:2rem;"></i>
+							<p class="tips-email" style="display:none; width:80%; height:auto; padding:2%; position:absolute;top:-55px; right:15px;background:#ff8585; color:white;">邮箱号也可使用腾讯QQ邮箱：邮箱格式一般为<span style="color:red;">xxxxxx@qq.com</span>(xxxxxx为QQ号码）</p>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="guname" class="col-lg-3 control-label">游戏账号</label>
 						<div class="col-lg-6">
-							<input name="guname" type="text" class="form-control" value="" id="guname" placeholder="尊龙账号（*非必填）" />
+							<input name="guname" type="text" class="form-control" value="" id="guname" placeholder="请输入已充值的尊龙账号（*非必填）" />
+							<i class="glyphicon  glyphicon-question-sign icon-zl-q" style="position:absolute;right:25px;top:10px; font-size:2rem;"></i>
+							<p class="tips-zl-id" style="display:none; width:80%; height:auto; padding:2%; position:absolute;top:-55px; right:15px;background:#ff8585; color:white;">尊龙账号为您VIP界面充值青青草会员时需注册使用，<a
+										href="/hdong/vip/" target="_blank" style="color:red;">点击注册</a></p>
+
 						</div>
 					</div>
-					<div class="form-group {if $err.gender}has-error{/if}">
+					{*鼠标点击 提示弹出*}
+				  <script>
+                      {literal}
+					  $(".icon-email-q").click( function(){
+						  if ($(".tips-email").is(":hidden")) {
+						      $(".tips-email").fadeIn();
+                          } else {
+                              $(".tips-email").fadeOut();
+                          }
+                          hide();
+                      });
+                      $(".icon-zl-q").click(function(){
+                          if ($(".tips-zl-id").is(":hidden")) {
+                              $(".tips-zl-id").fadeIn();
+                          } else {
+                              $(".tips-zl-id").fadeOut();
+                          }
+                          hide();
+                      });
+                      function hide(){
+                          setTimeout(function () {
+                              $(".tips-email").fadeOut();
+                              $(".tips-zl-id").fadeOut();
+                          },5000)
+                      }
+                      {/literal}
+				  </script>
+                  {*鼠标点击 提示弹出*}
+
+				  <div class="form-group {if $err.gender}has-error{/if}">
 						<label class="col-lg-3 control-label">{t c='global.gender'}</label>
 						<div class="col-lg-6">
 
