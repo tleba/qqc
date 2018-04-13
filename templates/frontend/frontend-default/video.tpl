@@ -93,8 +93,18 @@ evdiv.css("height" , eheight);
       <div class="modal-body" style="border-bottom:none;background:none;color: #000;font-size: 16px;padding-left: 40px;padding-right: 40px;">
         {$vmsg}
       </div>
-      <div class="modal-footer" style="text-align:center;padding-top:5px;">
-        {if $type_of_user != 'premium'}<a href="/hdong/vip/" style="margin-right:10px;"><img src="/templates/frontend/frontend-default/img/s2.png"></a><a href="/spread" style="margin-left:10px;" class="hidden-xs"><img src="/templates/frontend/frontend-default/img/s3.png"></a>{/if}
+      <div class="modal-footer" style="text-align:center;padding-top:5px;img max-width:60%">
+        {if $type_of_user != 'premium'}
+			<a href="/hdong/vip/" style="margin-right:10px;">
+				<img src="/templates/frontend/frontend-default/img/s2.png" style="width:100px">
+			</a>
+			<a href="/qhd/songsb/pc/" id="sebMessage">
+				<img src="/templates/frontend/frontend-default/sebMessage/images/sebi.png" style="width:100px">
+			</a>
+			<a href="/spread" style="margin-left:10px;" class="hidden-xs">
+				<img src="/templates/frontend/frontend-default/img/s3.png" style="width:100px">
+			</a>
+		{/if}
       </div>
     </div>
   </div>
@@ -103,7 +113,10 @@ evdiv.css("height" , eheight);
  <script type="text/javascript">
  {literal}
    $(function(){
-		show_sebi();
+       if(ismobile()){
+			$("#sebMessage").attr('href','/qhd/songsb/h5/')
+	   }
+	   show_sebi();
     });
  {/literal}
  </script>

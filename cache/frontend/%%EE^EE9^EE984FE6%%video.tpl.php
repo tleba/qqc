@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.20, created on 2018-04-06 15:22:49
+<?php /* Smarty version 2.6.20, created on 2018-04-13 18:41:37
          compiled from video.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 't', 'video.tpl', 5, false),array('modifier', 'escape', 'video.tpl', 131, false),array('modifier', 'clean', 'video.tpl', 399, false),array('modifier', 'nl2br', 'video.tpl', 496, false),array('insert', 'time_range', 'video.tpl', 138, false),array('insert', 'thumb_path', 'video.tpl', 401, false),array('insert', 'duration', 'video.tpl', 405, false),array('insert', 'adv', 'video.tpl', 536, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 't', 'video.tpl', 5, false),array('modifier', 'escape', 'video.tpl', 144, false),array('modifier', 'clean', 'video.tpl', 412, false),array('modifier', 'nl2br', 'video.tpl', 509, false),array('insert', 'time_range', 'video.tpl', 151, false),array('insert', 'thumb_path', 'video.tpl', 414, false),array('insert', 'duration', 'video.tpl', 418, false),array('insert', 'adv', 'video.tpl', 549, false),)), $this); ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "header.tpl", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -117,8 +117,18 @@ evdiv.css("height" , eheight);
         <?php echo $this->_tpl_vars['vmsg']; ?>
 
       </div>
-      <div class="modal-footer" style="text-align:center;padding-top:5px;">
-        <?php if ($this->_tpl_vars['type_of_user'] != 'premium'): ?><a href="/hdong/vip/" style="margin-right:10px;"><img src="/templates/frontend/frontend-default/img/s2.png"></a><a href="/spread" style="margin-left:10px;" class="hidden-xs"><img src="/templates/frontend/frontend-default/img/s3.png"></a><?php endif; ?>
+      <div class="modal-footer" style="text-align:center;padding-top:5px;img max-width:60%">
+        <?php if ($this->_tpl_vars['type_of_user'] != 'premium'): ?>
+			<a href="/hdong/vip/" style="margin-right:10px;">
+				<img src="/templates/frontend/frontend-default/img/s2.png" style="width:100px">
+			</a>
+			<a href="/qhd/songsb/pc/" id="sebMessage">
+				<img src="/templates/frontend/frontend-default/sebMessage/images/sebi.png" style="width:100px">
+			</a>
+			<a href="/spread" style="margin-left:10px;" class="hidden-xs">
+				<img src="/templates/frontend/frontend-default/img/s3.png" style="width:100px">
+			</a>
+		<?php endif; ?>
       </div>
     </div>
   </div>
@@ -127,7 +137,10 @@ evdiv.css("height" , eheight);
  <script type="text/javascript">
  <?php echo '
    $(function(){
-		show_sebi();
+       if(ismobile()){
+			$("#sebMessage").attr(\'href\',\'/qhd/songsb/h5/\')
+	   }
+	   show_sebi();
     });
  '; ?>
 

@@ -1,0 +1,24 @@
+html,body,div,img,a,h4,p { margin:0; padding:0;}
+
+/*
+ * clerafix
+ */
+
+.clearfix:before {content: "";display: table-cell;}
+.clearfix:after {  content: "";  display: table;  clear: both;  }
+.mask { position:fixed; top:0; right:0; bottom:0; left:0; background:rgba(0,0,0,.5); margin:auto; opacity: .5; filter:alpha(opacity=50);z-index: 9;}
+.pop { position:absolute; top:40%; left:50%; transform:translate(-50%, -50%); width:482px; height:346px; background:url(../images/pop-bg.png) center center no-repeat; z-index: 999;}
+.main-pop {position:relative; }
+
+.pop .btn-close { position:absolute; top:90px; right:-12px; width:31px; height:31px; background:url(../images/btn-close.png) center center no-repeat; cursor: pointer;}
+.pop .pop-body .pop-h4 { position:absolute; top:120px; left:50px;  color:white; font-size: 20px; }
+.pop .pop-body p { width:416px; height:auto; position:absolute; top:175px; left:50px; text-align: center; color:white; font-size: 17px; line-height:25px; font-weight:bold;}
+.pop .pop-body p span { color:yellow; }
+.pop .pop-btns { position:absolute; bottom:-310px; left:50px;}
+.pop .pop-btns a { display:block; float:left; width:130px; height:40px; line-height: 40px; text-align: center; text-decoration: none; background:#fff600; color:black; border-radius: 1000px;}
+.pop .pop-btns a+a { margin-left: 10px;}
+.pop .pop-btns a:hover { background: #e6dd00; }
+
+
+
+

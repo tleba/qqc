@@ -1,0 +1,200 @@
+
+body,h1,h2,h3,h4,dl,dt,dd,ul,ol,li,a,div,em,span,img,form,input,p,i{ padding:0px; margin:0px; border:none;}
+body{color:#242424;text-rendering: optimizelegibility;font:400 14px/1.8em "Microsoft YaHei",Arial;}
+em,i{word-wrap: break-word;font-style:normal;}
+a{  text-decoration:none;}
+a:link,a:visited,a:active{ text-decoration:none;}
+a,button,span,i,div,h2,aside{/* -webkit-user-select: none; */ -webkit-tap-highlight-color:rgba(0,0,0,0);}
+input, button, textarea, select {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+ul, ol, dl,li {list-style: none ;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block; margin:0; padding:0;}
+img{border:none; max-width:100%;vertical-align: middle;}
+html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+input[type="button"], input[type="text"], input[type="submit"], input[type="search"], input[type="email"], input[type="number"], input[type="phone"], button {
+    -webkit-appearance: none; -moz-appearance: none; -webkit-border-image: none; border-image: none; -webkit-border-radius: 0; border-radius: 0; }
+.clearfix:after { content: ""; display: block; height: 0; overflow: hidden; clear: both; visibility: hidden; }
+
+a:active {
+    opacity: 0.7;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+body {
+    background: #14264e;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.top {
+    height: 41px;
+    background: #1abd9d;
+}
+
+.top h1 {
+    width: 210px;
+    height: 41px;
+    text-indent: -1000em;
+    background: url("../images/logo.png");
+    background-size: 210px 41px;
+}
+
+.content .text {
+    padding: 0 25px;
+    margin: 25px 0;
+}
+
+.content .text span {
+    color: #fff400;
+    font-weight: 700;
+}
+
+.content .pic1 {
+   width: 95%;
+   margin: 0 auto;
+}
+
+.content .tip {
+    text-align: center;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.content .tit {
+    font-size: 15px;
+    font-weight: 700;
+    color: #000000;
+    line-height:58px;
+    text-align: center;
+    margin: 0 15px 10px;
+}
+
+.content .tit1 {
+    width: 137px;
+    height: 44px;
+    background: url("../images/tit1.png");
+    background-size: 137px 44px;
+}
+
+.content .tit2{
+    width: 183px;
+    height: 44px;
+    background: url("../images/tit2.png");
+    background-size: 183px 44px;
+}
+
+.content p {
+    padding: 0 15px;
+}
+
+.content p a {
+    color: #fff400;
+    font-weight: 700;
+}
+
+.pic2, .pic3, .pic4, .pic6, .pic5 {
+    width: 90%;
+    margin: 25px auto 0;
+}
+.pic6 {
+    width: 100%;
+}
+
+.pic5 {
+    width: 60%;
+}
+
+.how {
+    overflow: hidden;
+    width: 346px;
+    margin: 30px auto;
+    position: relative;
+    left: 5px;
+}
+
+.how li {
+    float: left;
+}
+
+.how li a {
+    display: block;
+    width: 163px;
+    height: 44px;
+    line-height: 44px;
+    display: block;
+    background: url("../images/button.png");
+    background-size: 163px 44px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.explain {
+    margin:  15px;
+    background: #09142b;
+    padding:  25px 10px;
+}
+
+.explain .title {
+    width: 85px;
+    height: 40px;
+    line-height: 40px;
+    color: #ffde00;
+    font-weight: 700;
+    text-align: center;
+    font-size: 16px;
+    background: url("../images/tit3.png") no-repeat 50% 50%;
+    background-size: 85px 8px;
+}
+
+.footer {
+    height: 60px;
+    background: #181818;
+    position: relative;
+}
+
+.footer .contact {
+    position: relative;
+    left: 15px;
+    top: 5px;
+    width: 190px;
+    background: url("../images/per.png") center right no-repeat;
+    font-size: 12px;
+}
+
+.footer .contact p {
+    height: 25px;
+    line-height: 25px;
+    width: 115px;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.footer .contact a {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    width: 115px;
+    text-align: center;
+    background: #1d88c6;
+    color: #ffffff;
+}
+
+.index-button {
+    width: 69px;
+    line-height: 26px;
+    border: #d5d5d5 1px solid;
+    color: #d5d5d5;
+    position: absolute;
+    top: 17px;
+    right: 12px;
+    text-align: center;
+}
+
+

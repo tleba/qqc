@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>消息弹窗</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+</head>
+<body>
+
+<!-- 手机访问则跳到手机站 -->
+<script type="text/javascript">
+    var userAgentInfo = navigator.userAgent;
+    if  (userAgentInfo.indexOf("Android") > 0 || userAgentInfo.indexOf("iPhone") > 0 || userAgentInfo.indexOf("SymbianOS") > 0 || userAgentInfo.indexOf("Windows Phone") > 0 || userAgentInfo.indexOf("iPod") > 0 || userAgentInfo.indexOf("iPad") > 0)
+    {
+        window.location.href = "m.index.html";
+    }else {
+    }
+</script>
+<div class="mask"></div>
+<div class="pop">
+    <div class="main-pop">
+        <div class="btn-close"></div>
+        <div class="pop-body">
+            <h4 class="pop-h4">温馨提示</h4>
+            <p>亲爱的<span>游客</span>，您目前还剩余体验币个数：<span>0</span>个 <br/>不够体验币播放该视频</p>
+        </div>
+        <div class="pop-btns clearfix">
+            <a href="javascript:;" class="btn-choose">加入VIP</a>
+            <a href="javascript:;" class="btn-choose">免费赚色币</a>
+            <a href="javascript:;" class="btn-choose">推广赚体验币</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
