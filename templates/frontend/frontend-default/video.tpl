@@ -19,19 +19,19 @@ var evdiv = $('.video-embedded');
 var ewidth = evdiv.width();
 eheight =  Math.round(ewidth / 1.777);
 evdiv.css("height" , eheight);
-
+	
 	$(window).resize(function() {
 	var vwidth = $('.video-container').width();
 	vheight =  Math.round(vwidth / (video_width / video_height));
 	$('.video-container').css("height" , vheight);
 	$('#video-body').css("height" , vheight);
-
+	
 	var evwidth = $('.video-embedded').width();
 	evheight =  Math.round(evwidth / 1.777);
-	$('.video-embedded').css("height" , evheight);
-
+	$('.video-embedded').css("height" , evheight);	
+	
 	});
-
+	
 	$(window).load(function() {
 
 		var checker = setInterval(function(){
@@ -45,11 +45,11 @@ evdiv.css("height" , eheight);
 				var item_name    = class_split[1];
 				$(this).removeClass();
 				$(this).addClass("at4-icon aticon-" + item_name);
-
-			});
+				
+			});	  
 		}, 100);
-	});
-
+	});	
+	
 });
 {/literal}
 </script>
@@ -61,7 +61,7 @@ evdiv.css("height" , eheight);
 			<div class="col-md-8">
 			{if !$guest_limit}
 			<div id="player_line" class="col-md-12 choose_line">
-				<div class="line_title">线路选择：</div>
+				<div class="line_title">线路选择：</div>	
 				 {if $type_of_user != 'premium'}<li class="hidden-xs line btn span6 offset4"><a target="_blank" href="/hdong/vip">体验高速VIP线路请加入VIP</a></li><li class="visible-xs line btn span6 offset4"><a href="javascript:alert('请加入VIP体验');">高速VIP线路</a></li>{/if}
 			</div>
 			{/if}
@@ -75,58 +75,85 @@ evdiv.css("height" , eheight);
        	 	backdrop:false,
        	 	keyboard:false
         });
-        var h = ($('#mysebi').height()-$('.modal-dialog').height())/4;
- 		$('.modal-dialog').css({'top':h});
+        //var h = ($('#mysebi').height()-$('.modal-dialog').height())/4;
+ 		//$('.modal-dialog').css({'top':h});
+	 //关闭弹框
+     $('.btn-close').click(function () {
+		 $('#mysebi').hide();
+     });
  }
 
  {/literal}
  </script>
-<!-- Modal -->
 <div class="modal fade" id="mysebi" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="position: absolute;">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content" style="background:url('/templates/frontend/frontend-default/img/s1.png') no-repeat!important;">
-      <div class="modal-header" style="border-bottom:none;background:none;">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" style="background: url('/templates/frontend/frontend-default/img/s4.png') 3px 15px no-repeat!important;padding: 10px;width: 10px;color: #fff;vertical-align: middle;"></span><span class="sr-only">关闭</span></button>
-        <h4 class="modal-title" id="myModalLabel" <h4 class="modal-title" id="myModalLabel" style="color: white;padding-left: 35px;margin-top: -3px;font-size: 18px;
-">温馨提示</h4>
-      </div>
-      <div class="modal-body" style="border-bottom:none;background:none;color: #000;font-size: 16px;padding-left: 40px;padding-right: 40px;">
-        {$vmsg}
-      </div>
-      <div class="modal-footer" style="text-align:center;padding-top:5px;img max-width:60%">
-        {if $type_of_user != 'premium'}
-			<a href="/hdong/vip/" style="margin-right:10px;">
-				<img src="/templates/frontend/frontend-default/img/s2.png" style="width:100px">
-			</a>
-			<a href="/qhd/songsb/pc/" id="sebMessage">
-				<img src="/templates/frontend/frontend-default/sebMessage/images/sebi.png" style="width:100px">
-			</a>
-			<a href="/spread" style="margin-left:10px;" class="hidden-xs">
-				<img src="/templates/frontend/frontend-default/img/s3.png" style="width:100px">
-			</a>
-		{/if}
-      </div>
-    </div>
-  </div>
+	<link id='sebMessCss' rel="stylesheet" href=""/>
+	<div class="mask"></div>
+	<div id="message_pc">
+		<div class="pop">
+			<div class="main-pop">
+				<div class="btn-close"></div>
+				<div class="pop-body">
+					<h4 class="pop-h4">温馨提示</h4>
+					<p>{$vmsg}</p>
+				</div>
+				<div class="pop-btns clearfix">
+                    {if $type_of_user != 'premium'}
+						<a href="/hdong/vip/" class="btn-choose">加入VIP</a>
+						<a href="/qhd/songsb/pc/" class="btn-choose">免费赚色币</a>
+						<a href="/spread" class="btn-choose">推广赚体验币</a>
+                    {/if}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="message_mobile" style="display: none">
+		<div class="pop">
+			<div class="pop-bg">
+				<img src="/templates/frontend/frontend-default/sebMessage/images/pop-bg.png" alt="弹框背景图片">
+			</div>
+			<div class="btn-close">
+				<img src="/templates/frontend/frontend-default/sebMessage/images/btn-close.png" alt="关闭按钮">
+			</div>
+			<div class="pop-body">
+				<h4 class="pop-h4">温馨提示</h4>
+				<p>{$vmsg}</p>
+			</div>
+			<div class="pop-btns clearfix">
+                {if $type_of_user != 'premium'}
+					<a href="/hdong/vip/" class="btn-choose">加入VIP</a>
+					<a href="/qhd/songsb/h5/" class="btn-choose">免费赚色币</a>
+					<a href="/spread" class="btn-choose">推广赚体验币</a>
+                {/if}
+			</div>
+		</div>
+	</div>
 </div>
+
 {if $guest_limit}
  <script type="text/javascript">
  {literal}
    $(function(){
-       if(ismobile()){
-			$("#sebMessage").attr('href','/qhd/songsb/h5/')
-	   }
-	   show_sebi();
+	   	if(ismobile()){
+	   	    var sebCssLink = '/templates/frontend/frontend-default/sebMessage/css/m.style.css';
+	   	    $('#message_pc').hide();
+            $('#message_mobile').show();
+		}else{
+            var sebCssLink = '/templates/frontend/frontend-default/sebMessage/css/style.css';
+            $('#message_mobile').hide();
+            $('#message_pc').show();
+		}
+       $("#sebMessCss").attr('href',sebCssLink);
+		show_sebi();
     });
  {/literal}
  </script>
-{/if}
+{/if}	
 {include file='video_newplayer.tpl'}
 
 				</div>
-
+			
 			<div class="col-md-12 video_player_tools" style="margin-bottom:10px;">
-
+			
 			<!--title-->
 			<div class="row nopadding">
 				{if $guest_limit}
@@ -134,7 +161,7 @@ evdiv.css("height" , eheight);
 						<div class="text-danger">{t c='video.limit'}</div>
 					</div>-->
 				{elseif !$is_friend}
-					<div class="col-xs-12">
+					<div class="col-xs-12">	
 						<div class="well well-sm">
 							<div class="text-danger">{t c='video.private' r=$relative s=$video.username sn=$video.username}</div>
 						</div>
@@ -155,10 +182,10 @@ evdiv.css("height" , eheight);
 			</div>
 			<div class="pull-left big-views-xs visible-xs">
 				<span class="text-black">{$addtime}</span>,
-				<span class="text-black"><i class="fa fa-eye green"></i> {$video.viewnumber}</span>
+				<span class="text-black"><i class="fa fa-eye green"></i> {$video.viewnumber}</span> 
 			</div>
 			</div>
-
+			
 				<div class="vote-box col-xs-7 col-sm-2 col-md-2">
 					<div class="dislikes {if $video.likes == 0 and $video.dislikes == 0}not-voted{/if}">
 						<div id="video_rate" class="likes" style="width: {$video.rate}%;"></div>
@@ -177,25 +204,25 @@ evdiv.css("height" , eheight);
 					<div class="pull-left m-t-15">
 						<a href="#" class="btn btn-primary" id="vote_like_{$video.VID}" ><i class="glyphicon glyphicon-thumbs-up"></i></a>
 						<a href="#" class="btn btn-primary" id="vote_dislike_{$video.VID}"><i class="glyphicon glyphicon-thumbs-down"></i></a>
-					</div>
+					</div>				
 				</div>
 				<div class="clearfix visible-xs"></div>
 				<div class="pull-left m-l-5 hidden-xs">
 					<div class="pull-left m-t-15">
 						<a href="#" class="btn btn-primary" id="vote_like_{$video.VID}" ><i class="glyphicon glyphicon-thumbs-up"></i></a>
 						<a href="#" class="btn btn-primary" id="vote_dislike_{$video.VID}"><i class="glyphicon glyphicon-thumbs-down"></i></a>
-					</div>
+					</div>				
 				</div>
 				<div class="pull-right m-t-15">
 					<div class="ps_131"></div>
-					<!--<div id="share_video" class="pull-right"><a href="#share_video" class="btn btn-default"><i class="glyphicon glyphicon-share-alt"></i> <span class="hidden-xs font-song-12 blod">{t c='global.share'}</span></a></div>-->
+					<!--<div id="share_video" class="pull-right"><a href="#share_video" class="btn btn-default"><i class="glyphicon glyphicon-share-alt"></i> <span class="hidden-xs font-song-12 blod">{t c='global.share'}</span></a></div>-->							
 					{if isset($smarty.session.uid)}
 						<!--<div id="flag_video" class="pull-right m-r-5"><a href="#flag_video" class="btn btn-default"><i class="glyphicon glyphicon-flag"></i> <span class="hidden-xs font-song-12 blod">{t c='global.flag'}</span></a></div>-->
 						<div id="favorite_video" class="pull-right m-r-5"><a href="#favorite_video" class="btn btn-default" id="favorite_video_{$video.VID}"><i class="glyphicon glyphicon-heart"></i> <span class="hidden-xs blod font-song-12">{t c='global.favorite'}</span></a></div>
 					{/if}
 						{if $video_embed == '1' && $video.embed_code != '' && $is_friend}
 						<div id="embed_video" class="pull-right m-r-5"><a href="#embed_video" class="btn btn-default"><i class="glyphicon glyphicon-link"></i> <span class="hidden-xs font-song-12 blod">{t c='global.embed'}</span></a></div>
-						{/if}
+						{/if}					
 					<div class="clearfix"></div>
 				</div>
 
@@ -209,14 +236,14 @@ evdiv.css("height" , eheight);
 								{if $hd == '1'}<li><a href="{$baseurl}/download_hd.php?id={$video.VID}">HD (MP4)</a></li>{/if}
 								{if $video.iphone == '1'}<li><a href="{$baseurl}/download_mobile.php?id={$video.VID}">Mobile (MP4)</a></li>{/if}
 							</ul>
-						</div>
+						</div>				
 					</div>
-				{/if}
+				{/if}						
 				<div class="clearfix"></div>
 				<div id="response_message" style="display: none;"></div>
 				{if $video_embed == '1' && $video.embed_code == '' && $is_friend}
 				<div id="embed_video_box" class="m-t-15" style="display: none;">
-					<a href="#close_embed" id="close_embed" class="close">&times;</a>
+					<a href="#close_embed" id="close_embed" class="close">&times;</a>					
 					<div class="separator">{t c='video.EMBED'}</div>
 					<div class="form-horizontal">
 						<div class="form-group">
@@ -229,7 +256,7 @@ evdiv.css("height" , eheight);
 							<label for="custom_width" class="col-lg-3 control-label">{t c='video.embed_custom_size'}</label>
 							<div class="col-lg-9">
 								<div class="pull-left">
-									<input id="custom_width" type="text" class="form-control" value="" placeholder="{t c='video.width'}" style="width: 100px!important;"/>
+									<input id="custom_width" type="text" class="form-control" value="" placeholder="{t c='video.width'}" style="width: 100px!important;"/>									
 								</div>
 								<div class="pull-left m-l-5 m-r-5" style="line-height: 38px;">
 									&times;
@@ -239,12 +266,12 @@ evdiv.css("height" , eheight);
 								</div>
 								<div class="pull-left" style="line-height: 38px;">
 									{t c='video.embed_custom_size_min'}
-								</div>
+								</div>								
 							</div>
-						</div>
+						</div>						
 					</div>
 				</div>
-				{/if}
+				{/if}				
 				{if isset($smarty.session.uid)}
 					<div id="flag_video_box" class="m-t-15" style="display: none;">
 						<a href="#close_flag" id="close_flag" class="close">&times;</a>
@@ -298,10 +325,10 @@ evdiv.css("height" , eheight);
 									<input name="submit_flag" type="button" value=" {t c='video.flag'} " id="submit_flag_video_{$video.VID}" class="btn btn-primary" />
 								</div>
 							</div>
-						</div>
+						</div>								
 					</div>
-				{/if}
-				<div id="share_video_box" class="m-t-15" style="display: none;">
+				{/if}				
+				<div id="share_video_box" class="m-t-15" style="display: none;">	
 					<a href="#close_share" id="close_share" class="close">&times;</a>
 					<div class="separator">{t c='video.SHARE'}</div>
 					<div id="share_video_response" style="display: none;"></div>
@@ -313,7 +340,7 @@ evdiv.css("height" , eheight);
 									<input name="from" type="text" class="form-control" value="{if isset($smarty.session.uid)}{if $smarty.session.fname != ''}{$smarty.session.fname}{else}{$smarty.session.username}{/if}{/if}" id="share_from" placeholder="{t c='global.from'}" />
 									<div id="share_from_error" class="text-danger m-t-5" style="display: none;"></div>
 								</div>
-							</div>
+							</div>								
 							<div class="form-group">
 								<label for="share_to" class="col-lg-3 control-label">{t c='global.To'}</label>
 								<div class="col-lg-9">
@@ -331,16 +358,16 @@ evdiv.css("height" , eheight);
 								<div class="col-lg-9 col-lg-offset-3">
 									 <input name="submit_share" type="button" value=" {t c='video.share'} " id="send_share_video_{$video.VID}" class="btn btn-primary" />
 								</div>
-							</div>
+							</div>									
 						</form>
 					</div>
-				</div>
+				</div>				
 				<div class="separator m-t-15 p-0"></div>
 				<div class="tools-left">
 				<div class="pull-left user-container">
 					发布者：<a href="{$relative}/user/{$video.username}"><img class="medium-avatar" src="{$relative}/media/users/{if $video.photo == ''}nopic-{$video.gender}.gif{else}{$video.photo}{/if}" /><span>{$video.username}</span></a>
 				</div>
-
+									
 				<div class="clearfix"></div>
 				<div class="m-t-10 font-song-12 overflow-hidden">
 				{$video.description}
@@ -350,7 +377,7 @@ evdiv.css("height" , eheight);
 					<i class="fa fa-tags"></i>{t c='global.tags'}:
 					{section name=i loop=$keywords}
 						<a class="tag font-song-12" href="{$relative}/search?search_type=videos&search_query={$keywords[i]}">{$keywords[i]}</a>{if !$smarty.section.i.last},{/if}
-					{/section}
+					{/section}						
 				</div>
 				</div>
 				<div class="m-t-10 m-b-15 tools-right">
@@ -371,7 +398,7 @@ evdiv.css("height" , eheight);
 					<div class="ps_83"></div>
 					<div style="clear:both;"></div>
 				</div>
-
+				
 			</div>
 			<div class="col-md-4 unvisible hidden-xs">
 				<div class="ps-body">
@@ -383,7 +410,7 @@ evdiv.css("height" , eheight);
 					<div class="ps-pc">
 					<div class="ps_47"></div>
 					</div>
-				</div>
+				</div>		
 				<div class="ps-body">
 					<div class="ps-pc">
 					<div class="ps_48"></div>
@@ -430,11 +457,11 @@ evdiv.css("height" , eheight);
 							</div>
 							<div class="video-rating pull-right {if $videos[i].rate == 0 && $videos[i].dislikes == 0}no-rating{/if}">
 								<i class="fa fa-thumbs-up video-rating-heart {if $videos[i].rate == 0 && $videos[i].dislikes == 0}no-rating{/if}"></i> <b>{if $videos[i].rate == 0 && $videos[i].dislikes == 0}-{else}{$videos[i].rate}%{/if}</b>
-							</div>
+							</div>	
 							<div class="clearfix"></div>
-
-						</div>
-					</div>
+							
+						</div>				
+					</div>			
 				{/section}
 				</div>
 				<div id="related_videos_container_1"></div>
@@ -445,18 +472,18 @@ evdiv.css("height" , eheight);
 						<ul class="pager">
 						  <li><a href="#prev_related_videos" id="prev_related_videos_{$video.VID}" style="display: none;">{t c='global.hide'}</a></li>
 						  <li><a href="#next_related_videos" id="next_related_videos_{$video.VID}" >{t c='global.show_more'}</a></li>
-						</ul>
+						</ul>					
 					</center>
-				{/if}
-
+				{/if}				
+				
 			{else}
 			<div class="row row-boder well-sm m-b-0">
 				<span class="text-danger">{t c='videos.no_videos_found'}.</span>
 			</div>
-			{/if}
+			{/if}				
 
 			</div>
-
+			
 			<div class="tab-pane fade" id="comments">
 			<div class="row row-boder pd-lr20">
 				<div class="m-b-20"></div>
@@ -466,7 +493,7 @@ evdiv.css("height" , eheight);
 							<div class="form-group">
 								<div class="col-xs-12 col-sm-10 col-sm-offset-1">
 									<textarea name="video_comment" id="video_comment" rows="5" class="form-control" placeholder="{t c='global.add_comment'}">{$comment}</textarea>
-									<div id="post_message" class="text-danger m-t-5" style="display: none;">{t c='global.comment_empty'}!</div>
+									<div id="post_message" class="text-danger m-t-5" style="display: none;">{t c='global.comment_empty'}!</div>											
 								</div>
 							</div>
 							<div class="form-group">
@@ -481,7 +508,7 @@ evdiv.css("height" , eheight);
 								</div>
 							</div>
 						</form>
-					</div>
+					</div>			
 				{/if}
 
 				<div id="video_comments_{$video.VID}">
@@ -490,16 +517,16 @@ evdiv.css("height" , eheight);
 					{/if}
 					<div id="video_response" style="display: none;"></div>
 					<div id="comments_delimiter" style="display: none;"></div>
-
+					
 					{if $comments}
 						{section name=i loop=$comments}
-
+							
 							<div id="video_comment_{$video.VID}_{$comments[i].CID}" class="col-xs-12 m-t-15">
 								<div class="row">
 									<div class="pull-left">
 										<a href="{$relative}/user/{$comments[i].username}">
 											<img src="{$relative}/media/users/{if $comments[i].photo != ''}{$comments[i].photo}{else}nopic-{$comments[i].gender}.gif{/if}" title="{$comments[i].username}'s avatar" alt="{$comments[i].username}'s avatar" class="img-responsive comment-avatar" />
-										</a>
+										</a>											
 									</div>
 									<div class="comment">
 										<div class="comment-info">
@@ -519,9 +546,9 @@ evdiv.css("height" , eheight);
 									</div>
 									<div class="clearfix"></div>
 								</div>
-
+								
 							</div>
-
+							
 						{/section}
 
 						{if $page_link_comments}
@@ -535,9 +562,9 @@ evdiv.css("height" , eheight);
 					{elseif !isset($smarty.session.uid)}
 						<div class="row row-boder well-sm m-b-0">
 							<span class="text-danger">{t c='global.comments.none'}.</span>
-						</div>
+						</div>						
 					{/if}
-				</div>
+				</div>				
 				<div class="clearfix"></div>
 			</div>
 			</div>
@@ -548,52 +575,52 @@ evdiv.css("height" , eheight);
 		<p class="ad-title">{t c='global.sponsors'}</p>
 		{insert name=adv assign=adv group='video_bottom'}
 		{if $adv}{$adv}{/if}
-	</div>
+	</div>		
 </div>
 <script type="text/javascript">
  {literal}
-function copyToClipboard(txt) {
-    if(window.clipboardData)
-    {
-        //window.clipboardData.clearData();
-        window.clipboardData.setData("Text", txt);
-    }
-    else if(navigator.userAgent.indexOf("Opera") != -1)
-    {
-        window.location = txt;
-    }
-    else if (window.netscape)
-    {
-        try {
-            netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
-        }
-        catch (e)
-        {
-            alert("!!被浏览器拒绝！\n请在浏览器地址栏输入'about:config'并回车\n然后将'signed.applets.codebase_principal_support'设置为'true'");
-        }
-        var clip = Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);
-        if (!clip)
-            return;
-        var trans = Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);
-        if (!trans)
-            return;
-        trans.addDataFlavor('text/unicode');
-        var str = new Object();
-        var len = new Object();
-        var str = Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);
-        var copytext = txt;
-        str.data = copytext;
-        trans.setTransferData("text/unicode",str,copytext.length*2);
-        var clipid = Components.interfaces.nsIClipboard;
-        if (!clip)
-            return false;
-        clip.setData(trans,null,clipid.kGlobalClipboard);
+function copyToClipboard(txt) {  
+    if(window.clipboardData)  
+    {  
+        //window.clipboardData.clearData();  
+        window.clipboardData.setData("Text", txt);  
+    }  
+    else if(navigator.userAgent.indexOf("Opera") != -1)  
+    {   
+        window.location = txt;  
+    }  
+    else if (window.netscape)  
+    {   
+        try {  
+            netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");  
+        }  
+        catch (e)  
+        {  
+            alert("!!被浏览器拒绝！\n请在浏览器地址栏输入'about:config'并回车\n然后将'signed.applets.codebase_principal_support'设置为'true'");  
+        }  
+        var clip = Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);  
+        if (!clip)  
+            return;  
+        var trans = Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);  
+        if (!trans)  
+            return;  
+        trans.addDataFlavor('text/unicode');  
+        var str = new Object();  
+        var len = new Object();  
+        var str = Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);  
+        var copytext = txt;  
+        str.data = copytext;  
+        trans.setTransferData("text/unicode",str,copytext.length*2);  
+        var clipid = Components.interfaces.nsIClipboard;  
+        if (!clip)  
+            return false;  
+        clip.setData(trans,null,clipid.kGlobalClipboard);  
     }
     else{
-       alert("!!被浏览器拒绝！\n请手动复制推广链接！");
+       alert("!!被浏览器拒绝！\n请手动复制推广链接！"); 
        return false;
     }
-    return true;
+    return true;  
 }
 
 //复制
