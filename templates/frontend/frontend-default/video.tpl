@@ -122,7 +122,6 @@ evdiv.css("height" , eheight);
                 {if $type_of_user != 'premium'}
 					<a href="/hdong/vip/" class="btn-choose">加入VIP</a>
 					<a href="/qhd/songsb/h5/" class="btn-choose">免费赚色币</a>
-					<a href="/spread" class="btn-choose">推广赚体验币</a>
                 {/if}
 			</div>
 		</div>
