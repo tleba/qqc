@@ -18,7 +18,7 @@ $expire = 7200;
 $options = array(
     'host'=>$config['mem_host'],
     'port'=>$config['mem_port'],
-    'prefix'=>'video',
+    'prefix'=>'vdo',
     'expire'=>$expire,
     'length'=>99999999
 );
@@ -29,7 +29,7 @@ if (!$video || !is_array($video)){
     $active     = ( $config['approve'] == '1' ) ? " AND v.active = 1" : NULL;
     $sql        = "SELECT v.VID, v.UID, v.title, v.channel, v.keyword, v.viewnumber, v.type,
                           v.addtime, v.rate, v.likes, v.dislikes, v.ratedby, v.flvdoname, v.space, v.embed_code, v.width_sd, v.height_sd, v.hd, v.iphone,
-    		v.sebi,u.username, u.photo, u.gender, u.fname
+    		v.sebi,v.tuijian,u.username, u.photo, u.gender, u.fname
                    FROM video AS v, signup AS u WHERE v.VID = " .$vid. " AND v.UID = u.UID" .$active. " LIMIT 1";
     $rs         = $conn->execute($sql);
     if($rs && $conn->Affected_Rows() > 0){
@@ -45,8 +45,8 @@ if ( !$video ) {
     VRedirect::go($config['BASE_URL']. '/error/video_missing');
 }
 $uid                = ( isset($_SESSION['uid']) ) ? intval($_SESSION['uid']) : NULL;
-$hide_categories = array(61,63,65);
-if ( in_array($video['channel'], $hide_categories) ) {
+$hide_categories = array(61,63,65,67);
+if ( in_array($video['channel'], $hide_categories) && $video['tuijian'] != 4 ) {
     if ($premium == 0 ) {
         VRedirect::go($config['BASE_URL']. '/error/video_preminum');
     }else{
@@ -87,12 +87,12 @@ $player_width = 640;
 $embed_width = 530;
 $embed_auto_height = round(530 * ($video_height/$video_width));
 
-if ($hd==0)
+if ($hd==0) 
 {
 	$autoheight	= round(640 * ($video_height/$video_width));
 	$player_width = 640;
 }
-if ($hd==1)
+if ($hd==1) 
 {
 	$autoheight	= round(800 * ($video_height/$video_width));
 	$player_width = 800;
@@ -107,7 +107,7 @@ $is_friend          = true;
 
 if ( isset($_SESSION['uid']) ) {
    // update_cache_mysql($cache, 'up_sv1', $uid, 'signup', 'watched_video', 'UID',200);
-
+    
     $sql    = "SELECT UID FROM playlist WHERE UID = " .$uid. " AND VID = " .$vid. " LIMIT 1";
     $conn->CacheExecute(3000,$sql);
     if ( $conn->Affected_Rows() == 0 ) {
@@ -168,7 +168,7 @@ if (!$videos){
     }else{
         $cache->_unset($key1);
     }
-
+    
     $pagination     = new Pagination(8, 'p_related_videos_' .$video['VID']. '_');
     $limit          = $pagination->getLimit($total_related);
     $sql            = "SELECT VID, title, duration, addtime, rate, likes, dislikes, viewnumber, type, thumb, thumbs, hd FROM video
@@ -200,7 +200,7 @@ if ($new_permisions['watch_normal_videos'] == 0) {
 }
 $remote_ip = GetRealIP();
 require $config['BASE_DIR']. '/classes/sebi.class.php';
-$guest_limit = VSebi::check($remote_ip, intval($video['sebi']),$video['VID'],intval($_SESSION['uid']));
+$guest_limit = VSebi::check($remote_ip, intval($video['sebi']),$video['VID'],intval($_SESSION['uid'])); 
 if (is_array($guest_limit)) {
 	if (isset($guest_limit['is_premium']) && $guest_limit['is_premium'] == 0) {
 		$tpl_msg = '亲爱的<font style="color:red;">%s</font>，您目前VIP身份已到期，如需续费，请与客服联系！';
@@ -247,7 +247,7 @@ if(!$guest_limit){
     $referer = md5($_SERVER['REDIRECT_SCRIPT_URI']);
     $AVS = $_COOKIE['AVS'];
     $cache->set('redirect_url'.$host.$sid,md5($referer.$random.$ip.$AVS.$vid .'盗链可耻!=!???'));
-}else
+}else 
     $cache->_unset('redirect_url');
 
 $conn->Close();
