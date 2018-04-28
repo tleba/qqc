@@ -1,0 +1,1 @@
+{"day_total_award":"100000","day_user_total_award":"100","min_invit_custom":"1","min_sebi":1}

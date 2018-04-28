@@ -1,0 +1,54 @@
+<?php
+define('_VALID', true);
+require '../include/config.php';
+//require 'include/function_global.php';
+require '../include/function_smarty.php';
+require '../classes/pagination.class.php';
+$ip = GetRealIP();
+$uid = intval($_GET['fromuid']);
+//体验币配置
+$invitConfig = array(
+    'day_total_award'=>10000,
+    'day_user_total_award'=>50,
+    'min_invit_custom'=>1,
+    'min_sebi'=>1
+);
+if($uid)
+{
+	$exist_sql = "select count(id) as count from user_tuiguang where uid={$uid} and ip='{$ip}'";
+	$rsc = $conn->execute($exist_sql);
+	$today_total = $rsc->fields['count'];
+	if($today_total==0)//本日该ip没有访问过
+	{
+		$time = time();
+		$sql = "insert into user_tuiguang (`uid`,`ip`,`dateline`) values ('$uid','$ip','$time')";//增加一条记录
+		$conn->execute($sql);
+	}
+	//统计用户今日已领体验币
+    $today = date("Y-m_d");
+    $award_sql = "select sum(award) as awards from user_award where uid=$uid and day='$today'";//统计今日奖励数
+    $award_rs = $conn->execute($award_sql);
+    $award_rs->fields['awards'] ? $receiveSeb = $award_rs->fields['awards']:$receiveSeb = 0; //已领体验币
+    //统计用户应赠送体验币
+    $now_sql = "select count(id) as count from user_tuiguang where `uid`=$uid AND `condition`=1";//统计当前uid的ip流量
+    $now_rs = $conn->execute($now_sql);
+    $now_rs->fields['count'] ? $totalIp = $now_rs->fields['count']:$totalIp = 0; //推广ip条数
+    $awardSeb =$totalIp*($invitConfig['min_sebi']/$invitConfig['min_invit_custom']);//应赠送体验币
+    if(!is_int($awardSeb)) return -1;//赠送体验币必须是整数
+    if($receiveSeb+$awardSeb>$invitConfig['day_user_total_award']) return -2;//赠送体验币必须小于day_user_total_award
+    //统计今日是否达到最大赠送体验币
+	$award_sql = "select sum(award) as awards from user_award where day='$today'";//统计今天已送出体验币的总数
+    $award_rs = $conn->execute($award_sql);
+    $award_rs->fields['awards'] ? $allReceiveSeb = $award_rs->fields['awards']: $allReceiveSeb = 0;
+    if($allReceiveSeb+$awardSeb>$invitConfig['day_total_award']) return -3;//不得超出已送出体验币总数day_total_award
+	//赠送体验币入库
+    $sql_tui = "UPDATE user_tuiguang SET `condition`=2 WHERE uid={$uid}"; //修改状态为已经奖励
+    $conn->execute($sql_tui);
+    $sql = "insert into user_award (`uid`,`award`,`day`) values ('$uid','{$awardSeb}','$today')";//增加一条记录
+    $conn->execute($sql);
+    $sql_ty = "UPDATE user_sebi SET sebi_tiyan = sebi_tiyan + '{$awardSeb}' WHERE uid = {$uid} LIMIT 1";//奖励体验体验币
+    $conn->execute($sql_ty);
+}
+$smarty->display('tuiguang/tuiguang.tpl');
+$smarty->gzip_encode();
+?>

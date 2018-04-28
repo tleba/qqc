@@ -10,5 +10,6 @@
         <li><a href="hd.php?m=task">游戏任务管理</a></li>
         <li><a href="hd.php?m=task_receive">领取游戏任务记录</a></li>
         <li><a href="hd.php?m=puzzle&a=all">拼图游戏记录</a></li>
+        <li><a href="hd.php?m=tuiguang&a=list">个人用户推广</a></li>
     </ul>
     </div>

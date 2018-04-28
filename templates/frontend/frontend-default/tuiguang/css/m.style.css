@@ -1,0 +1,49 @@
+/*banner*/
+.banner { width:100%; }
+.banner img { width:100%; }
+/*主要内容*/
+.main { width:100%; padding:3%; box-sizing: border-box; background:#250a37; }
+.main .rule-txt { text-align: center; color:white; font-size: 1.3rem; line-height: 1.8rem; }
+.h2-title { width:55%; margin-left: auto; margin-right: auto;  margin-bottom: 5%; }
+.h2-title img { display: block; width:100%;}
+/*您的专属链接*/
+.h2-link { width:65%;}
+/*.input-link { margin-bottom: }*/
+.input-link input { width:75%; height:40px; padding-left: 2%; line-height: 40px; background:white; border-top-left-radius: 8px; border-bottom-left-radius: 8px; border:none; outline:none; }
+.input-link button { width:23%; height:40px; line-height: 40px; background:#f26826; color:white; border:none; outline: none;border-top-right-radius: 8px; border-bottom-right-radius: 8px; }
+
+/*.gold { position:relative;height:100px; }*/
+/*.icon-gold { position:absolute; left:35%; transform:translateX(-50%); }*/
+/*.text-gold { position:absolute; left:55%; transform:translateX(-50%);  }*/
+
+.gold { width:80%; margin-left: auto; margin-right: auto;}
+.text-gold { line-height: 42px; color:white; font-size: 1.3rem; }
+
+.text-gold span { color:#2207f7; background:#ffef00; padding:8px 10px; border-radius: 5px; font-weight:bold;  }
+
+
+
+
+
+@media (max-width:1024px) {
+    .gold { width:35%;}
+}
+
+@media (max-width:768px) {
+    .gold { width:43%;}
+}
+@media (max-width:542px) {
+    .gold { width:62%;}
+}
+@media (max-width:500px) {
+    .gold { width:80%;}
+}
+@media (max-width:375px) {
+    .gold { width:85%;}
+}
+@media (max-width:360px) {
+    .gold { width:90%;}
+}
+@media (max-width:320px) {
+    .gold { width:100%;}
+}

@@ -2,7 +2,6 @@
 define('_VALID', true);
 include 'include/config.ajax.php';
 disableRegisterGlobals();
-
 $time = strtotime(date('Y-m-d'));
 $tomorrow = $time + 86400;
 $expire = $tomorrow - time();
@@ -60,7 +59,7 @@ if ($type_of_user == 'guest' && isset($config['visitors_sebi_select']) && $confi
     	    $rs    = $conn->execute($sql);
     	    //如果没有得到奖励，就给予一定的奖励
     	    if ( $conn->Affected_Rows() === 0 ) {
-    	        $sql = "UPDATE user_sebi set sebi = '{$num}',sebi_tiyan ={$num},jiangli_time = {$time},isfree =1 where uid = {$uid} LIMIT 1;";
+    	        $sql = "UPDATE user_sebi set sebi = sebi + '{$num}',sebi_tiyan = sebi_tiyan+'{$num}',jiangli_time = {$time},isfree =1 where uid = {$uid} LIMIT 1;";
     	        $iurs = $conn->execute($sql);
     	        $tcache->_unset($uid.$time.'free');
     	    }
@@ -131,7 +130,6 @@ if ($uid > 0 && !$is_show) {
         }
     }
 }
-
 //拼图
 $ispuzzleshow = true;
 $totay = strtotime(date('Y-m-d'));
@@ -147,7 +145,6 @@ if (time() > $endTime || $isfirstpuzzleshow) {
 }else{
     $cache->set($puzzleKey,1,0);
 }
-
 $cache->close();
 $smarty->assign('ispuzzleshow',$ispuzzleshow);
 $smarty->assign('type_of_user',$type_of_user);
