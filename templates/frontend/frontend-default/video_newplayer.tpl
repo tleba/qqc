@@ -57,7 +57,7 @@ var flashvars={
 				if(data._furl && !data.code && data._furl != ''){
 					url = data._furl;
 				}else{
-					window.location.reload();
+					//window.location.reload();
 				}
 				if(isload && data.servers){
 					var str = '';
