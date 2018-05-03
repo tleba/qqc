@@ -388,9 +388,8 @@ evdiv.css("height" , eheight);
 				<div style="clear:both;"></div>
 				</div>
 				<div class="col-md-12 video_player_tools" style="margin-bottom:10px;padding: 15px;color: #000;">
-  <div>视频推广链接(您登陆账户后（只有在登陆后链接才有效），可以把此接发到其他论坛或部落格。当有人访问该地址时，就可以赚取色币！)</div>
-  <div style="line-height:30px;margin-top"10px;"><font style="color:red;">视频推广链接：</font><input id="textfield3" type="text" style="width:502px;text-align:center;" readonly="readonly" value="分享一个我收藏很久了的看片神器！你懂的！ {$remotehost}/tuiguang.php?fromuid={$smarty.session.uid}"> <input type="button" onclick="$('#textfield3').select();CopyUrl($('#textfield3').val());"  value="复制地址">  <font style="color:red;">注册成功后，推广连接生效，告诉身边朋友，马上获得色币，免费观看视频</font></div>
-</div>
+  					<a href="/tuiguang/" target="_blank"><img src="/templates/frontend/frontend-default/img/tuiguang-p.jpg" alt="" style="display: block; width:100%;"></a>
+				</div>
 				<div class="ps-pc hidden-xs">
 					<div class="ps_79"></div>
 					<div class="ps_81"></div>
