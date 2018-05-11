@@ -525,5 +525,5 @@ $(function(){
 	</div>
 </div>
 </div>
-<div style="font-size: 14px;color: red;text-align: center;">广告为联盟推广与本站无关</div>
+{*<div style="font-size: 14px;color: red;text-align: center;">广告为联盟推广与本站无关</div>*}
 {/if}
