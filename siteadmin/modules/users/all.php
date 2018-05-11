@@ -96,8 +96,8 @@ $pagination     = new Pagination($query['page_items']);
 $limit          = $pagination->getLimit($total_users);
 $paging         = $pagination->getAdminPagination($remove);
 //$sql          = $query['select']. " LIMIT " .$limit;
-$sql            = 'SELECT p.UID,p.username,p.photo,p.gender,p.products,p.premium,p.premiumexpirytime,p.addtime,p.logintime,p.watched_video,p.video_viewed,p.account_status,s.sebi_surplus,s.sebi_tiyan,uv.`aname` FROM 
-                    (SELECT UID, username,photo,gender,products,premium,premiumexpirytime,addtime,logintime,watched_video,video_viewed,account_status FROM signup INNER JOIN (SELECT UID FROM signup '.$query['select'].' LIMIT '.$limit.') AS np USING(UID)) p 
+$sql            = 'SELECT p.UID,p.username,p.photo,p.gender,p.products,p.reg_ip,p.premium,p.premiumexpirytime,p.addtime,p.logintime,p.watched_video,p.video_viewed,p.account_status,s.sebi_surplus,s.sebi_tiyan,uv.`aname` FROM 
+                    (SELECT UID, username,photo,gender,products,reg_ip,premium,premiumexpirytime,addtime,logintime,watched_video,video_viewed,account_status FROM signup INNER JOIN (SELECT UID FROM signup '.$query['select'].' LIMIT '.$limit.') AS np USING(UID)) p 
                     LEFT JOIN user_sebi s On p.UID = s.uid LEFT JOIN `user_vip` uv ON p.`username`=uv.`uname`';
 $rs             = $conn->execute($sql);
 $users          = $rs->getrows();
@@ -156,6 +156,7 @@ function constructQuery($module)
         $option['sdate']        = trim($_POST['sdate']);
         $option['edate']        = trim($_POST['edate']);
         $option['aname']        = trim($_POST['aname']);
+        $option['reg_ip']       = trim($_POST['reg_ip']);
       
         $_SESSION['search_users_option'] = $option;
     }
@@ -194,8 +195,8 @@ function constructQuery($module)
         $query_option[] = $query_add. "  locate('{$products}',products) > 0 ";
         $query_add      = " AND";
     }
-    if ( $option['premium'] != '' ){
-        $query_option[] = $query_add. " premium >= " .intval($option['premium']);
+    if ( $option['premium'] !== '' ){
+        $query_option[] = $query_add. " premium = " .intval($option['premium']);
         $query_add      = " AND";
     }
     if ($option['sdate'] != '') {
@@ -213,6 +214,12 @@ function constructQuery($module)
         $query_option[] = $query_add. " aname = '{$aname}'";
         $query_add      = " AND";
     }*/
+    
+    if(!empty($option['reg_ip'])){
+        $query_option[] = $query_add. " reg_ip LIKE '%" .mysql_real_escape_string($option['reg_ip']). "%'";
+        $query_add      = " AND";
+    }
+    
     $query_option[]         = " ORDER BY " .$option['sort']. " " .$option['order'];
     $where = implode(' ', $query_option);
 

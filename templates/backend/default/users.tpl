@@ -244,12 +244,14 @@ var send_users ="{$send_users}";
             <td>
             <select name="premium">
               <option value="">请选择</option>
-              <option value="1" {if $option.premium == '1'} selected="selected"{/if}>是</option>
               <option value="0" {if $option.premium == '0'} selected="selected"{/if}>否</option>
+              <option value="1" {if $option.premium == '1'} selected="selected"{/if}>积分vip</option>
+              <option value="2" {if $option.premium == '2'} selected="selected"{/if}>年VIP</option>
+              <option value="3" {if $option.premium == '3'} selected="selected"{/if}>永久VIP</option>
             </select>
             </td>
-            <td align="right"></td>
-            <td></td>
+            <td align="right">用户注册IP:</td>
+            <td><input type="text" name="reg_ip" value="{$option.reg_ip}"></td>
             </tr>
             <!--<tr>
             	<td align="right">开户人:</td>
@@ -291,7 +293,7 @@ var send_users ="{$send_users}";
                 <td align="center"><b><input name="check_all_users" type="checkbox" id="user_check_all"></b></td>
                 <td align="center"><b>Id</b></td>
                 <td align="center"><b>Username</b></td>
-                <!--<td align="center"><b>开户人</b></td>-->
+                <td align="center"><b>注册IP</b></td>
                 <td align="center"><b>产品归属</b></td>
                 <td align="center"><b>是否VIP</b></td>
                 <td align="center"><b>等级组</b></td>
@@ -309,7 +311,7 @@ var send_users ="{$send_users}";
                     <a href="users.php?m=view&UID={$users[i].UID}">{$users[i].username}<br><br>
                     <img src="../media/users/{if $users[i].photo == ''}nopic-{$users[i].gender}.gif{else}{$users[i].photo}{/if}" width="100"></a>
                 </td>
-                <!--<td align="center">{$users[i].aname}</td>-->
+                <td align="center">{$users[i].reg_ip}</td>
                 <td align="center">{$users[i].products}</td>
                 <td align="center">{if $users[i].premium > 0}是{else}否{/if}</td>
                 
