@@ -31,7 +31,7 @@
     <div class="h2-rule h2-title ">
         <img src="/templates/frontend/frontend-default/tuiguang/images/h2-rule.png" alt="活动规则" class="block">
     </div>
-    <p class="rule-txt">复制您的专属分享链接发给QQ好友、QQ群、微信朋友、微信群、微信朋友圈、微博、百度贴吧、论坛等，邀请2个用户通过您的分享链接访问本站，您即可以获得 1 个体验币，有了体验币，您就可以免费观看视频了！</p>
+    <p class="rule-txt">复制您的专属分享链接发给QQ好友、QQ群、微信朋友、微信群、微信朋友圈、微博、百度贴吧、论坛等，邀请1个用户通过您的分享链接访问本站，您即可以获得 1 个体验币，有了体验币，您就可以免费观看视频了！</p>
     <!--您的专属链接-->
     <div class="h2-link h2-title margin-large-top-50">
         <img src="/templates/frontend/frontend-default/tuiguang/images/h2-link.png" alt="您的专属链接">

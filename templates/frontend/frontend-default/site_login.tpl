@@ -15,7 +15,7 @@
 					<ul class="dropdown-menu pull-right m-t-0">
 						<li class="visible-xs">{if $premium == 0}<a style="color:red;" class="nm">级别：普通用户</a><a>体验币：<font class="sebi_surplus" style="color:#c00;">{$PremiumRemainingView}</font><img src="/templates/frontend/frontend-default/img/12x12.png" style="margin-left:5px;"/></a>{else}<a style="color:red;" class="nm">级别:{$rank}</a><a>({$user_range})</a><a class="rv">{$PremiumRemainingView}</a>{/if}</li>
 						<li>{if $isgameUserNull}<a href="javascript:void(0);" onclick="sebi();">绑定游戏账号</a>{else}<a href="{if $istask}/qhd/task/{else}javascript:void(0);{/if}" target="_blank"><div class="badge" style="background-color:#c00;">领</div> {$game}账号：<font style="color:red;">{$gusername}</font></a>{/if}</li>
-						<li><a href="javascript://" onClick="show_it();">推广赚积分</a></li>
+						<li  style="background:red"><a href="/tuiguang/" target="_blank" >推广赚积分</a></li>
 						<li><a href="{$relative}/user">{t c='topnav.my_profile'}</a></li>
 						{if $type_of_user==='free'}<li><a href="#"><span class="pull-left">可用体验币</span><div class="sebi_surplus badge pull-right">{$sebi_surplus}个</div><div class="clearfix"></div></a></li>{/if}
 						{if $video_module == '0'}<li><a href="{$relative}/user/{$smarty.session.username}/videos">{t c='topnav.my_videos'}</a></li>{/if}
@@ -28,7 +28,7 @@
 						<li><a href="{$relative}/requests"><span class="pull-left">{translate c='global.requests'}</span>{if $requests_count > 0}<div class="badge pull-right">{$requests_count}</div>{/if}<div class="clearfix"></div></a></li>
 						<li><a href="{$relative}/mail/inbox"><span class="pull-left">{translate c='global.inbox'}</span>{if $mails_count > 0}<div class="badge pull-right">{$mails_count}</div>{/if}<div class="clearfix"></div></a></li>
 					</ul>
-				</li>
+				</li>			
 				<li><a href="{$relative}/logout">{translate c='global.sign_out'}</a></li>
 <!-- 弹出框 开始 -->
 <link href="/templates/frontend/frontend-default/pop_tips/pop.css" rel="stylesheet" type="text/css">
@@ -43,7 +43,7 @@
     <div class="ls_pop_body">
     	<ul>
         	<li class="l1">将以下链接发布到朋友圈、网站或论坛，你将获得相应 积分奖励</li>
-        	<li class="l2"><input id="textfield2" type="text" value="分享一个我收藏很久了的看片神器！你懂的！{$remotehost}/tuiguang.php?fromuid={$smarty.session.uid}"></li>
+        	<li class="l2"><input id="textfield2" type="text" value="分享一个我收藏很久了的看片神器！你懂的！ {$remotehost}/tuiguang.php?fromuid={$smarty.session.uid}"></li>
         	<li class="l3"><input type="button" onclick="CopyUrl($('#textfield2').val());$('#textfield2').select();"  value="复制地址"></li>
         </ul>
     </div>
@@ -51,48 +51,48 @@
 
 <script type="text/javascript">
  {literal}
-function copyToClipboard(txt) {
-    if(window.clipboardData)
-    {
-        //window.clipboardData.clearData();
-        window.clipboardData.setData("Text", txt);
-    }
-    else if(navigator.userAgent.indexOf("Opera") != -1)
-    {
-        window.location = txt;
-    }
-    else if (window.netscape)
-    {
-        try {
-            netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
-        }
-        catch (e)
-        {
-            alert("!!被浏览器拒绝！\n请在浏览器地址栏输入'about:config'并回车\n然后将'signed.applets.codebase_principal_support'设置为'true'");
-        }
-        var clip = Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);
-        if (!clip)
-            return;
-        var trans = Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);
-        if (!trans)
-            return;
-        trans.addDataFlavor('text/unicode');
-        var str = new Object();
-        var len = new Object();
-        var str = Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);
-        var copytext = txt;
-        str.data = copytext;
-        trans.setTransferData("text/unicode",str,copytext.length*2);
-        var clipid = Components.interfaces.nsIClipboard;
-        if (!clip)
-            return false;
-        clip.setData(trans,null,clipid.kGlobalClipboard);
+function copyToClipboard(txt) {  
+    if(window.clipboardData)  
+    {  
+        //window.clipboardData.clearData();  
+        window.clipboardData.setData("Text", txt);  
+    }  
+    else if(navigator.userAgent.indexOf("Opera") != -1)  
+    {   
+        window.location = txt;  
+    }  
+    else if (window.netscape)  
+    {   
+        try {  
+            netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");  
+        }  
+        catch (e)  
+        {  
+            alert("!!被浏览器拒绝！\n请在浏览器地址栏输入'about:config'并回车\n然后将'signed.applets.codebase_principal_support'设置为'true'");  
+        }  
+        var clip = Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);  
+        if (!clip)  
+            return;  
+        var trans = Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);  
+        if (!trans)  
+            return;  
+        trans.addDataFlavor('text/unicode');  
+        var str = new Object();  
+        var len = new Object();  
+        var str = Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);  
+        var copytext = txt;  
+        str.data = copytext;  
+        trans.setTransferData("text/unicode",str,copytext.length*2);  
+        var clipid = Components.interfaces.nsIClipboard;  
+        if (!clip)  
+            return false;  
+        clip.setData(trans,null,clipid.kGlobalClipboard);  
     }
     else{
-       alert("!!被浏览器拒绝！\n请手动复制推广链接！");
+       alert("!!被浏览器拒绝！\n请手动复制推广链接！"); 
        return false;
     }
-    return true;
+    return true;  
 }
 
 //复制
@@ -114,8 +114,8 @@ function CopyUrl(txt)
  {/literal}
 </script>
 			{else}
-
-
+				
+			
 				          <div class='hidden-xs' id="login_form">
 				        <p><label>账号:</label> <input type="text" class="input" name="user" id="user" /></p>
 				        <p><label>密码:</label> <input type="password" class="input" name="pass" id="pass" /></p>
@@ -128,7 +128,7 @@ function CopyUrl(txt)
 				     <div class="visible-xs">
 				     <li><a href="/login" rel="nofollow">登录</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="/signup" rel="nofollow">注册</a></li>
 				     </div>
-
+					
 			{/if}
 <!-- Modal -->
 <div class="modal fade" id="bindguser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -183,6 +183,7 @@ function CopyUrl(txt)
 <!--红包-->
 {/if}
 <script type="text/javascript">
+var premium = parseInt('{$premium}');
  {literal}
  function close_hg(obj){
  	console.log($(obj).parents('div.hongbao'));
