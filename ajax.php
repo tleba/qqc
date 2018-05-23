@@ -113,6 +113,7 @@ $modules_allowed    = array(
     'couplets_game'=>1,
     'turntable_lottery'=>1,
     'ajax_vip'=>1,
+    'tuiguang_add'=>1,
 );
 
 if (!isset($_SESSION['uid'])) {
