@@ -98,7 +98,7 @@
                     <p>1. 为什么要充值亚美娱乐城？<br/>
                         亚美娱乐是这边指定的充值收款渠道，完成注册存款即可选择美女主播互动。<br/></p>
                     <p>2. 如何直播？<br/>
-                        在满足参与条件后，加QQ客服 3002801271<a class="btn-add yellow" href="tencent://message/?uin=3002801271&Site=qq&Menu=yes" target="_blank">【点击加我】</a>，核实认证后，即可为您安排进入开通使用哦！<br/></p>
+                        在满足参与条件后，加QQ客服 3005208409<a class="btn-add yellow" href="tencent://message/?uin=3005208409&Site=qq&Menu=yes" target="_blank">【点击加我】</a>，核实认证后，即可为您安排进入开通使用哦！<br/></p>
                     <p>3. 会有同时享受升级为久草视频VIP，在线畅享成人视频点播（手机电脑一起玩）</p>
                     <p style="margin-bottom: 0;">4. 该页面内指定亚美娱乐优惠链接进入注册存款有效哦！【亚美娱乐】</p>
                 </div>

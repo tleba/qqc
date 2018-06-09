@@ -62,8 +62,8 @@
 			<img src="/templates/frontend/frontend-default/img/qq_15.jpg">
 			<ul>
 				<li style="line-height:20px;"><span style="font-size:13px;">活动客服：在线咨询</span><a style="margin-left:50px;" href="https://f18.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=869866&configID=75470&jid=2696669831&s=1" target="_blank"></a></li>
-				<li style="line-height:20px;"><span style="font-size:13px;">活动客服：3002814561</span><a href="tencent://message/?uin=3002814561&Site=www.luoxiao123.cn&Menu=yes"></a></li>
-				<li style="line-height:20px;"><span style="font-size:13px;">活动客服：3002801271</span><a href="tencent://message/?uin=3002801271&Site=www.luoxiao123.cn&Menu=yes"></a></li>
+				<li style="line-height:20px;"><span style="font-size:13px;">活动客服：3005207857</span><a href="tencent://message/?uin=3005207857&Site=www.luoxiao123.cn&Menu=yes"></a></li>
+				<li style="line-height:20px;"><span style="font-size:13px;">活动客服：3005208409</span><a href="tencent://message/?uin=3005208409&Site=www.luoxiao123.cn&Menu=yes"></a></li>
 				<li style="line-height:18px;"><span>在线时间：13:00--22:00</span></li>
 			</ul>
 		</div>
