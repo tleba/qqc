@@ -1,2 +1,5 @@
 cache/
 1.test
+*.idea
+.idea/
+ps/data.js

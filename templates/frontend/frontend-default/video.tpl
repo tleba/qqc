@@ -387,9 +387,13 @@ evdiv.css("height" , eheight);
 				</div>
 				<div style="clear:both;"></div>
 				</div>
-				<div class="col-md-12 video_player_tools" style="margin-bottom:10px;padding: 15px;color: #000;">
-  					<a href="/tuiguang/" target="_blank"><img src="/templates/frontend/frontend-default/img/tuiguang-p.jpg" alt="" style="display: block; width:100%;"></a>
-				</div>
+				{*<div class="col-md-12 video_player_tools" style="margin-bottom:10px;padding: 15px;color: #000;">*}
+  					{*<a href="/tuiguang/" target="_blank"><img src="/templates/frontend/frontend-default/img/tuiguang-p.jpg" alt="" style="display: block; width:100%;"></a>*}
+				{*</div>*}
+				{*播放页中部广告（PC端）*}
+                <div class="ps_164 col-md-12 video_player_tools" style="margin-bottom:10px;padding: 15px;color: #000;"></div>
+				{*播放页中部广告（APP端）*}
+				<div class="ps_165 col-md-12 video_player_tools" style="margin-bottom:10px;padding: 15px;color: #000;"></div>
 				<div class="ps-pc hidden-xs">
 					<div class="ps_79"></div>
 					<div class="ps_81"></div>
