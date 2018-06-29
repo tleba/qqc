@@ -630,6 +630,15 @@
             }, 300); //为当前的按钮切换到选中的效果
         }
     });
+    $(function() {
+        var urladdress = window.location.href;
+
+        if (urladdress.indexOf("qqcmo") > -1 || urladdress.indexOf("qqcca") > -1 || urladdress.indexOf("qqcff") > -1) {
+            $("#realAccount").attr({
+                action: 'http://www.ZL1616.com/MarketCreateRealAccount.htm'
+            });
+        }
+    })
     {/literal}
     </script>
     <script> 

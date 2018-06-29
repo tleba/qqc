@@ -1,4 +1,5 @@
 </div>
+<div class="ps_169" style="width: 100%; margin: 10px 0;"></div>
 <div class="ps_135" style="width: 100%; margin: 10px 0; text-align: center; padding: 0px 5px;">
 </div>
 <!--手机端顶部广告-->
@@ -223,13 +224,13 @@
 			}
 		});
 		function showAds(){
-			if(vipFlag>1) return;
 			if(ads){
+                var yg = ["169"];//硬广
 				var cWidth = parseInt($('.container').css('width').replace('px',''));
 				var ismo = ismobile();
 				var pcContainerWidth = ismo ? Math.floor(cWidth *2 + 30) : 1150;
-				
 				$.each(ads,function(i,r){
+                    if(vipFlag && yg.indexOf(i)<0) return true;//过滤广告
 					var width = parseInt(r.width) === 0 ? '100%' : Math.floor(r.width * (cWidth / pcContainerWidth))+'px';
 					var height = parseInt(r.height)===0 ? '100%' : r.height+'px';
 					var advs = $('.ps_'+i);
